@@ -1,0 +1,29 @@
+.popup-bg {
+  position: absolute;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 99;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.popup {
+  position: relative;
+  width: 500px;
+  max-height: 90%;
+  box-sizing: border-box;
+  overflow: scroll;
+  padding: 15px;
+  background-color: #fff;
+}

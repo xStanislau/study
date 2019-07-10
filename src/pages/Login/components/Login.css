@@ -1,9 +1,8 @@
 .page-content {
   margin: 0 auto;
+  min-height: 100%;
 }
-* {
-  transition: all 20ms ease-in;
-}
+
 .form-wrapper {
   width: 50vw;
   max-width: 500px;
@@ -17,10 +16,6 @@
   justify-content: center;
 }
 
-.page-content {
-  min-height: 100%;
-}
-
 .img {
   display: flex;
   justify-content: flex-end;
@@ -31,15 +26,12 @@
 }
 
 @media (min-width: 1200px) {
-    .img {
-      height: 100vh;
-      width: 100vw;
-      background-position: left center;
-      background-size: cover ;
-    }
-    .form-wrapper {
-      margin-left: 0;
-    }
+  .img {
+    height: 100vh;
+    width: 100vw;
+    background-position: left center;
+    background-size: cover;
+  }
 }
 
 @media (max-width: 952px) {

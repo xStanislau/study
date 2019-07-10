@@ -27,6 +27,7 @@ const Input = ({
               placeholder={placeholder}
               {...input}
             />
+            {children}
             {meta.touched && meta.error && (
               <span className="text-danger">{meta.error}</span>
             )}

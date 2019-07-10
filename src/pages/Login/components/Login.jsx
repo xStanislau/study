@@ -9,10 +9,12 @@ class Login extends Component {
   state = {
     isOpen: false
   };
+  
   openPopup = evt => {
     evt.preventDefault();
     this.setState({ isOpen: true });
   };
+
   closePopup = evt => {
     evt.preventDefault();
     if (
@@ -26,9 +28,9 @@ class Login extends Component {
   render() {
     return (
       <Fragment>
-        <div className="page-content ">
+        <main className="page-content ">
           <div className="img">
-            <div className="right-side">
+            <section className="right-side">
               <div className="form-wrapper">
                 <h2 className="text-center">Log in</h2>
                 <Form />
@@ -41,9 +43,9 @@ class Login extends Component {
                 </div>
                 {this.state.isOpen && <Popup onClick={this.closePopup} />}
               </div>
-            </div>
+            </section>
           </div>
-        </div>
+        </main>
       </Fragment>
     );
   }

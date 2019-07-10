@@ -1,1 +1,12 @@
-
+.header {
+    border-bottom: 3px dashed black;
+    padding: 30px;
+    background-color: #eee;
+}
+.fixed {
+    top:0;
+    width: 100%;
+    position: fixed;
+    padding: 20px 30px;
+    transition: all 0.24s ease-in-out;
+}

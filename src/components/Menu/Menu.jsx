@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 import Item from "./MenuItem/Item";
 import "./Menu.css";
 
-const Menu = ({ className, hrefs, items, itemClassName }) => {
-  const classes = classNames("menu", className);
+const Menu = ({ className, hrefs, items, isOpen, itemClassName }) => {
+  const classes = classNames("menu", className, { open: isOpen });
   return (
     <ul className={classes}>
       {items.map((item, index) => {

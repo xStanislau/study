@@ -4,7 +4,7 @@ import Button from "../../../../components/Button/Button";
 import Input from "../../../../components/input/Input";
 import { checkPassword, checkEmail } from "./../../../../utils/validation";
 import { withRouter } from "react-router-dom";
-
+import "./Form.css";
 class LoginForm extends Component {
   onSubmit = () => {
     this.props.history.push("/main-page");
@@ -22,13 +22,12 @@ class LoginForm extends Component {
   };
 
   render() {
-    const { className } = this.props;
     return (
       <Form
         onSubmit={this.onSubmit}
         validate={this.validate}
         render={({ handleSubmit, pristine, invalid }) => (
-          <form className={className} onSubmit={handleSubmit}>
+          <form className={'login-form'} onSubmit={handleSubmit}>
             <Input
               type="email"
               name="email"

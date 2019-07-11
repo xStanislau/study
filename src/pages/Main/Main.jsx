@@ -35,6 +35,7 @@ class Main extends Component {
             className="burger-icon"
             name="bars"
             size={25}
+            isActive={this.state.isOpen}
             onClick={this.toggleTopMenu}
           />
           <Menu

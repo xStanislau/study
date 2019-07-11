@@ -1,0 +1,19 @@
+.side-menu {
+    background-color: #999;
+    display: block;
+    min-height: 100%;
+    width: 200px;
+    position: fixed;
+}
+
+.side-menu-item {
+    margin: 0;
+    text-align: center;
+    border: 0;
+}
+
+.side-menu-item:hover {
+    border: 0;
+    padding: 10px;
+    background-color: #eee;
+}

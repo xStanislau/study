@@ -42,7 +42,7 @@ class Login extends Component {
                   </Button>
                 </div>
                 <div className="d-flex align-items-center flex-column">
-                  <Button type="button" className="btn-border">
+                  <Button type="button" className="btn-outlined">
                     <i className="fa fa-google fa-fw" />
                     <span className="text">Sign up google</span>
                   </Button>

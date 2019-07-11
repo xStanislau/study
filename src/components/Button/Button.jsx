@@ -1,11 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
+import classNames from "classnames";
 import "./Button.scss";
+
 const Button = ({ onClick, type, className, children, disabled, ...attrs }) => {
+  const classes = classNames("btn", className, { disabled });
   return (
     <button
       {...attrs}
-      className={className}
+      className={classes}
       onClick={onClick}
       disabled={disabled}
     >

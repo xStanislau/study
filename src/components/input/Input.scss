@@ -1,0 +1,11 @@
+
+.withicon {
+    position: relative;
+}
+
+.l-icon-center-left {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+}

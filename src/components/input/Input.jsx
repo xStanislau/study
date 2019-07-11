@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Field } from "react-final-form";
+import classNames from "classnames";
+import "./Input.scss";
 
 const Input = ({
   className,
@@ -10,8 +12,11 @@ const Input = ({
   id,
   disabled,
   label,
-  children
+  children,
+  withicon
 }) => {
+  const withIcon = classNames({withicon});
+  const classess = classNames("form-control", className);
   return (
     <Field
       name={name}
@@ -21,13 +26,15 @@ const Input = ({
         return (
           <div className="form-group">
             {label && <label htmlFor={id}>{label}</label>}
-            <input
-              className={className}
-              id={id}
-              placeholder={placeholder}
-              {...input}
-            />
-            {children}
+            <div className={withIcon} >
+              <input
+                className={classess}
+                id={id}
+                placeholder={placeholder}
+                {...input}
+              />
+              {children}
+            </div>
             {meta.touched && meta.error && (
               <span className="text-danger">{meta.error}</span>
             )}
@@ -48,7 +55,6 @@ Input.propTypes = {
 };
 
 Input.defaultProps = {
-  className: "form-control",
   type: "text",
   disabled: false
 };

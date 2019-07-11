@@ -1,25 +1,36 @@
 @import "./../../styles/base//colors.scss";
 @import "./../../styles/base//sizes.scss";
+
+
+%btn-shared {
+  border-radius: $btn-border-radius;
+  border: 1px solid $btn-green-bg;
+  background-color: $btn-green-bg;
+  color: $white-color;
+}
+
+
 .btn {
   cursor: pointer;
 }
 
-.green {
-  background-color: $btn-green-bg;
+.btn-primary {
+  @extend %btn-shared;
 }
 
-.border-radius20px {
-  border-radius: $btn-border-radius;
+.btn-primary:hover {
+  @extend %btn-shared;
+  background-color: darken($btn-green-bg, 5%);
 }
 
-.white-text {
-  color: $white-color;
+.btn-primary.disabled {
+  @extend %btn-shared;
+  background-color: lighten($btn-green-bg, 10%);
 }
 
-.green-text {
-  color: $btn-green-color;
-}
-
-.green-border {
-  border-color: $btn-green-bg;
+.btn-outlined {
+  width: 100%;
+  @extend %btn-shared;
+  color: black;
+  background-color: $white-color;
 }

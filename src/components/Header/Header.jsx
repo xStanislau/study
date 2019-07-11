@@ -12,14 +12,8 @@ class Header extends React.Component {
 
   componentDidMount() {
     const el = document.querySelector(".header");
-    this.setState({ top: el.offsetTop, height: el.offsetHeight });
+    this.setState({ top: el.offsetTop + 200 });
     window.addEventListener("scroll", this.handleScroll);
-  }
-
-  componentDidUpdate() {
-    this.state.scroll > this.state.top
-      ? (document.body.style.paddingTop = `${this.state.height}px`)
-      : (document.body.style.paddingTop = 0);
   }
 
   render() {

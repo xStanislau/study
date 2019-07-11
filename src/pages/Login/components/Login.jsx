@@ -28,18 +28,23 @@ class Login extends Component {
   render() {
     return (
       <Fragment>
-        <main className="page-content ">
+        <main className="page-content">
           <div className="img">
             <section className="right-side">
               <div className="form-wrapper">
                 <h2 className="text-center">Log in</h2>
                 <Form />
-                <div className="d-flex align-items-center">
+                <div className="d-flex align-items-center flex-column">
+
                   <Button onClick={this.openPopup}>modal</Button>
                   <div>-or-</div>
                   <Button>
                     <Link to="/main-page">redirect</Link>
                   </Button>
+                    <Button type="button" className="btn-border">
+                        <i className="fa fa-google fa-fw"/>
+                        <span className="text">Sign up google</span>
+                    </Button>
                 </div>
                 {this.state.isOpen && <Popup onClick={this.closePopup} />}
               </div>

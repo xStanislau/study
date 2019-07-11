@@ -1,0 +1,70 @@
+.side-menu {
+  background-color: #999;
+  display: flex;
+  padding-top: 110px;
+  flex-direction: column;
+  min-height: 100%;
+  width: 30%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.side-menu-item {
+  margin: 0;
+  text-align: center;
+  border: 0;
+}
+
+.side-menu-item:hover {
+  border: 0;
+  padding: 10px;
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.btn-open-menu {
+  display: none;
+  width: 300px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 952px) {
+  .side-menu {
+    position: fixed;
+    left: -100%;
+    transition: all 0.25s ease-in-out;
+  }
+
+  .btn-open-menu {
+    display: block;
+  }
+
+  .side-menu.open {
+    display: block;
+    position: fixed;
+    left: 0;
+    width: 50%;
+  }
+}
+
+.side-menu-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.2);
+  animation: slide-up 0.3s ease;
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

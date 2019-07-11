@@ -1,10 +1,16 @@
-import React from "react";
+import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import "./SideMenu.css"
-const SideMenu = ({ className, children }) => {
-  const classes = classNames("side-menu d-flex flex-column", className);
-  return <nav className={classes}>{children}</nav>;
+import "./SideMenu.scss";
+
+const SideMenu = ({ className, children, isOpen }) => {
+  const classes = classNames("side-menu", className, { open: isOpen });
+  return (
+    <Fragment>
+      {isOpen && <div className="side-menu-bg" />}
+      <nav className={classes}>{children}</nav>
+    </Fragment>
+  );
 };
 
 SideMenu.propTypes = {

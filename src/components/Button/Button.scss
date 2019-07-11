@@ -1,0 +1,25 @@
+@import "./../../styles/base//colors.scss";
+@import "./../../styles/base//sizes.scss";
+.btn {
+  cursor: pointer;
+}
+
+.green {
+  background-color: $btn-green-bg;
+}
+
+.border-radius20px {
+  border-radius: $btn-border-radius;
+}
+
+.white-text {
+  color: $white-color;
+}
+
+.green-text {
+  color: $btn-green-color;
+}
+
+.green-border {
+  border-color: $btn-green-bg;
+}

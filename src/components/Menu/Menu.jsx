@@ -3,7 +3,7 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import Item from "./MenuItem/Item";
-import "./Menu.css";
+import "./Menu.scss";
 
 const Menu = ({ className, hrefs, items, isOpen, itemClassName }) => {
   const classes = classNames("menu", className, { open: isOpen });

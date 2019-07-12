@@ -7,7 +7,7 @@
 }
 
 .form-wrapper {
-  width: 50vw;
+  width: 100%;
   max-width: 500px;
   min-width: 300px;
   padding: 25px;
@@ -51,6 +51,10 @@
 }
 
 .right-side {
+  display: flex;
+  justify-content: center;
+  background-color: $white-color;
+  width: 50%;
   .btn-border {
     margin-bottom: 20px;
     width: 100%;
@@ -66,8 +70,8 @@
   border: 2px solid $btn-green-color;
 }
 
-.btn-border {
-  & > i {
+.btn-outlined {
+  & > .fa {
     margin: 0 10px;
   }
 }

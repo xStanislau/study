@@ -1,14 +1,12 @@
 @import "./../../styles/base//colors.scss";
 @import "./../../styles/base//sizes.scss";
 
-
 %btn-shared {
   border-radius: $btn-border-radius;
   border: 1px solid $btn-green-bg;
   background-color: $btn-green-bg;
   color: $white-color;
 }
-
 
 .btn {
   cursor: pointer;
@@ -31,6 +29,6 @@
 .btn-outlined {
   width: 100%;
   @extend %btn-shared;
-  color: black;
+  color: $btn-green-color;
   background-color: $white-color;
 }

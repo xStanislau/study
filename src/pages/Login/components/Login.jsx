@@ -19,7 +19,7 @@ class Login extends Component {
     evt.preventDefault();
     if (
       evt.target.className === "popup-bg" ||
-      evt.currentTarget.className === "close"
+      evt.currentTarget.classList.contains("close")
     ) {
       this.setState({ isOpen: false });
     }

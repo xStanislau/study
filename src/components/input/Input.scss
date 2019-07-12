@@ -1,16 +1,15 @@
-
 .withicon {
-    position: relative;
+  position: relative;
 }
 
 .l-icon-center-left {
-    position: absolute;
-    top: 50%;
-    left: 15px;
-    transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
 }
 
 .isActive {
-    color: rgb(216, 68, 80);
-    transition: color 0.24s ease-out;
+  color: rgb(216, 68, 80);
+  transition: color 0.24s ease-out;
 }

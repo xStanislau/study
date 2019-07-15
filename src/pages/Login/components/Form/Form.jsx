@@ -35,7 +35,7 @@ class LoginForm extends Component {
               type="email"
               name="email"
               id="user-email"
-              placeholder="email@eample.com"
+              placeholder="email@example.com"
               label="Email"
               withicon
             >

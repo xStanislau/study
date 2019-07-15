@@ -1,14 +1,11 @@
-@import "./../../styles/base//colors.scss";
-@import "./../../styles/base//sizes.scss";
+@import "./../../styles/theme/theme.scss";
 
 .header {
   position: fixed;
   top: 0;
   width: 100%;
   min-width: 300px;
-  border-bottom: 3px dashed black;
   padding: 30px;
-  background-color: #eee;
   z-index: 1;
   transition: all 0.24s ease-in-out;
 }

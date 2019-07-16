@@ -1,16 +1,20 @@
 import React from "react";
 
-const Project = ({ technology, title, numberOfDevelopers, description }) => {
+const Project = ({
+  technology,
+  title,
+  numberOfDevelopers,
+  description,
+  className
+}) => {
   return (
-    <>
-      <section className="project-content">
-        <span>{technology}</span>
-        <h2>{title}</h2>
-        <p>{numberOfDevelopers}</p>
-        <span>{description}</span>
-        <span>Read more...</span>
-      </section>
-    </>
+    <div className={className}>
+      <span className="project-technology">{technology}</span>
+      <h2 className="project-title">{title}</h2>
+      <span className="project-developers">{numberOfDevelopers}</span>
+      <span className="project-description">{description}</span>
+      <span className="project-read-more">Read more...</span>
+    </div>
   );
 };
 

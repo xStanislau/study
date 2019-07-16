@@ -5,11 +5,12 @@ import Card from "./components/Card/Card";
 import Project from "./components/Project/Project";
 import mockData from "../../mocks/mocks";
 import Menu from "../../components/Menu/Menu";
+import Table from "../../components/Table/Table";
 import "./Main.scss";
 
 class Main extends Component {
   render() {
-    const items = ["item 1", "item 2", "item 3", "item 4", "item 5"];
+    const items = ["Trending", "Language", "Speeh", "Vision", "Data Insight"];
     const { card } = mockData;
     return (
       <Fragment>
@@ -30,7 +31,7 @@ class Main extends Component {
               <p className="text-center text-white">
                 Be part of the innovation!
               </p>
-              <Button className="btn btn-dark btn-outline-light">
+              <Button className="btn btn-dark btn-outline-light rounded-0">
                 Get Started
               </Button>
             </div>
@@ -47,7 +48,9 @@ class Main extends Component {
               Etiam gravida mollis tortor quis porttitor.
             </p>
             <div className="text-right">
-              <Button className="btn-outline-light ">Get Started</Button>
+              <Button className="btn-outline-light rounded-0">
+                Get Started
+              </Button>
             </div>
           </div>
           <div className="media-video">
@@ -73,28 +76,100 @@ class Main extends Component {
             </li>
           </ul>
         </section>
-        <section className="community ">
-          <h3 className="text-center mb-5">Comunity Value</h3>
+        <section className="community">
+          <h3 className="text-center mb-3 community-title">Comunity Value</h3>
           <div className="d-flex justify-content-around flex-wrap">
             <Card title={card.titles.contribute} text={card.texts[0]} />
             <Card title={card.titles.collaborate} text={card.texts[1]} />
             <Card title={card.titles.extend} text={card.texts[2]} />
           </div>
         </section>
-        {/* <section>
-          <h1>Project</h1>
-          <Menu className="project-menu mx-auto" items={items} />
-          {mockData.projects.map(project => {
-            return (
-              <Project
-                technology={project.technology}
-                title={project.title}
-                numberOfDevelopers={project.numberOfDevelopers}
-                description={project.description}
-              />
-            );
-          })}
-        </section> */}
+        <section className="projects">
+          <h1 className="projects-title text-center">Projects</h1>
+          <Menu
+            className="projects-menu d-flex justify-content-center align-items-start"
+            items={items}
+          />
+          <div className="projects-grid d-flex justify-content-center flex-wrap">
+            {mockData.projects.map((project, index) => {
+              return (
+                <Project
+                  key={`${project.technology} ${project.title} ${index}`}
+                  className="project d-flex flex-column justify-content-around"
+                  technology={project.technology}
+                  title={project.title}
+                  numberOfDevelopers={project.numberOfDevelopers}
+                  description={project.description}
+                />
+              );
+            })}
+          </div>
+          <div className="text-center">
+            <Button className="btn btn-dark btn-outline-light rounded-0">
+              Browse All Projects
+            </Button>
+          </div>
+        </section>
+        <section className="forums text-center mb-5">
+          <h1 className="text-center mb-4">Forums</h1>
+          <Table
+            cols={[
+              { header: "Topics", name: "topics" },
+              { header: "Category", name: "category" },
+              { header: "Author", name: "author" },
+              { header: "Replies", name: "replies" },
+              { header: "Views", name: "views" },
+              { header: "Last Post", name: "lastPost" }
+            ]}
+            rows={[
+              {
+                id: 1,
+                topics:
+                  "Cras quis nulla commodo, aliquam lectus sed, blandit augue.",
+                category: "Improvements",
+                author: "Developer 21",
+                replies: "281",
+                views: "8.972",
+                lastPost: "Yesterday"
+              },
+              {
+                id: 2,
+                topics:
+                  "Cras quis nulla commodo, aliquam lectus sed, blandit augue.",
+                category: "Improvements",
+                author: "Developer 21",
+                replies: "281",
+                views: "8.972",
+                lastPost: "Yesterday"
+              },
+              {
+                id: 3,
+                topics:
+                  "Cras quis nulla commodo, aliquam lectus sed, blandit augue.",
+                category: "Improvements",
+                author: "Developer 21",
+                replies: "281",
+                views: "8.972",
+                lastPost: "Yesterday"
+              },
+              {
+                id: 4,
+                topics:
+                  "Cras quis nulla commodo, aliquam lectus sed, blandit augue.",
+                category: "Improvements",
+                author: "Developer 21",
+                replies: "281",
+                views: "8.972",
+                lastPost: "Yesterday"
+              }
+            ]}
+          />
+          <div className="text-center">
+            <Button className="btn btn-light btn-outline-dark rounded-0">
+              Browse Forums
+            </Button>
+          </div>
+        </section>
       </Fragment>
     );
   }

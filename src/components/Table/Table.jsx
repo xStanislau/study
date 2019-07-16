@@ -2,20 +2,26 @@ import React from "react";
 
 const Table = props => {
   return (
-    <table>
-      <thead>
-        <tr>
+    <table className="table">
+      <thead className="table-head">
+        <tr className="table-row">
           {props.cols.map(col => (
-            <th key={col.name}>{col.header}</th>
+            <th className="table-head-cell" key={col.name}>
+              {col.header}
+            </th>
           ))}
         </tr>
       </thead>
-      <tbody>
+      <tbody className="table-body">
         {props.rows.map(row => (
-          <tr key={row.id}>
-            {props.cols.map(col => (
-              <td key={col.name}>{row[col.name]}</td>
-            ))}
+          <tr className="table-row" key={row.id}>
+            {props.cols.map(col => {
+              return (
+                <td className="table-cell" key={col.name}>
+                  {row[col.name]}
+                </td>
+              );
+            })}
           </tr>
         ))}
       </tbody>

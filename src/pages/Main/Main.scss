@@ -16,7 +16,6 @@ main {
 }
 
 .promo-content {
-  // margin-top: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,28 +55,51 @@ main {
 }
 
 .media-text {
-  max-width: 539.9px;
+  max-width: 539px;
   min-width: 450px;
   padding: 10px;
   box-sizing: border-box;
   color: white;
 }
 
-@media (max-width: $break-point-medium) {
+@media (max-width: $break-point-lg) {
   .media-section {
     flex-wrap: wrap;
     padding-left: 40px;
     padding-right: 40px;
+    .media-text {
+      width: 100%;
+      min-width: 100%;
+      margin-bottom: 40px;
+    }
+    .media-text {
+      margin-bottom: 40px;
+    }
+    .media-video {
+      max-width: none;
+      width: 100%;
+    }
   }
+}
 
-  .media-text {
-    margin-bottom: 40px;
-  }
-
-  .media-video {
-    min-width: 450px;
-    max-width: none;
-    width: 100%;
+@media (max-width: $break-point-sm) {
+  .media-section {
+    min-width: 100%;
+    padding: 30px 10px 30px 10px;
+    justify-content: center;
+    .media-text {
+      width: 100%;
+      padding: 0;
+      margin-bottom: 40px;
+    }
+    .media-video {
+      width: 100%;
+      padding: 0;
+      max-width: none;
+      .video {
+        padding: 0;
+      }
+    }
   }
 }
 
@@ -86,6 +108,7 @@ main {
   background-color: rgba(0, 0, 0, 0.75);
   color: white;
   height: 303px;
+  padding: 10px 20px 20px 20px;
 
   .statistics-list {
     width: 100%;
@@ -110,6 +133,163 @@ main {
   .card {
     width: 311px;
     margin: 20px;
-    min-width: 350px;
+  }
+}
+@media (max-width: $break-point-sm) {
+  .community {
+    padding: 40px 10px 0px 10px;
+    .card {
+      margin: 0px 0px 20px;
+      max-width: 300px;
+    }
+  }
+}
+
+.projects {
+  background-color: #363c44;
+  padding: 50px 20px 60px 20px;
+  .projects-title {
+    font-size: 36px;
+    margin-bottom: 25px;
+    color: white;
+  }
+  .projects-menu {
+    font-size: 18px;
+    font-weight: lighter;
+    overflow: auto;
+    color: white;
+  }
+  .projects-grid {
+    margin: 40px 0;
+    .project {
+      width: 30%;
+      max-width: 311px;
+      min-width: 300px;
+      min-height: 300px;
+      font-size: 14px;
+      background-color: #ffcf27;
+      margin: 3% 3%;
+      padding: 29px 26px 20px 26px;
+      .project-title {
+        font-size: 22px;
+        font-weight: bold;
+        margin-top: 0px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+@media (max-width: $break-point-xl) {
+  .projects {
+    .projects-grid {
+      margin: 40px 0px;
+      .project {
+        width: 25%;
+      }
+    }
+  }
+}
+
+@media (max-width: $break-point-md) {
+  .projects {
+    .projects-grid {
+      .project {
+        width: 100%;
+        max-width: 400px;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.forums {
+  padding: 30px;
+
+  .table {
+    text-align: left;
+    border: 1px solid #f2f2f2;
+    .table-head {
+      border-bottom: 1px solid #f2f2f2;
+    }
+  }
+}
+
+@media only screen and (max-width: $break-point-md) {
+  .table,
+  .table-head,
+  .table-body,
+  .table-head-cell,
+  .table-cell,
+  .table-row {
+    display: block;
+  }
+  .table {
+    border: none;
+    .table-head .table-row {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    .table-row {
+      border-bottom: 2px solid #f2f2f2;
+    }
+    .table-cell {
+      border: none;
+      border-bottom: none;
+      position: relative;
+      padding-left: 5%;
+      margin-left: 150px;
+    }
+
+    .table-cell:before {
+      position: absolute;
+      top: 12px;
+      left: 6px;
+      width: 100%;
+      font-weight: bold;
+      padding-right: 40px;
+      white-space: nowrap;
+      margin-left: -150px;
+    }
+
+    .table-cell:nth-of-type(1):before {
+      content: "Topics";
+    }
+
+    .table-cell:nth-of-type(2):before {
+      content: "Category";
+    }
+
+    .table-cell:nth-of-type(3):before {
+      content: "Author";
+    }
+
+    .table-cell:nth-of-type(4):before {
+      content: "Replies";
+    }
+
+    .table-cell:nth-of-type(5):before {
+      content: "Views";
+    }
+
+    .table-cell:nth-of-type(6):before {
+      content: "Last Post";
+    }
+  }
+}
+
+@media only screen and (max-width: $break-point-sm) {
+  .table {
+    .table-cell:before {
+      display: none;
+    }
+    .table-cell {
+      border: none;
+      border-bottom: none;
+      position: relative;
+      padding-left: 5%;
+      margin-left: 0;
+    }
   }
 }

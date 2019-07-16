@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Header from "../../../../components/Header/Header";
-import Icon from "../../../../components/Icon/Icon";
 import Logo from "../../../../components/Logo/Logo";
 import Button from "../../../../components/Button/Button";
 
@@ -14,7 +13,7 @@ const MainHeader = () => {
           Profile
         </Link>
         <Link to="/auth">
-          <Button className="btn btn-outline-light">Login</Button>
+          <Button className="btn btn-outline-light rounded-0">Login</Button>
         </Link>
       </div>
     </Header>

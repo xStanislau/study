@@ -37,7 +37,7 @@
     cursor: pointer;
   }
 
-  .header-menu.open {
+  .header-menu {
     display: flex;
     width: 100%;
     font-size: 18px;
@@ -61,7 +61,7 @@
     }
   }
 
-  .header-menu.open :hover {
+  .header-menu.open {
     .menu-item {
       &:hover {
         border: none;

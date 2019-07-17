@@ -4,7 +4,7 @@ const initialState = {
   isOpen: false
 };
 
-export function uiReducer(state = initialState, action) {
+const popupReducer = (state = initialState, action) => {
   switch (action.type) {
     case OPEN_POPUP:
       return {
@@ -21,4 +21,6 @@ export function uiReducer(state = initialState, action) {
     default:
       return state;
   }
-}
+};
+
+export default popupReducer;

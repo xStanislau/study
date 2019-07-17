@@ -4,6 +4,7 @@ import "./index.scss";
 import * as serviceWorker from "./serviceWorker";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navigation from "./navigation/Navigation";
+
 ReactDOM.render(<Navigation />, document.getElementById("root"));
 
 // If you want your app to work offline and load faster, you can change

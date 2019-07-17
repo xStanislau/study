@@ -12,13 +12,16 @@ const Article = ({
 }) => {
   return (
     <div className={className}>
-      <img src={imgSrc} alt={imgAlt} />
-      <section>
-        <div className="badge">{tagText}</div>
-        <h2>{title}</h2>
-        <span>{creator}</span>
-        <span>{date}</span>
-        <p>{text}</p>
+      <img className={`${className}-img`} src={imgSrc} alt={imgAlt} />
+      <section className={`${className}-description`}>
+        <div className={`${className}-tag`}>{tagText}</div>
+        <h2 className={`${className}-title`}>{title}</h2>
+        <span className={`${className}-subscription`}>
+          by <span className={`${className}-creator`}>{creator}</span> on{" "}
+          <span className={`${className}-date`}>{date}</span>
+        </span>
+        <p className={`${className}-text`}>{text}</p>
+        <span>Read more...</span>
       </section>
     </div>
   );

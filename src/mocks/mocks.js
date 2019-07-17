@@ -1,4 +1,9 @@
 const mockData = {
+  statistics: {
+    developers: "13.435",
+    software: "1.943",
+    topics: "6.346"
+  },
   card: {
     texts: [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Ut eget imperdiet neque. In volutpat ante semper diam molestie, et aliquam erat laoreet. Sed sit amet arcu aliquet, molestie justo at, auctor nunc.",
@@ -55,28 +60,73 @@ const mockData = {
         "Discover details about the IBM Design Language animation update, where the moving parts of the user interface meet the business machine."
     }
   ],
-  posts: [{
-    tag: "News",
-    title: "Machines in Motion : IBM Design Language" ,
-    creator: "pixroom",
-    date: "Dec 11, 2015",
-    text: "Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. In malesuada enim in dolor euismod, id commodo mi consectetur. Curabitur at vestibulum nisi. Nullam vehicula nisi velit. Mauris turpis nisl, molestie ut ipsum et, suscipit vehicula odio. Vestibulum interdum vestibulum felis ac molestie. Praesent aliquet quam et libero dictum, vitae dignissim leo eleifend. In in turpis turpis. Quisque justo turpis, vestibulum non enim nec, tempor mollis mi. Sed vel tristique quam."
-  },
-  {
-    tag: "Blog",
-    title: "Learn, Do and Be Inspired : The IBM Design Language" ,
-    creator: "pixroom",
-    date: "Dec 11, 2015",
-    text: "Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. In malesuada enim in dolor euismod, id commodo mi consectetur. Curabitur at vestibulum nisi. Nullam vehicula nisi velit. Mauris turpis nisl, molestie ut ipsum et, suscipit vehicula odio. Vestibulum interdum vestibulum felis ac molestie. Praesent aliquet quam et libero dictum, vitae dignissim leo eleifend. In in turpis turpis. Quisque justo turpis, vestibulum non enim nec, tempor mollis mi. Sed vel tristique quam."
-  },
-  {
-    tag: "Iconic Project",
-    title: "IBM Verse : Focus. Find. Do" ,
-    creator: "pixroom",
-    date: "Dec 11, 2015",
-    text: "Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. In malesuada enim in dolor euismod, id commodo mi consectetur. Curabitur at vestibulum nisi. Nullam vehicula nisi velit. Mauris turpis nisl, molestie ut ipsum et, suscipit vehicula odio. Vestibulum interdum vestibulum felis ac molestie. Praesent aliquet quam et libero dictum, vitae dignissim leo eleifend. In in turpis turpis. Quisque justo turpis, vestibulum non enim nec, tempor mollis mi. Sed vel tristique quam."
-  }
-]
+  posts: [
+    {
+      imgSrc: "https://place-hold.it/250x250",
+      tag: "News",
+      title: "Machines in Motion : IBM Design Language",
+      creator: "pixroom",
+      date: "Dec 11, 2015",
+      text:
+        "Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. In malesuada enim in dolor euismod, id commodo mi consectetur. Curabitur at vestibulum nisi. Nullam vehicula nisi velit. Mauris turpis nisl, molestie ut ipsum et, suscipit vehicula odio. Vestibulum interdum vestibulum felis ac molestie. Praesent aliquet quam et libero dictum, vitae dignissim leo eleifend. In in turpis turpis. Quisque justo turpis, vestibulum non enim nec, tempor mollis mi. Sed vel tristique quam."
+    },
+    {
+      imgSrc: "https://place-hold.it/250x250",
+      tag: "Blog",
+      title: "Learn, Do and Be Inspired : The IBM Design Language",
+      creator: "pixroom",
+      date: "Dec 11, 2015",
+      text:
+        "Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. In malesuada enim in dolor euismod, id commodo mi consectetur. Curabitur at vestibulum nisi. Nullam vehicula nisi velit. Mauris turpis nisl, molestie ut ipsum et, suscipit vehicula odio. Vestibulum interdum vestibulum felis ac molestie. Praesent aliquet quam et libero dictum, vitae dignissim leo eleifend. In in turpis turpis. Quisque justo turpis, vestibulum non enim nec, tempor mollis mi. Sed vel tristique quam."
+    },
+    {
+      imgSrc: "https://place-hold.it/250x250",
+      tag: "Iconic Project",
+      title: "IBM Verse : Focus. Find. Do",
+      creator: "pixroom",
+      date: "Dec 11, 2015",
+      text:
+        "Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. In malesuada enim in dolor euismod, id commodo mi consectetur. Curabitur at vestibulum nisi. Nullam vehicula nisi velit. Mauris turpis nisl, molestie ut ipsum et, suscipit vehicula odio. Vestibulum interdum vestibulum felis ac molestie. Praesent aliquet quam et libero dictum, vitae dignissim leo eleifend. In in turpis turpis. Quisque justo turpis, vestibulum non enim nec, tempor mollis mi. Sed vel tristique quam."
+    }
+  ],
+  forums: [
+    {
+      id: 1,
+      topics: "Cras quis nulla commodo, aliquam lectus sed, blandit augue.",
+      category: "Improvements",
+      author: "Developer 21",
+      replies: "281",
+      views: "8.972",
+      lastPost: "Yesterday"
+    },
+    {
+      id: 2,
+      topics: "Cras quis nulla commodo, aliquam lectus sed, blandit augue.",
+      category: "Improvements",
+      author: "Developer 21",
+      replies: "281",
+      views: "8.972",
+      lastPost: "Yesterday"
+    },
+    {
+      id: 3,
+      topics: "Cras quis nulla commodo, aliquam lectus sed, blandit augue.",
+      category: "Improvements",
+      author: "Developer 21",
+      replies: "281",
+      views: "8.972",
+      lastPost: "Yesterday"
+    },
+    {
+      id: 4,
+      topics: "Cras quis nulla commodo, aliquam lectus sed, blandit augue.",
+      category: "Improvements",
+      author: "Developer 21",
+      replies: "281",
+      views: "8.972",
+      lastPost: "Yesterday"
+    }
+  ]
 };
 
 export default mockData;

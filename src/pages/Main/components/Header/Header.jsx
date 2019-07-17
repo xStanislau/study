@@ -4,12 +4,14 @@ import Header from "../../../../components/Header/Header";
 import Logo from "../../../../components/Logo/Logo";
 import Button from "../../../../components/Button/Button";
 
-const MainHeader = () => {
+const MainHeader = ({ className }) => {
   return (
-    <Header className="d-flex justify-content-between align-items-center">
+    <Header
+      className={`${className} d-flex justify-content-between align-items-center`}
+    >
       <Logo className="logo">Logo</Logo>
-      <div>
-        <Link to="/profile" className="mr-3">
+      <div className="text-white">
+        <Link to="/profile" className="mr-3 text-white">
           Profile
         </Link>
         <Link to="/auth">

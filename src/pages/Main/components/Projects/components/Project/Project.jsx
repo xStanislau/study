@@ -10,7 +10,7 @@ const Project = ({
   return (
     <div className={className}>
       <span className="project-technology">{technology}</span>
-      <h2 className="project-title">{title}</h2>
+      <h3 className="project-title">{title}</h3>
       <span className="project-developers">{numberOfDevelopers}</span>
       <span className="project-description">{description}</span>
       <span className="project-read-more">Read more...</span>

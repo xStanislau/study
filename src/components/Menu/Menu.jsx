@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import Item from "./MenuItem/Item";
+import ListItem from "./MenuItem/Item";
 import "./Menu.scss";
 
 const Menu = ({ className, hrefs, items, isOpen, itemClassName }) => {
@@ -10,10 +10,14 @@ const Menu = ({ className, hrefs, items, isOpen, itemClassName }) => {
   return (
     <ul className={classes}>
       {items.map((item, index) => {
-        return (
-          <Item className={itemClassName} key={item}>
-            {hrefs ? <Link to={hrefs[index]}>{item}</Link> : item}
-          </Item>
+        return hrefs ? (
+          <ListItem key={item}>
+            <Link to={hrefs[index]}>{item}</Link>
+          </ListItem>
+        ) : (
+          <ListItem className={itemClassName} key={item}>
+            {item}
+          </ListItem>
         );
       })}
     </ul>

@@ -5,15 +5,28 @@
   top: 0;
   width: 100%;
   min-width: 300px;
-  padding: 30px;
+  font-size: 14px;
+  padding: 15px 69px;
   z-index: 1;
   transition: all 0.24s ease-in-out;
+  color: white;
+  .btn {
+    width: 100px;
+  }
+  .logo {
+    font-family: "HelveticaNeue";
+  }
+  .profile {
+    font-family: "HelveticaNeue";
+    font-weight: lighter;
+  }
 }
 
 .fixed {
   top: 0;
   width: 100%;
   position: fixed;
-  padding: 20px 30px;
+  background-color: black;
+  padding: 10px 69px;
   transition: all 0.24s ease-in-out;
 }

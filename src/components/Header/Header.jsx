@@ -25,7 +25,7 @@ class Header extends React.Component {
     const fixed = this.state.scroll > this.state.top ? "fixed" : "";
     const classes = classNames("header", className, { fixed });
 
-    return <div className={classes}>{children}</div>;
+    return <header className={classes}>{children}</header>;
   }
 }
 

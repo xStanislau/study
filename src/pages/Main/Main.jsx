@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import MainHeader from "./components/Header/Header";
 import News from "./components/News/News";
 import StartGuide from "./components/StartGuide/StartGuide";
@@ -15,8 +15,8 @@ import "./Main.scss";
 class Main extends Component {
   render() {
     return (
-      <Fragment>
-        <MainHeader className="main-header" />
+      <>
+        <MainHeader className="main-header d-flex justify-content-center" />
         <Promo className="promo" />
         <Media className="media" />
         <Statistics className="statistics" />
@@ -26,7 +26,7 @@ class Main extends Component {
         <News className="news" />
         <StartGuide className="start-guide" />
         <Footer className="footer" />
-      </Fragment>
+      </>
     );
   }
 }

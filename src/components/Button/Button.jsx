@@ -4,6 +4,10 @@ import classNames from "classnames";
 import "./Button.scss";
 
 const Button = ({ onClick, type, className, children, disabled, ...attrs }) => {
+  // edits
+  // classes ?
+  // why not use bootstrap component?
+
   const classes = classNames("btn", className, { disabled });
   return (
     <button

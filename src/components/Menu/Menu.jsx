@@ -5,6 +5,10 @@ import { Link } from "react-router-dom";
 import ListItem from "./MenuItem/Item";
 import "./Menu.scss";
 
+// edits
+// Menu -> ProjectsMenu (ListButtons)
+// Link -> Buttons (Tabs)
+
 const Menu = ({ className, hrefs, items, isOpen, itemClassName }) => {
   const classes = classNames("menu", className, { open: isOpen });
   return (
@@ -23,6 +27,10 @@ const Menu = ({ className, hrefs, items, isOpen, itemClassName }) => {
     </ul>
   );
 };
+
+// Good job!!!!!!!!
+// |
+// V
 
 Menu.propTypes = {
   hrefs: PropTypes.array,

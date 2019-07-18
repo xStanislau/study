@@ -7,6 +7,8 @@ const Project = ({
   description,
   className
 }) => {
+  // edits
+  // add different content
   return (
     <div className={className}>
       <span className="project-technology">{technology}</span>

@@ -1,4 +1,13 @@
 import React from "react";
+// edits
+// imgSrc - add true images
+// tagText - Badge react-bootstrap
+// h2 ? -> h4
+// news-article-img -> news-article__img
+// news-article-description -> news-article__description
+// use <article> <small> http://htmlbook.ru/html/article
+// .news-article-creator, .news-article-date -> strong
+// <span>Read more...</span> -> <Link to="">
 
 const Article = ({
   className,

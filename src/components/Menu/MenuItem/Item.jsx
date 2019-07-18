@@ -5,6 +5,8 @@ import "./Item.scss";
 
 const Item = props => {
   const { className, children } = props;
+  // edits
+  // classes ?
   const classes = classNames("menu-item", className);
   return <li className={classes}>{children}</li>;
 };

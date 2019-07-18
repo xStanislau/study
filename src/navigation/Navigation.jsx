@@ -17,6 +17,10 @@ export default () => {
     <Provider store={store}>
       <Router>
         <Switch>
+          {/* edits */}
+          {/* /main-page -> / */}
+          {/* /auth -> /login */}
+          {/* Main -> Home */}
           <Redirect exact from="/" to="/auth" />
           <Route path="/auth" component={Login} />
           <Route exact path="/main-page" component={Main} />

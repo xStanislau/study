@@ -25,6 +25,9 @@ class Login extends Component {
     }
   };
 
+  // edits
+  // images -> images folder
+
   render() {
     return (
       <Fragment>

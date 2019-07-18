@@ -3,6 +3,8 @@ const Card = props => {
   const { text, title } = props;
   return (
     <div className="card">
+      {/* edits */}
+      {/* true images */}
       <img
         className="card-img-top"
         src="https://place-hold.it/200x150"

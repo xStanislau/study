@@ -9,6 +9,8 @@ const News = ({ className }) => {
       <h1 className={`${className}-title text-center mb-5`}>
         News, Blog and Event
       </h1>
+      {/* edits */}
+      {/* section in section */}
       <section>
         {posts.map(post => {
           const { imgSrc, tag, title, creator, text, date } = post;

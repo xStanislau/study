@@ -3,6 +3,11 @@ import Menu from "../../../../components/Menu/Menu";
 
 const Footer = ({ className }) => {
   return (
+    // edits
+    // use <footer>
+    // Menu -> ListLinks
+    // footer menu  -> mockdata
+
     <section className={`${className} d-flex justify-content-between`}>
       <Menu
         className={`${className}-info d-flex`}

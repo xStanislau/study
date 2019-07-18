@@ -11,6 +11,8 @@ const MainHeader = ({ className }) => {
     >
       <Logo className="logo">Logo</Logo>
       <div className="text-white">
+        {/* edits */}
+        {/* Link -> NavLink with active class */}
         <Link to="/profile" className="mr-3 text-white">
           Profile
         </Link>

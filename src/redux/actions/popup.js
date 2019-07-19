@@ -1,12 +1,11 @@
-export const OPEN_POPUP = "OPEN_MODAL";
-export const CLOSE_POPUP = "CLOSE_MODAL";
+import * as t from "../actionTypes/popup";
 
 const openPopup = () => ({
-  type: OPEN_POPUP
+  type: t.OPEN_POPUP
 });
 
 const closePopup = () => ({
-  type: CLOSE_POPUP
+  type: t.CLOSE_POPUP
 });
 
 export default {

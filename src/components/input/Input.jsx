@@ -15,7 +15,7 @@ const Input = ({
   children,
   withicon
 }) => {
-  const withIcon = classNames({withicon});
+  const withIcon = classNames({ withicon });
   const classess = classNames("form-control", className);
   return (
     <Field
@@ -23,10 +23,13 @@ const Input = ({
       type={type}
       disabled={disabled}
       render={({ input, meta }) => {
+        if (meta.submitError) {
+          debugger;
+        }
         return (
           <div className="form-group">
             {label && <label htmlFor={id}>{label}</label>}
-            <div className={withIcon} >
+            <div className={withIcon}>
               <input
                 className={classess}
                 id={id}
@@ -35,8 +38,10 @@ const Input = ({
               />
               {children}
             </div>
-            {meta.touched && meta.error && (
-              <span className="text-danger">{meta.error}</span>
+            {meta.touched && (meta.error || meta.submitError) && (
+              <span className="text-danger">
+                {meta.error || meta.submitError}
+              </span>
             )}
           </div>
         );

@@ -14,6 +14,8 @@ import "./Home.scss";
 
 class Main extends Component {
   render() {
+    debugger;
+    let a = this.props;
     return (
       <>
         <MainHeader className="main-header d-flex justify-content-center" />

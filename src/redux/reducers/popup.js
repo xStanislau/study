@@ -1,4 +1,4 @@
-import { OPEN_POPUP, CLOSE_POPUP } from "../actions/popup";
+import { OPEN_POPUP, CLOSE_POPUP } from "../actionTypes/popup";
 
 const initialState = {
   isOpen: false

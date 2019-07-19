@@ -1,4 +1,9 @@
 const mockData = {
+  credentials: {
+    userName: "Admin",
+    password: "Admin12345"
+  },
+
   statistics: {
     developers: "13.435",
     software: "1.943",

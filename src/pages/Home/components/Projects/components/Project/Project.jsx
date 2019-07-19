@@ -13,7 +13,7 @@ const Project = ({
       <h4 className="project-title">{title}</h4>
       <span className="project-developers">{numberOfDevelopers}</span>
       <span className="project-description">{description}</span>
-      <Link href="#" className="project-read-more">
+      <Link to="#" className="project-read-more">
         Read more...
       </Link>
     </div>

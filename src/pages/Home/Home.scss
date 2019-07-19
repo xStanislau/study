@@ -39,7 +39,7 @@
   background: url("/images/pic.jpg") no-repeat;
   background-position: center center;
   background-size: cover;
-  height: 702px;
+  height: 100vh;
   text-align: center;
   font-family: "IBM Plex Sans", sans-serif;
 
@@ -49,7 +49,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: calc(100% - 65px);
+    min-height: calc(100vh);
     font-weight: 300;
     strong {
       font-weight: bold;
@@ -71,7 +71,20 @@
     font-weight: 500;
   }
 }
-
+@media (max-width: $break-point-sm) {
+  .promo {
+    .promo-content {
+      .promo-title {
+        font-size: 30px;
+        margin-bottom: 10px;
+        font-weight: 300;
+      }
+      .promo-sub-title {
+        font-size: 20px;
+      }
+    }
+  }
+}
 .header.fixed .header-menu {
   top: 80px;
 }
@@ -157,14 +170,13 @@
     justify-content: center;
     .wrapper {
       flex-wrap: wrap;
-      padding-left: 0px;
-      padding-right: 0px;
+      padding-left: 10px;
+      padding-right: 10px;
     }
     .media-text {
       width: 100%;
       min-width: 320px;
       text-align: left;
-      padding: 0;
     }
     .media-video {
       min-width: 320px;
@@ -487,20 +499,25 @@
   .btn {
     margin-right: 20px;
     margin-bottom: 10px;
-    width: 200px;
+  }
+  .btn {
+    &:last-child {
+      margin-right: 0;
+    }
   }
   .news-title {
     text-align: center;
   }
-  .news-article {
-    small {
-      font-size: 14px;
-    }
 
+  .news-article {
     display: flex;
     justify-content: space-between;
     font-size: 14px;
     margin-bottom: 40px;
+
+    small {
+      font-size: 14px;
+    }
     .news-article-img {
       max-width: 300px;
       height: auto;
@@ -542,6 +559,9 @@
     }
     .news-article {
       flex-wrap: wrap;
+      &:last-child {
+        margin-bottom: 100px;
+      }
       .news-article-img {
         width: 70%;
         max-width: none;

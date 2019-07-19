@@ -6,22 +6,25 @@ const mockData = {
   },
   cards: [
     {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Ut eget imperdiet neque. In volutpat ante semper diam molestie, et aliquam erat laoreet. Sed sit amet arcu aliquet, molestie justo at, auctor nunc.",
+      text:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Ut eget imperdiet neque. In volutpat ante semper diam molestie, et aliquam erat laoreet. Sed sit amet arcu aliquet, molestie justo at, auctor nunc.",
       title: "Contribute",
       imgSrc: "/images/mark-basarab-1OtUkD_8svc-unsplash.jpg"
     },
     {
-      text: "Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum, neque sem pretium metus, quis mollis nisl nunc et massa. Vestibulum sed metus in lorem tristique ullamcorper id vitae erat. Nulla mollis.",
+      text:
+        "Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum, neque sem pretium metus, quis mollis nisl nunc et massa. Vestibulum sed metus in lorem tristique ullamcorper id vitae erat. Nulla mollis.",
       title: "Collaborate",
       imgSrc: "/images/tim-swaan-eOpewngf68w-unsplash.jpg"
     },
     {
-      text: "Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliqua.",
+      text:
+        "Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliqua.",
       title: "Extend",
       imgSrc: "/images/wil-stewart-pHANr-CpbYM-unsplash.jpg"
     }
   ],
-  projectsMenu:     ["Trending", "Language", "Speeh", "Vision", "Data Insight"],
+  projectsMenu: ["Trending", "Language", "Speeh", "Vision", "Data Insight"],
   projects: [
     {
       technology: "Javascript",
@@ -48,8 +51,7 @@ const mockData = {
       technology: "Javascript",
       title: "IBM Cognative Catalyst Community",
       numberOfDevelopers: 15,
-      description:
-        " the user interface meet the business machine."
+      description: " the user interface meet the business machine."
     },
     {
       technology: "Javascript",
@@ -62,8 +64,7 @@ const mockData = {
       technology: "Javascript",
       title: "IBM Cognative Catalyst Community",
       numberOfDevelopers: 15,
-      description:
-        "Discover "
+      description: "Discover "
     }
   ],
   posts: [

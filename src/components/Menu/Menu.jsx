@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import ListItem from "./MenuItem/Item";
 import "./Menu.scss";
 
@@ -12,7 +12,13 @@ const Menu = ({ className, hrefs, items, isOpen, itemClassName }) => {
       {items.map((item, index) => {
         return hrefs ? (
           <ListItem key={item}>
-            <Link to={hrefs[index]}>{item}</Link>
+            <NavLink
+              className="link"
+              activeClassName="isActive"
+              to={hrefs[index]}
+            >
+              {item}
+            </NavLink>
           </ListItem>
         ) : (
           <ListItem className={itemClassName} key={item}>

@@ -38,7 +38,7 @@ class Login extends Component {
                   <Button onClick={this.openPopup}>modal</Button>
                   -or-
                   <Button>
-                    <Link to="/main-page">redirect</Link>
+                    <Link to="/">redirect</Link>
                   </Button>
                 </div>
                 <div className="d-flex align-items-center flex-column">

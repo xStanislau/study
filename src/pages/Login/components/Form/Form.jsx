@@ -9,7 +9,7 @@ import "./Form.scss";
 
 class LoginForm extends Component {
   onSubmit = () => {
-    this.props.history.push("/main-page");
+    this.props.history.push("/");
   };
 
   validate = values => {

@@ -10,7 +10,7 @@ import Media from "./components/Media/Media";
 import Promo from "./components/Promo/Promo";
 import Forums from "./components/Forums/Forums";
 
-import "./Main.scss";
+import "./Home.scss";
 
 class Main extends Component {
   render() {

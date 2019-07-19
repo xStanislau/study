@@ -14,7 +14,7 @@ const Promo = ({ className }) => {
             Solve problems collaboratively using IBM Watson
           </h2>
         </div>
-        <div>
+        <div className="container">
           <p className={`${className}-text text-center text-white`}>
             Be part of the innovation!
           </p>

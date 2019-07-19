@@ -14,11 +14,15 @@
     width: 100px;
   }
   .logo {
-    font-family: "HelveticaNeue";
+    font-family: "IBM Plex Sans", sans-serif;
   }
   .profile {
-    font-family: "HelveticaNeue";
+    font-family: "IBM Plex Sans", sans-serif;
     font-weight: lighter;
+  }
+  .profile.isActive {
+    text-decoration: underline;
+    color: darken($color: #fff, $amount: 20%);
   }
 }
 

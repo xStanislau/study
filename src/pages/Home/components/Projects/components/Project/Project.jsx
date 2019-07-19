@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const Project = ({
   technology,
   title,
@@ -10,10 +10,12 @@ const Project = ({
   return (
     <div className={className}>
       <span className="project-technology">{technology}</span>
-      <h3 className="project-title">{title}</h3>
+      <h4 className="project-title">{title}</h4>
       <span className="project-developers">{numberOfDevelopers}</span>
       <span className="project-description">{description}</span>
-      <a href="#" className="project-read-more">Read more...</a>
+      <Link href="#" className="project-read-more">
+        Read more...
+      </Link>
     </div>
   );
 };

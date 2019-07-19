@@ -5,7 +5,7 @@ import Button from "../../../../components/Button/Button";
 const News = ({ className }) => {
   const { posts } = mockData;
   return (
-    <section className={className}>
+    <section className={`${className} pt-50`}>
       <div className="wrapper">
         <h1 className={`${className}-title text-center mb-5`}>
           News, Blog and Event

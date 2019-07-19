@@ -5,11 +5,11 @@ import mockData from "../../../../mocks/mocks";
 import Button from "../../../../components/Button/Button";
 
 const Projects = ({ className }) => {
-  const {projects, projectsMenu} = mockData;
+  const { projects, projectsMenu } = mockData;
   return (
-    <section className={`${className}`}>
+    <section className={`${className} pt-50 pb-60`}>
       <div className="wrapper">
-        <h2 className={`${className}-title text-center`}>Projects</h2>
+        <h3 className={`${className}-title text-center`}>Projects</h3>
         <Menu
           className={`${className}-menu d-flex align-items-start`}
           items={projectsMenu}

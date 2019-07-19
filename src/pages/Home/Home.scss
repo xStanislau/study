@@ -1,23 +1,37 @@
 @import "./../../styles/theme/theme.scss";
+
 .h1 {
-  font-family: "HelveticaNeue Light";
   font-size: 36px;
+  font-family: "IBM Plex Sans", sans-serif;
   font-weight: 300;
 }
+
 .wrapper {
   max-width: $base-content-width;
   width: 100%;
   margin: 0 auto;
 }
 
-.v-pad-50_60 {
-  padding: 50px 60px;
+.pt-50 {
+  padding-top: 50px;
+}
+
+.pb-60 {
+  padding-bottom: 60px;
 }
 
 .promo,
 .media-section {
   .btn {
     width: 165px;
+  }
+}
+.news,
+.projects,
+.start-guide,
+.forums {
+  .btn {
+    width: 200px;
   }
 }
 
@@ -27,7 +41,8 @@
   background-size: cover;
   height: 702px;
   text-align: center;
-  font-family: "HelveticaNeue Light";
+  font-family: "IBM Plex Sans", sans-serif;
+
   color: #363c44;
   .promo-content {
     display: flex;
@@ -35,17 +50,21 @@
     justify-content: center;
     align-items: center;
     min-height: calc(100% - 65px);
+    font-weight: 300;
     strong {
       font-weight: bold;
     }
+    .promo-title {
+      font-size: 44px;
+      margin-bottom: 10px;
+      font-weight: 300;
+    }
   }
-  .title {
-    font-size: 44px;
-    margin-bottom: 10px;
-  }
+
   .promo-sub-title {
     margin-bottom: 115px;
     font-size: 24px;
+    font-weight: 300;
   }
   .promo-text {
     font-size: 16px;
@@ -60,7 +79,8 @@
 .media-section {
   padding: 116px 20px;
   background-color: #9855d4;
-  font-family: "HelveticaNeue Light";
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 300;
   font-size: 16px;
   margin: 0 auto;
 
@@ -76,7 +96,6 @@
 
   .video {
     width: 100%;
-    padding: 10px;
     position: absolute;
     top: 0;
     left: 0;
@@ -118,8 +137,7 @@
       max-width: none;
       width: 100%;
       position: relative;
-      padding-bottom: 56.25%; 
-      padding-top: 25px;
+      padding-bottom: 56.25%;
       height: 0;
       .video {
         position: absolute;
@@ -160,7 +178,7 @@
   width: 100%;
   background-color: rgba(0, 0, 0, 0.75);
   color: white;
-  height: 303px;
+  min-height: 303px;
   padding: 10px 20px 20px 20px;
   .statistics-list {
     width: 100%;
@@ -186,7 +204,6 @@
   }
 }
 
-
 @media (max-width: $break-point-md) {
   .statistics {
     .statistics-list {
@@ -209,16 +226,19 @@
 }
 
 .community {
-  padding: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 143px;
   .community-title {
-    font-family: "HelveticaNeue Light";
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 300;
     font-size: 36px;
   }
   .card {
     width: 311px;
     margin: 20px 0;
     margin-right: 63px;
-    font-family: "HelveticaNeue";
+    font-family: "IBM Plex Sans", sans-serif;
     font-size: 13px;
     &:last-child {
       margin: 20px 0px 20px 0px;
@@ -257,7 +277,8 @@
   .projects-title {
     font-size: 36px;
     margin-bottom: 25px;
-    font-family: "HelveticaNeue Light";
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 300;
     color: white;
   }
   .projects-menu {
@@ -291,6 +312,7 @@
       width: 30%;
       max-width: 311px;
       min-width: 300px;
+      font-family: "IBM Plex Sans", sans-serif;
       font-size: 14px;
       background-color: #ffcf27;
       margin: 3% 3%;
@@ -346,9 +368,10 @@
 }
 
 .forums {
-  padding: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
   .table {
-    font-family: "HelveticaNeue";
+    font-family: "IBM Plex Sans", sans-serif;
     font-size: 14px;
     font-weight: normal;
     color: #303a4e;
@@ -455,22 +478,32 @@
 }
 
 .news {
-  padding: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 42px;
   color: white;
   background-color: #00b29e;
+  font-family: "IBM Plex Sans", sans-serif;
   .btn {
     margin-right: 20px;
     margin-bottom: 10px;
     width: 200px;
   }
+  .news-title {
+    text-align: center;
+  }
   .news-article {
+    small {
+      font-size: 14px;
+    }
+
     display: flex;
     justify-content: space-between;
     font-size: 14px;
     margin-bottom: 40px;
     .news-article-img {
-      min-width: 250px;
       max-width: 300px;
+      height: auto;
       margin-right: 20px;
     }
     .news-article-tag {
@@ -483,19 +516,52 @@
       font-size: 24px;
       margin: 11px 0 5px 0;
     }
+    .news-article-description {
+      margin-top: 15px;
+      .news-article-subscription {
+        margin-bottom: 9px;
+        display: block;
+      }
+    }
+
     .news-article-creator,
     .news-article-date {
       font-weight: bold;
+    }
+    a {
+      color: white;
+      text-decoration: none;
     }
   }
 }
 
 @media only screen and (max-width: $break-point-xl) {
   .news {
+    .news-title {
+      text-align: left;
+    }
     .news-article {
       flex-wrap: wrap;
       .news-article-img {
+        width: 70%;
+        max-width: none;
+        margin-right: 0;
         margin-bottom: 20px;
+      }
+      .news-article-description {
+        margin-top: 0px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: $break-point-md) {
+  .news {
+    .news-article {
+      flex-wrap: wrap;
+      .news-article-img {
+        width: 100%;
+        max-width: none;
+        margin-right: 0;
       }
     }
   }
@@ -519,7 +585,6 @@
         width: 100%;
         max-width: none;
         margin-right: 0;
-        margin-bottom: 20px;
       }
       .news-article-title {
         font-size: 19px;
@@ -530,9 +595,11 @@
 
 .start-guide {
   color: white;
+  font-family: "IBM Plex Sans", sans-serif;
   padding: 55px 20px 55px 20px;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.75);
+
   .start-guide-text {
     margin-bottom: 40px;
   }
@@ -543,13 +610,20 @@
 
 .footer {
   padding: 40px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 14px;
   .footer-info {
     font-size: 14px;
+
     &:last-child {
       margin-right: 0;
     }
     .menu-item {
       margin-right: 20px;
+      .link.isActive {
+        color: black;
+        text-decoration: underline;
+      }
       & > a {
         color: #6f7076;
         text-decoration: none;
@@ -562,6 +636,10 @@
       &:last-child {
         margin-right: 0;
       }
+      .link.isActive {
+        color: black;
+        text-decoration: none;
+      }
       & > a {
         color: #509afb;
         text-decoration: underline;
@@ -571,8 +649,22 @@
 }
 
 @media only screen and (max-width: $break-point-sm) {
-  .footer-info,
-  .footer-social {
-    flex-direction: column;
+  .footer {
+    .wrapper {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+    .footer-info {
+      margin-bottom: 20px;
+    }
+    .footer-info,
+    .footer-social {
+      flex-direction: column;
+      .menu-item {
+        margin-bottom: 10px;
+        margin-right: 0;
+      }
+    }
   }
 }

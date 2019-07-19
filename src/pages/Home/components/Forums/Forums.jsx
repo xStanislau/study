@@ -6,9 +6,9 @@ import mockData from "../../../../mocks/mocks";
 const Forums = ({ className }) => {
   const { forums } = mockData;
   return (
-    <section className={`${className} text-center mb-5`}>
+    <section className={`${className} pt-50 pb-60 text-center `}>
       <div className="wrapper">
-        <h2 className="text-center mb-4">Forums</h2>
+        <h3 className="text-center mb-4">Forums</h3>
         <Table
           cols={[
             { header: "Topics", name: "topics" },

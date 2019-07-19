@@ -3,17 +3,17 @@ import mockData from "../../../../mocks/mocks";
 import Card from "../../../../components/Card/Card";
 
 const Community = ({ className }) => {
-  const { card } = mockData;
+  const { cards } = mockData;
   return (
     <section className={className}>
-      <section className="wrapper">
+      <div className="wrapper">
         <h2 className="text-center mb-3 community-title">Comunity Value</h2>
         <div className="d-flex justify-content-center flex-wrap">
-          <Card title={card.titles.contribute} text={card.texts[0]} />
-          <Card title={card.titles.collaborate} text={card.texts[1]} />
-          <Card title={card.titles.extend} text={card.texts[2]} />
+          {cards.map((card) => {
+            return <Card imgSrc={card.imgSrc} title={card.title} text={card.text} />
+          }) }
         </div>
-      </section>
+      </div>
     </section>
   );
 };

@@ -1,11 +1,11 @@
 import React from "react";
 const Card = props => {
-  const { text, title } = props;
+  const { text, title, imgSrc } = props;
   return (
     <div className="card">
       <img
         className="card-img-top"
-        src="https://place-hold.it/200x150"
+        src={imgSrc}
         alt="Card cap"
       />
       <div className="card-body">

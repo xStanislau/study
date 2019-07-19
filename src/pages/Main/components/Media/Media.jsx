@@ -18,10 +18,15 @@ const Media = ({ className }) => {
           <Button className="btn-outline-light rounded-0">Get Started</Button>
         </div>
         <div className={`${className}-video `}>
-          <video className=" video" controls>
-            <source src="movie.mp4" type="video/mp4" />
+          <iframe
+            className="video"
+            src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0"
+            frameBorder="0"
+          />
+          {/* <video className="video" controls>
+            <source src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1" />
             <source src="movie.ogg" type="video/ogg" />
-          </video>
+          </video> */}
         </div>
       </div>
     </section>

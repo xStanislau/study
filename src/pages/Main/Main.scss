@@ -22,7 +22,7 @@
 }
 
 .promo {
-  background: url("./pic.jpg") no-repeat;
+  background: url("/images/pic.jpg") no-repeat;
   background-position: center center;
   background-size: cover;
   height: 702px;
@@ -71,12 +71,16 @@
   .media-video {
     max-width: 460px;
     width: 100%;
+    position: relative;
   }
 
   .video {
     width: 100%;
-    height: auto;
     padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
     box-sizing: border-box;
   }
 
@@ -113,6 +117,17 @@
     .media-video {
       max-width: none;
       width: 100%;
+      position: relative;
+      padding-bottom: 56.25%; 
+      padding-top: 25px;
+      height: 0;
+      .video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 }
@@ -122,6 +137,11 @@
     min-width: 100%;
     padding: 30px 10px 30px 10px;
     justify-content: center;
+    .wrapper {
+      flex-wrap: wrap;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
     .media-text {
       width: 100%;
       min-width: 320px;
@@ -131,11 +151,7 @@
     .media-video {
       min-width: 320px;
       width: 100%;
-      padding: 0;
       max-width: none;
-      .video {
-        padding: 0;
-      }
     }
   }
 }
@@ -170,6 +186,17 @@
   }
 }
 
+
+@media (max-width: $break-point-md) {
+  .statistics {
+    .statistics-list {
+      flex-direction: column;
+    }
+    .statistics-list-item {
+      margin-right: 0px;
+    }
+  }
+}
 @media (max-width: $break-point-sm) {
   .statistics {
     .statistics-list {
@@ -207,6 +234,7 @@
 @media (max-width: $break-point-md) {
   .community {
     .card {
+      width: 80%;
       margin: 20px;
     }
   }
@@ -218,7 +246,7 @@
     .card {
       margin-right: 0;
       margin: 0px 0px 20px;
-      max-width: 300px;
+      width: 100%;
     }
   }
 }
@@ -263,16 +291,28 @@
       width: 30%;
       max-width: 311px;
       min-width: 300px;
-      min-height: 300px;
       font-size: 14px;
       background-color: #ffcf27;
       margin: 3% 3%;
       padding: 29px 26px 20px 26px;
+      .project-technology {
+        margin-bottom: 20px;
+      }
       .project-title {
         font-size: 22px;
         font-weight: bold;
         margin-top: 0px;
-        margin-bottom: 5px;
+        margin-bottom: 20px;
+      }
+      .project-developers {
+        margin-bottom: 20px;
+      }
+      .project-description {
+        margin-bottom: 20px;
+      }
+      .project-read-more {
+        color: black;
+        margin-top: auto;
       }
     }
   }
@@ -430,7 +470,7 @@
     margin-bottom: 40px;
     .news-article-img {
       min-width: 250px;
-      height: 250px;
+      max-width: 300px;
       margin-right: 20px;
     }
     .news-article-tag {
@@ -476,7 +516,9 @@
 
     .news-article {
       .news-article-img {
-        margin: 0 auto;
+        width: 100%;
+        max-width: none;
+        margin-right: 0;
         margin-bottom: 20px;
       }
       .news-article-title {

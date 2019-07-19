@@ -11,9 +11,9 @@ const Article = ({
   text
 }) => {
   return (
-    <div className={className}>
+    <article className={className}>
       <img className={`${className}-img`} src={imgSrc} alt={imgAlt} />
-      <section className={`${className}-description`}>
+      <div className={`${className}-description`}>
         <div className={`${className}-tag`}>{tagText}</div>
         <h2 className={`${className}-title`}>{title}</h2>
         <span className={`${className}-subscription`}>
@@ -22,8 +22,8 @@ const Article = ({
         </span>
         <p className={`${className}-text`}>{text}</p>
         <span>Read more...</span>
-      </section>
-    </div>
+      </div>
+    </article>
   );
 };
 

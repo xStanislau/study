@@ -16,10 +16,10 @@ const logInSuccessed = () => ({
 const logIn = () => async dispatch => {
   dispatch(logInStart());
   try {
-    logInSuccessed();
+    dispatch(logInSuccessed());
     localStorage.setItem("user", JSON.stringify({ isAuthorized: true }));
   } catch (error) {
-    logInFailed(error);
+    dispatch(logInFailed(error));
   }
 };
 

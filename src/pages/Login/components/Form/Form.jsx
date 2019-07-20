@@ -19,7 +19,6 @@ class LoginForm extends Component {
     ) {
       return { password: "The username or password you entered is incorrect" };
     } else {
-      logIn();
       this.props.history.push("/profile");
     }
   };

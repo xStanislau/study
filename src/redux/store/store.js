@@ -13,7 +13,6 @@ export default function configureStore() {
         window.__REDUX_DEVTOOLS_EXTENSION__()
     )
   );
-  debugger;
   if (!(localStorage.getItem("user") == null)) {
     const user = JSON.parse(localStorage.getItem("user") == null);
     if (!!user.isAuthorized) {

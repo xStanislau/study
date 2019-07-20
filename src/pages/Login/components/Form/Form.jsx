@@ -34,13 +34,11 @@ class LoginForm extends Component {
   };
 
   render() {
-    debugger;
     return (
       <Form
         onSubmit={this.onSubmit}
         validate={this.validate}
         render={({ handleSubmit, pristine, invalid }) => {
-          debugger;
           return (
             <form className="login-form" onSubmit={handleSubmit}>
               <Input

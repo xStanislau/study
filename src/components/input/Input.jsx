@@ -24,7 +24,6 @@ const Input = ({
       disabled={disabled}
       render={({ input, meta }) => {
         if (meta.submitError) {
-          debugger;
         }
         return (
           <div className="form-group">

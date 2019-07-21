@@ -1,11 +1,12 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
+import checkAuth from "../../utils/checkAuth";
 
 const AuthRoute = Route => props => {
-  const { isAuthorized } = props;
-
+  const isAuthorized = checkAuth();
   if (!isAuthorized) {
-    return <Redirect to="login" />;
+
+    return <Redirect to="/login" />;
   }
 
   return <Route {...props} />;

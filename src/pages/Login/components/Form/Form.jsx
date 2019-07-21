@@ -5,9 +5,11 @@ import Input from "../../../../components/input/Input";
 import Icon from "../../../../components/Icon/Icon";
 import { checkPassword } from "./../../../../utils/validation";
 import { withRouter } from "react-router-dom";
-import logIn from "../../../../redux/actions/login";
+import actions from "../../../../redux/actions/login";
 import mockData from "../../../../mocks/mocks";
 import "./Form.scss";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 
 const { credentials } = mockData;
 
@@ -19,6 +21,7 @@ class LoginForm extends Component {
     ) {
       return { password: "The username or password you entered is incorrect" };
     } else {
+      this.props.login();
       this.props.history.push("/profile");
     }
   };
@@ -76,5 +79,9 @@ class LoginForm extends Component {
     );
   }
 }
+const {logIn} = actions;
+const mapDispatchToProps = dispatch => ({
+  login: bindActionCreators(logIn, dispatch)
+});
 
-export default withRouter(LoginForm);
+export default connect(null, mapDispatchToProps)(withRouter(LoginForm));

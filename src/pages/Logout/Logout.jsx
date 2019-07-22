@@ -6,7 +6,7 @@ import { withRouter } from "react-router-dom";
 
 class LogOut extends Component {
   componentDidMount = async () => {
-    await this.props.logOut("user");
+    await this.props.logout("user");
     this.props.history.push("/");
   };
 

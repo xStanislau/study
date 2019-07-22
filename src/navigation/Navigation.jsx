@@ -15,7 +15,7 @@ export default () => {
         <Switch>
           <Route path="/login" component={Login} />
           <Route exact path="/" component={Home} />
-          <Route exact path="/logOut" component={LogOut} />
+          <Route exact path="/logout" component={LogOut} />
           <AuthRoute exact path="/profile" component={() => <h1>Profile</h1>} />
           <Route exact component={() => <h1>Page not found</h1>} />
         </Switch>

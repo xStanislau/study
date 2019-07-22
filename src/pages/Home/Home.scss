@@ -6,6 +6,10 @@
   font-weight: 300;
 }
 
+.container {
+  box-sizing: border-box;
+}
+
 .wrapper {
   max-width: $base-content-width;
   width: 100%;
@@ -71,6 +75,7 @@
     font-weight: 500;
   }
 }
+
 @media (max-width: $break-point-sm) {
   .promo {
     .promo-content {
@@ -120,7 +125,6 @@
     text-align: right;
     max-width: 539px;
     min-width: 450px;
-    padding: 10px;
     box-sizing: border-box;
     line-height: 1.13;
     font-weight: 300;
@@ -166,20 +170,18 @@
 @media (max-width: $break-point-sm) {
   .media-section {
     min-width: 100%;
-    padding: 30px 10px 30px 10px;
+    padding: 30px 20px 30px 20px;
     justify-content: center;
     .wrapper {
       flex-wrap: wrap;
-      padding-left: 10px;
-      padding-right: 10px;
+      padding-left: 0;
+      padding-right: 0;
     }
     .media-text {
       width: 100%;
-      min-width: 320px;
       text-align: left;
     }
     .media-video {
-      min-width: 320px;
       width: 100%;
       max-width: none;
     }
@@ -197,6 +199,7 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+    align-content: center;
   }
   .statistics-list-item {
     margin-right: 90px;
@@ -226,10 +229,11 @@
     }
   }
 }
+
 @media (max-width: $break-point-sm) {
   .statistics {
     .statistics-list {
-      flex-direction: column;
+      align-content: start;
     }
     .statistics-list-item {
       margin-right: 0px;
@@ -238,8 +242,6 @@
 }
 
 .community {
-  padding-left: 40px;
-  padding-right: 40px;
   padding-bottom: 143px;
   .community-title {
     font-family: "IBM Plex Sans", sans-serif;
@@ -247,39 +249,7 @@
     font-size: 36px;
   }
   .card {
-    width: 311px;
-    margin: 20px 0;
-    margin-right: 63px;
     font-family: "IBM Plex Sans", sans-serif;
-    font-size: 13px;
-    &:last-child {
-      margin: 20px 0px 20px 0px;
-    }
-    .card-body {
-      .card-title {
-        font-weight: normal;
-      }
-    }
-  }
-}
-
-@media (max-width: $break-point-md) {
-  .community {
-    .card {
-      width: 80%;
-      margin: 20px;
-    }
-  }
-}
-
-@media (max-width: $break-point-sm) {
-  .community {
-    padding: 40px 10px 0px 10px;
-    .card {
-      margin-right: 0;
-      margin: 0px 0px 20px;
-      width: 100%;
-    }
   }
 }
 
@@ -293,6 +263,7 @@
     font-weight: 300;
     color: white;
   }
+
   .projects-menu {
     font-size: 18px;
     font-weight: lighter;
@@ -303,6 +274,7 @@
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     color: white;
+    margin-bottom: 40px;
     .menu-item {
       font-size: 15px;
       margin: 0 10px;
@@ -318,16 +290,27 @@
   .projects-menu::-webkit-scrollbar {
     display: none;
   }
+  .container {
+    max-width: 1180px;
+  }
   .projects-grid {
-    margin: 40px 0;
+    .col-xl-4 {
+      padding-left: 37px;
+      padding-right: 37px;
+      margin: 0;
+      margin-bottom: 50px;
+    }
+
+    &:nth-child(3) {
+      padding-right: 0;
+    }
     .project {
-      width: 30%;
-      max-width: 311px;
-      min-width: 300px;
+      min-height: 300px;
+      height: 100%;
       font-family: "IBM Plex Sans", sans-serif;
       font-size: 14px;
       background-color: #ffcf27;
-      margin: 3% 3%;
+
       padding: 29px 26px 20px 26px;
       .project-technology {
         margin-bottom: 20px;
@@ -352,32 +335,32 @@
   }
 }
 
-@media (max-width: $break-point-xl) {
-  .projects {
-    .projects-grid {
-      margin: 40px 0px;
-    }
-  }
+// @media (max-width: $break-point-xl) {
+//   .projects {
+//     .projects-grid {
+//       margin: 40px 0px;
+//     }
+//   }
+// }
 
-  @media (max-width: $break-point-md) {
-    .projects {
-      .projects-grid {
-        .project {
-          width: 100%;
-          font-size: 18px;
-        }
-      }
-    }
-  }
-}
+// @media (max-width: $break-point-md) {
+//   .projects {
+//     .projects-grid {
+//       .project {
+//         width: 100%;
+//         font-size: 18px;
+//       }
+//     }
+//   }
+// }
 
-@media (max-width: 500px) {
-  .projects {
-    .projects-menu {
-      justify-content: normal;
-    }
-  }
-}
+// @media (max-width: 500px) {
+//   .projects {
+//     .projects-menu {
+//       justify-content: normal;
+//     }
+//   }
+// }
 
 .forums {
   padding-left: 40px;
@@ -402,6 +385,13 @@
         border: none;
       }
     }
+  }
+}
+@media only screen and (max-width: $break-point-sm) {
+  .forums {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left;
   }
 }
 

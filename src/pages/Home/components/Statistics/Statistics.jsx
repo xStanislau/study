@@ -10,7 +10,7 @@ const Statistics = ({ className }) => {
       className={`${className} d-flex justify-content-center align-items-center `}
     >
       <ul
-        className={`${className}-list d-flex justify-content-center align-content-center flex-wrap wrapper`}
+        className={`${className}-list d-flex justify-content-center flex-wrap wrapper`}
       >
         <li className={`${className}-list-item`}>
           <div className="number">{developers}</div>

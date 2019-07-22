@@ -9,10 +9,10 @@ const Project = ({
 }) => {
   return (
     <div className={className}>
-      <span className="project-technology">{technology}</span>
+      <div className="project-technology">{technology}</div>
       <h4 className="project-title">{title}</h4>
-      <span className="project-developers">{numberOfDevelopers}</span>
-      <span className="project-description">{description}</span>
+      <div className="project-developers">{numberOfDevelopers}</div>
+      <p className="project-description">{description}</p>
       <Link to="#" className="project-read-more">
         Read more...
       </Link>

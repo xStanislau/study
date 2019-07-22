@@ -5,7 +5,7 @@ import Input from "../../../../components/input/Input";
 import Icon from "../../../../components/Icon/Icon";
 import { checkPassword } from "./../../../../utils/validation";
 import { withRouter } from "react-router-dom";
-import { logIn as loginAction } from "../../../../redux/modules/login";
+import { logIn as loginAction } from "../../../../redux/modules/auth";
 import "./Form.scss";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";

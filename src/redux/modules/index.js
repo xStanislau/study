@@ -1,4 +1,4 @@
-import login from "./login";
+import auth from "./auth";
 import popup from "./popup";
 
-export { login, popup };
+export { auth, popup };

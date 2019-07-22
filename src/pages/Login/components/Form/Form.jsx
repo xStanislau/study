@@ -5,25 +5,16 @@ import Input from "../../../../components/input/Input";
 import Icon from "../../../../components/Icon/Icon";
 import { checkPassword } from "./../../../../utils/validation";
 import { withRouter } from "react-router-dom";
-import actions from "../../../../redux/actions/login";
-import mockData from "../../../../mocks/mocks";
+import { logIn as loginAction } from "../../../../redux/modules/login";
 import "./Form.scss";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
-const { credentials } = mockData;
-
 class LoginForm extends Component {
-  onSubmit = values => {
-    if (
-      values.username !== credentials.userName ||
-      values.password !== credentials.password
-    ) {
-      return { password: "The username or password you entered is incorrect" };
-    } else {
-      this.props.login();
-      this.props.history.push("/profile");
-    }
+  onSubmit = async values => {
+    const response = await this.props.login(values);
+    if (response) return response;
+    this.props.history.push("/profile");
   };
 
   validate = values => {
@@ -79,9 +70,12 @@ class LoginForm extends Component {
     );
   }
 }
-const {logIn} = actions;
+
 const mapDispatchToProps = dispatch => ({
-  login: bindActionCreators(logIn, dispatch)
+  login: bindActionCreators(loginAction, dispatch)
 });
 
-export default connect(null, mapDispatchToProps)(withRouter(LoginForm));
+export default connect(
+  null,
+  mapDispatchToProps
+)(withRouter(LoginForm));

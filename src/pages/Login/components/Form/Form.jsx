@@ -13,7 +13,11 @@ import { bindActionCreators } from "redux";
 class LoginForm extends Component {
   onSubmit = async values => {
     const response = await this.props.login(values);
-    if (response) return response;
+
+    if (response) {
+      return { password: response.error.message };
+    }
+
     this.props.history.push("/profile");
   };
 

@@ -1,0 +1,23 @@
+.header-nav {
+  .nav-list {
+    margin-bottom: 0;
+    &__icon {
+      position: relative;
+      display: block;
+      color: #8ca0b3;
+      .badge {
+        font-size: 12px;
+        position: absolute;
+        top: -7px;
+        left: 12px;
+      }
+    }
+    &__item {
+      margin: 0;
+      margin-right: 37px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

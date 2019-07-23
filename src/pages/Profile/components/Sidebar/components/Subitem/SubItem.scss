@@ -1,0 +1,12 @@
+.sidebar-sub-item {
+  padding: 10px 26px 10px 36px;
+  text-decoration: none;
+  color: #000a12;
+  &__icon {
+    color: #0db9dd;
+    margin-right: 30px;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}

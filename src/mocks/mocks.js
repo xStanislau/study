@@ -3,7 +3,6 @@ const mockData = {
     userName: "Admin",
     password: "Admin12345"
   },
-
   statistics: {
     developers: "13.435",
     software: "1.943",
@@ -138,7 +137,26 @@ const mockData = {
       views: "8.972",
       lastPost: "Yesterday"
     }
-  ]
+  ],
+  accordeon: {
+    dashboard: [
+      {
+        text: "dashboard 1",
+        link: "/dashboard/1"
+      },
+      {
+        text: "dashboard 2",
+        link: "/dashboard/2"
+      },
+      {
+        text: "dashboard 3",
+        link: "/dashboard/3"
+      }
+    ],
+    tables: [],
+    forms: [],
+    uiElements: []
+  }
 };
 
 export default mockData;

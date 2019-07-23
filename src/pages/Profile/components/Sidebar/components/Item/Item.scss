@@ -1,0 +1,20 @@
+.sidebar-item {
+  padding: 10px 26px 10px 36px;
+  background-color: #fff;
+  cursor: pointer;
+  &__icon {
+    color: #1e87f0;
+  }
+}
+
+.sidebar.isClosed {
+  .sidebar-item {
+    &__text {
+      display: none;
+      transition: all 0.24s ease-in-out;
+    }
+    &__angle {
+      display: none;
+    }
+  }
+}

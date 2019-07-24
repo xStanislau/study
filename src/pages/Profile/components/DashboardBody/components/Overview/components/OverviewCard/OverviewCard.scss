@@ -1,0 +1,41 @@
+.orange {
+  background-image: linear-gradient(to left, #f9d423, #f83600);
+}
+
+.blue {
+  background-image: linear-gradient(to bottom, #40bcf9, #1e87f0);
+}
+
+.green {
+  background-image: linear-gradient(to top, #009efd, #2af598);
+}
+
+.overview-card {
+  min-height: 208px;
+  color: #ffffff;
+  border: none;
+  & a {
+    display: flex;
+    padding: 0 23px;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    border-left: 1px solid #fff;
+    height: 100%;
+  }
+  .overview-card__header {
+    height: 46px;
+    padding: 0 0 0 39px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ffffff;
+  }
+}
+
+.overview {
+  .col {
+    padding: 0 30px;
+  }
+}

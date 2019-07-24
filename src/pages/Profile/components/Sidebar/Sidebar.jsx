@@ -9,13 +9,20 @@ import cx from "classnames";
 
 class Sidebar extends Component {
   state = {
-    isClosed: false
+    isClosed: false,
+    itemIsClosed: false
   };
 
-  toogleSidebar = () => {
+  toogleSidebar = evt => {
     this.setState(state => {
       return { isClosed: !this.state.isClosed };
     });
+  };
+
+  handleClick = evt => {
+    if (this.state.isClosed) {
+      this.toogleSidebar(evt);
+    }
   };
 
   render() {
@@ -26,7 +33,7 @@ class Sidebar extends Component {
       accordeon: { dashboard }
     } = mockData;
     return (
-      <div className={classNames}>
+      <div className={classNames} onClick={this.handleClick}>
         <div className="container">
           <header className="sidebar-header d-flex align-items-center">
             <div className="sidebar-header__content d-flex justify-content-between">

@@ -9,4 +9,15 @@
   &:hover {
     text-decoration: none;
   }
+  transition: all 0.34s ease-in;
+}
+.sidebar.isClosed {
+  .collapse.show {
+    height: auto;
+  }
+  .collapse.show {
+    ul {
+      display: none;
+    }
+  }
 }

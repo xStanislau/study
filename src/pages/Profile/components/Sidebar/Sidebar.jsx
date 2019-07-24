@@ -55,7 +55,17 @@ class Sidebar extends Component {
               <SidebarItem text="Charts" name="git-square" />
             </Accordion.Toggle>
             <Accordion.Collapse eventKey="1">
-              <div>Hello! I'm another body</div>
+              <ul>
+                {dashboard.map((element, index) => {
+                  return (
+                    <li key={`${element} ${index}`}>
+                      <SubItem name="circle" to={element.link}>
+                        {element.text}
+                      </SubItem>
+                    </li>
+                  );
+                })}
+              </ul>
             </Accordion.Collapse>
           </Accordion>
         </div>

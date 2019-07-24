@@ -5,10 +5,10 @@ import Sidebar from "./components/Sidebar/Sidebar";
 
 const Profile = () => {
   return (
-    <div className="containter dashboard">
+    <div className="containter-fluid dashboard">
       <div className="row">
         <Sidebar />
-        <main className="col-9 content">
+        <main className="col content">
           <Header />
         </main>
       </div>

@@ -1,7 +1,7 @@
 import mockData from "../mocks/mocks";
-
+import wait from "../utils/fakeRequest";
 export default async data => {
-  setTimeout(() => {}, 300);
+  await wait();
   const { credentials } = mockData;
 
   const error = Object.create(null);

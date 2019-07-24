@@ -42,7 +42,7 @@ class Sidebar extends Component {
               <ul>
                 {dashboard.map((element, index) => {
                   return (
-                    <li key={`${element} ${index}`}>
+                    <li key={`${element.text} ${index}`}>
                       <SubItem name="circle" to={element.link}>
                         {element.text}
                       </SubItem>
@@ -58,7 +58,7 @@ class Sidebar extends Component {
               <ul>
                 {dashboard.map((element, index) => {
                   return (
-                    <li key={`${element} ${index}`}>
+                    <li key={`${element.text} ${index}`}>
                       <SubItem name="circle" to={element.link}>
                         {element.text}
                       </SubItem>

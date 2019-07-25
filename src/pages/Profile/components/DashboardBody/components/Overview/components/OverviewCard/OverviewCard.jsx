@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Card, Button, Col } from "react-bootstrap";
+import React from "react";
+import { Card, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Icon from "../../../../../../../../components/Icon/Icon";
 import cx from "classnames";
@@ -11,12 +11,15 @@ const OverviewCard = ({ title, number, iconName, blue, orange, green }) => {
     <Col>
       <Card className={classNames}>
         <Card.Header className="overview-card__header">
-          <Icon name={iconName} />
-          <Link to="#">View detail</Link>
+          <Icon className="overview-card__header-icon" name={iconName} />
+          <Link className="overview-card__header-link" to="#">
+            View detail
+          </Link>
         </Card.Header>
         <Card.Body>
-          <Card.Title>{title}</Card.Title>
-          <Card.Text>{number}</Card.Text>
+          <div>{`//today`}</div>
+          <Card.Title className="overview-card__title">{title}</Card.Title>
+          <Card.Text className="overview-card__number">{number}</Card.Text>
         </Card.Body>
       </Card>
     </Col>

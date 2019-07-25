@@ -1,0 +1,36 @@
+.activity {
+  &:nth-child(2n) {
+    background-color: #f0f0f0;
+  }
+  padding: 18px 22px;
+  &__user-img {
+    margin-right: 27px;
+  }
+  &__info {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .media-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items: flex-start;
+  }
+  &__title {
+    font-size: 20px;
+    color: #000a12;
+    margin-bottom: 0px;
+  }
+  &__operation {
+    color: #053361;
+    font-size: 16px;
+    line-height: 24px;
+    opacity: 0.86;
+  }
+  &__time {
+    font-size: 14px;
+    color: #555555;
+  }
+}

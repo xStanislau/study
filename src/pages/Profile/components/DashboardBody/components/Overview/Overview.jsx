@@ -1,11 +1,13 @@
 import React from "react";
 import OverviewCard from "./components/OverviewCard/OverviewCard";
 import { Row, Container } from "react-bootstrap";
+import "./Overview.scss";
 
-const Overview = () => {
+const Overview = ({ chidren }) => {
   return (
     <section className="d-flex overview">
-      <Container>
+      <Container fluid>
+        <h2 className="overview__title">Overview</h2>
         <Row>
           <OverviewCard
             title="Overall Sale"

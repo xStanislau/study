@@ -156,6 +156,49 @@ const mockData = {
     tables: [],
     forms: [],
     uiElements: []
+  },
+  dashboardData: {
+    status: "ok",
+    data: {
+      userId: 1,
+      notifications: 3,
+      emails: 10,
+      overview: {
+        visited: 1231,
+        sale: 1446,
+        growth: 65
+      },
+      activity: [
+        {
+          operation: "new comment",
+          time: "4"
+        },
+        {
+          operation: "ordered 2 items",
+          time: "20"
+        },
+        {
+          operation: "ordered 1 item",
+          time: "30"
+        },
+        {
+          operation: "sended message",
+          time: "55"
+        },
+        {
+          operation: "signed out",
+          time: "60"
+        },
+        {
+          operation: "ordered 2 items",
+          time: "90"
+        },
+        {
+          operation: "ordered 1 item",
+          time: "105"
+        }
+      ]
+    }
   }
 };
 

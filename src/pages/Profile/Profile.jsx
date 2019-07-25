@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Header from "./components/Header/Header";
+import DashBoardHeader from "./components/DashBoardHeader/DashBoardHeader";
 import Sidebar from "./components/Sidebar/Sidebar";
 import "./Profile.scss";
 import DashboardBody from "./components/DashboardBody/DashboardBody";
@@ -11,7 +11,7 @@ class Profile extends Component {
         <div className="row">
           <Sidebar />
           <div className="col right-col">
-            <Header />
+            <DashBoardHeader />
             {/* <main className="dashboard-content">some content</main> */}
             <DashboardBody />
           </div>

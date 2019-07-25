@@ -26,7 +26,7 @@
   }
 }
 .sidebar.col-3 {
-  transition: all 0.34s ease-in;
+  transition: all 0.1s ease-in;
 }
 
 .sidebar.col-3.isClosed {
@@ -35,9 +35,7 @@
 .sidebar.isClosed {
   .sidebar-header {
     &__title {
-      transform: translateX(-1000px);
-      position: absolute;
-      transition: all 0.2s ease-in;
+      display: none;
     }
   }
 }

@@ -14,23 +14,31 @@
   min-height: 208px;
   color: #ffffff;
   border: none;
-  & a {
-    display: flex;
-    padding: 0 23px;
-    justify-content: space-between;
-    align-items: center;
-    text-decoration: none;
-    color: inherit;
-    border-left: 1px solid #fff;
-    height: 100%;
-  }
-  .overview-card__header {
+
+  &__header {
     height: 46px;
     padding: 0 0 0 39px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #ffffff;
+    margin-bottom: 39px;
+    &-link {
+      display: flex;
+      padding: 0 23px;
+      justify-content: space-between;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+      border-left: 1px solid #fff;
+      height: 100%;
+    }
+  }
+  &__title {
+    margin-bottom: 0;
+  }
+  &__number {
+    font-size: 36px;
   }
 }
 

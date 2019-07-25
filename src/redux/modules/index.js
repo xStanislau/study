@@ -1,4 +1,4 @@
 import auth from "./auth";
 import popup from "./popup";
-
-export { auth, popup };
+import dashboard from "./dashboard";
+export { auth, popup, dashboard };

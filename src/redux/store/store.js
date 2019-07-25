@@ -11,7 +11,6 @@ export default function configureStore() {
         window.__REDUX_DEVTOOLS_EXTENSION__()
     )
   );
-
   if (localStorage.getItem("user") !== null) {
     const { userName } = JSON.parse(localStorage.getItem("user"));
     store.dispatch(logInSuccessed(userName));

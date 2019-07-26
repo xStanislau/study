@@ -1,20 +1,36 @@
 .sidebar-item {
-  padding: 10px 26px 10px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 25px 36px 25px 36px;
   background-color: #fff;
+  min-height: 77px;
   cursor: pointer;
   &__icon {
     color: #1e87f0;
+    margin-right: 33px;
+  }
+  &__text {
+    font-size: 18px;
+  }
+  &__icon-angle {
+    margin-left: auto;
   }
 }
 
 .sidebar.isClosed {
   .sidebar-item {
+    &__icon {
+      color: #1e87f0;
+      margin-right: 0;
+    }
     &__text {
       display: none;
       transition: all 0.24s ease-in-out;
     }
-    &__angle {
+    &__icon-angle {
       display: none;
+      margin-right: 0;
     }
   }
 }

@@ -43,7 +43,7 @@ class Sidebar extends Component {
           </header>
           <Accordion>
             <Accordion.Toggle as={Card.Header} eventKey="0">
-              <SidebarItem text="Dashboard" name="git-square" />
+              <SidebarItem text="dashboard" name="git-square" size />
             </Accordion.Toggle>
             <Accordion.Collapse eventKey="0">
               <ul>
@@ -59,7 +59,7 @@ class Sidebar extends Component {
               </ul>
             </Accordion.Collapse>
             <Accordion.Toggle as={Card.Header} eventKey="1">
-              <SidebarItem text="Charts" name="git-square" />
+              <SidebarItem text="charts" name="git-square" />
             </Accordion.Toggle>
             <Accordion.Collapse eventKey="1">
               <ul>

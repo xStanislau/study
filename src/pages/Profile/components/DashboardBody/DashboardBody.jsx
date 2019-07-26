@@ -3,10 +3,11 @@ import Overview from "./components/Overview/Overview";
 import { Container, Row } from "react-bootstrap";
 import UserActivity from "./components/Secondary/components/UserActivity/UserActivity";
 import Chart from "./components/Secondary/components/Chart/Chart";
+import "./DashboardBody.scss";
 
 const DashboardBody = () => {
   return (
-    <Container fluid>
+    <Container fluid className="dashboard-body">
       <Overview />
       <Row>
         <Chart />

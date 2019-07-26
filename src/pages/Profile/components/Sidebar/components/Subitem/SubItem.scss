@@ -1,20 +1,18 @@
 .sidebar-sub-item {
   padding: 10px 26px 10px 36px;
+  font-size: 18px;
   text-decoration: none;
   color: #000a12;
   &__icon {
     color: #0db9dd;
-    margin-right: 30px;
+    margin-right: 33px;
   }
   &:hover {
     text-decoration: none;
   }
-  transition: all 0.34s ease-in;
+  transition: all 0.24s ease-in;
 }
 .sidebar.isClosed {
-  .collapse.show {
-    height: auto;
-  }
   .collapse.show {
     ul {
       display: none;

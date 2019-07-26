@@ -8,8 +8,13 @@
   }
 }
 
+.isClosed + .right-col {
+  margin-left: 100px;
+}
+
 .right-col {
   background-color: #f0f0f0;
   padding: 0;
   min-height: 100%;
+  margin-left: 350px;
 }

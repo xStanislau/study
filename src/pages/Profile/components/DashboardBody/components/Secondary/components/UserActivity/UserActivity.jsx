@@ -6,7 +6,7 @@ import "./UserActivity.scss";
 import { Col, Card } from "react-bootstrap";
 import Button from "../../../../../../../../components/Button/Button";
 
-const UserActivity = () => {
+const UserActivity = ({ props }) => {
   const activity = mockData.dashboardData.data.activity;
 
   return (

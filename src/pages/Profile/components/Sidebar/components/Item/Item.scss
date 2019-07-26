@@ -17,11 +17,26 @@
     margin-left: auto;
   }
 }
-
+// @media (max-width: 1024px) {
+//   .sidebar.mobile {
+//     .sidebar-item {
+//       &__icon {
+//         margin-right: 0;
+//       }
+//       &__text {
+//         display: none;
+//         transition: all 0.24s ease-in-out;
+//       }
+//       &__icon-angle {
+//         display: none;
+//         margin-right: 0;
+//       }
+//     }
+//   }
+// }
 .sidebar.isClosed {
   .sidebar-item {
     &__icon {
-      color: #1e87f0;
       margin-right: 0;
     }
     &__text {

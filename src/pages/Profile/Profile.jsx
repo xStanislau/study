@@ -6,29 +6,34 @@ import DashboardBody from "./components/DashboardBody/DashboardBody";
 import { loadData } from "../../redux/modules/dashboard";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
+import { Row, Col } from "react-bootstrap";
 class Profile extends Component {
   componentDidMount() {
     this.props.loadData(1);
   }
+
   render() {
+    debugger;
+    const { isLoad } = this.props;
     return (
       <div className="containter-fluid dashboard">
-        <div className="row">
+        <Row>
           <Sidebar />
-          <div className="col right-col">
-            <DashBoardHeader />
-            {/* <main className="dashboard-content">some content</main> */}
-            <DashboardBody />
-          </div>
-        </div>
+          {isLoad && (
+            <Col className="right-col">
+              <DashBoardHeader {...this.props.data} />
+              <DashboardBody {...this.props.data} />
+            </Col>
+          )}
+        </Row>
       </div>
     );
   }
 }
 
 const mapStateToProps = state => ({
-  data: state.data,
-  isLoad: state.isLoaded
+  data: state.dashboard.data,
+  isLoad: state.dashboard.isLoaded
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -12,21 +12,6 @@ const Chart = () => {
 
   return (
     <Col className="col-8">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="100"
-        height="100"
-        viewBox="0 0 100 100"
-      >
-        <defs>
-          <linearGradient id="gradient" gradientTransform="rotate(-240)">
-            <stop offset="0%" stopColor="#f8c83a" />
-            <stop offset="35%" stopColor="#f72929" />
-            <stop offset="54%" stopColor="#1b7db0" />
-            <stop offset="100%" stopColor="#1e87f0" />
-          </linearGradient>
-        </defs>
-      </svg>
       <VictoryChart
         events={[
           {
@@ -84,7 +69,7 @@ const Chart = () => {
         <VictoryLine
           name="line"
           style={{
-            data: { stroke: "url(#gradient)", strokeWidth: 3 }
+            data: { stroke: "#1e87f0", strokeWidth: 3 }
           }}
           interpolation="natural"
           data={[

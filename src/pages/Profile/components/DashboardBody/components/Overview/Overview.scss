@@ -1,11 +1,22 @@
 .overview {
   margin-bottom: 22px;
   .row {
-    margin-right: -30px;
-    margin-left: -30px;
   }
+  .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   &__title {
     margin-bottom: 22px;
     font-size: 28px;
+  }
+  &__time {
+    .time-badge {
+      margin-right: 33px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
 }

@@ -1,19 +1,19 @@
-.orange {
-  background-image: linear-gradient(to left, #f9d423, #f83600);
-}
-
-.blue {
-  background-image: linear-gradient(to bottom, #40bcf9, #1e87f0);
-}
-
-.green {
-  background-image: linear-gradient(to top, #009efd, #2af598);
-}
-
 .overview-card {
   min-height: 208px;
   color: #ffffff;
   border: none;
+
+  &_orange {
+    background-image: linear-gradient(to left, #f9d423, #f83600);
+  }
+
+  &_blue {
+    background-image: linear-gradient(to bottom, #40bcf9, #1e87f0);
+  }
+
+  &_green {
+    background-image: linear-gradient(to top, #009efd, #2af598);
+  }
 
   &__header {
     height: 46px;

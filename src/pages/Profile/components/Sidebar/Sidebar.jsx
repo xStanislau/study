@@ -26,7 +26,7 @@ class Sidebar extends Component {
   };
 
   render() {
-    const classNames = cx("sidebar", "col-3", {
+    const classNames = cx("sidebar", "col-3", "mobile", {
       isClosed: this.state.isClosed
     });
     const {

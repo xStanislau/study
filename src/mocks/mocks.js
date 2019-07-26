@@ -158,6 +158,20 @@ const mockData = {
     uiElements: []
   },
   dashboardData: {
+    timeBadges: [
+      {
+        text: "today",
+        color: "blue"
+      },
+      {
+        text: "month",
+        color: "orange"
+      },
+      {
+        text: "year",
+        color: "green"
+      }
+    ],
     status: "ok",
     data: {
       userId: 1,

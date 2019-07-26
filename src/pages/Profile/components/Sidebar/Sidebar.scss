@@ -1,12 +1,17 @@
 .sidebar {
   padding: 0;
   height: 100vh;
-  max-width: 350px;
-
+  width: 350px;
+  min-width: 350px;
+  position: fixed;
+  z-index: 2;
+  overflow-y: auto;
+  background: white;
   .container {
     padding: 0;
     margin: 0;
   }
+
   .sidebar-header {
     padding: 0 26px 0 36px;
     height: 80px;
@@ -29,6 +34,8 @@
 
 .sidebar.col-3.isClosed {
   flex: 0 0 100px;
+  width: 100px;
+  min-width: 100px;
 }
 .sidebar.isClosed {
   .sidebar-header {
@@ -37,3 +44,48 @@
     }
   }
 }
+
+// @media (max-width: 1024px) {
+//   .sidebar.mobile:not(.isClosed) {
+//     flex: 0 0 25%;
+//     width: 350px;
+//     min-width: 350px;
+//   }
+//   .sidebar.mobile:not(.isClosed) {
+//     padding: 0;
+//     height: 100vh;
+//     .container {
+//       padding: 0;
+//       margin: 0;
+//     }
+
+//     .sidebar-header {
+//       padding: 0 26px 0 36px;
+//       height: 80px;
+//       background-color: #29b1cc;
+//       color: white;
+//       left: 0;
+//       &__content {
+//         width: 100%;
+//       }
+//       &__title {
+//         font-size: 20px;
+//       }
+//     }
+
+//     .card-header {
+//       padding: 0 0;
+//       background-color: #fff;
+//     }
+//   }
+//   .sidebar.col-3.mobile {
+//     flex: 0 0 100px;
+//     width: 100px;
+//     min-width: 100px;
+//   }
+//   .sidebar-header {
+//     &__title {
+//       display: none;
+//     }
+//   }
+// }

@@ -16,7 +16,7 @@ const OverviewCard = ({ title, number, iconName, color }) => {
             View detail
           </Link>
         </Card.Header>
-        <Card.Body>
+        <Card.Body className={`${className}__body`}>
           <div>{`//today`}</div>
           <Card.Title className={`${className}__title`}>{title}</Card.Title>
           <Card.Text className={`${className}__number`}>{number}</Card.Text>

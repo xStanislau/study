@@ -7,21 +7,44 @@ import { loadData } from "../../redux/modules/dashboard";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { Row, Col } from "react-bootstrap";
+
 class Profile extends Component {
+  state = {
+    isClosed: false
+  };
+
   componentDidMount() {
     this.props.loadData(1);
   }
 
+  toogleSidebar = evt => {
+    this.setState(state => {
+      return { isClosed: !this.state.isClosed };
+    });
+  };
+
+  handleClick = evt => {
+    if (this.state.isClosed) {
+      this.toogleSidebar(evt);
+    }
+  };
+
   render() {
-    debugger;
     const { isLoad } = this.props;
     return (
       <div className="containter-fluid dashboard">
         <Row>
-          <Sidebar />
+          <DashBoardHeader
+            {...this.props.data}
+            toogleSidebar={this.toogleSidebar}
+            isClosed={this.state.isClosed}
+          />
+          <Sidebar
+            handleClick={this.handleClick}
+            isClosed={this.state.isClosed}
+          />
           {isLoad && (
             <Col className="right-col">
-              <DashBoardHeader {...this.props.data} />
               <DashboardBody {...this.props.data} />
             </Col>
           )}

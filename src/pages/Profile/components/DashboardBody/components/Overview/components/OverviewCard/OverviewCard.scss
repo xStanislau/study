@@ -2,7 +2,6 @@
   min-height: 208px;
   color: #ffffff;
   border: none;
-
   &_orange {
     background-image: linear-gradient(to left, #f9d423, #f83600);
   }
@@ -34,10 +33,14 @@
       height: 100%;
     }
   }
+  &__body {
+    padding: 0 39px;
+  }
   &__title {
     margin-bottom: 0;
   }
   &__number {
     font-size: 36px;
+    letter-spacing: 0.51px;
   }
 }

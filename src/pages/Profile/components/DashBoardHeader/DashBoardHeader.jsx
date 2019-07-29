@@ -1,26 +1,43 @@
-import React from "react";
-import { Container } from "react-bootstrap";
+import React, { Component } from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import cx from "classnames";
 import Searchbar from "./components/Searchbar/Searchbar";
 import Nav from "./components/Nav/Nav";
 import Account from "./components/Account/Account";
+import Icon from "../../../../components/Icon/Icon";
 import "./DashBoardHeader.scss";
 
-const DashBoardHeader = ({ notifications, emails }) => {
-  return (
-    <header className="dashboard-header ">
+class DashBoardHeader extends Component {
+  render() {
+    const classNames = cx("header-left-col", {
+      isClosed: this.props.isClosed
+    });
+    const { notifications, emails, toogleSidebar } = this.props;
+    return (
       <Container fluid>
-        <div className="row justify-content-between align-items-center">
-          <Nav notifications={notifications} emails={emails} />
-          <div className="col-6">
-            <div className="d-flex justify-content-end align-items-center">
-              <Searchbar />
-              <Account />
-            </div>
-          </div>
-        </div>
+        <Row className="top-row">
+          <Col className={classNames}>
+            <header className="sidebar-header d-flex align-items-center">
+              <div className="sidebar-header__content d-flex justify-content-between">
+                <h6 className="sidebar-header__title">Profile</h6>
+                <Icon name="align-left" size="25" onClick={toogleSidebar} />
+              </div>
+            </header>
+          </Col>
+          <Col className="header-right-col">
+            <header className="dashboard-header">
+              <Nav notifications={notifications} emails={emails} />
+
+              <div className="d-flex justify-content-end align-items-center">
+                <Searchbar />
+                <Account />
+              </div>
+            </header>
+          </Col>
+        </Row>
       </Container>
-    </header>
-  );
-};
+    );
+  }
+}
 
 export default DashBoardHeader;

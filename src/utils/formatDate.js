@@ -1,6 +1,7 @@
 const formatTime = time => {
   const minutesInhour = 60;
-  const minutesInDay = 60 * 24;
+  const minutesInDay = minutesInhour * 24;
+
   if (time < minutesInhour) {
     return `${time} minutes`;
   } else if (time > minutesInhour && time < minutesInDay) {

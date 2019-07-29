@@ -1,18 +1,14 @@
 import React from "react";
 import { VictoryChart, VictoryLine, VictoryAxis } from "victory";
 import { Col } from "react-bootstrap";
+import "./Chart.scss";
 
 const Chart = () => {
-  const data = [
-    { quarter: 1, earnings: 13000 },
-    { quarter: 2, earnings: 16500 },
-    { quarter: 3, earnings: 14250 },
-    { quarter: 4, earnings: 19000 }
-  ];
-
   return (
-    <Col className="col-8">
+    <Col className="col-8 chart">
       <VictoryChart
+        width={722}
+        height={350}
         events={[
           {
             childName: ["line"],

@@ -2,13 +2,14 @@
   & > .row {
     margin-right: 0;
     margin-left: 0;
-    min-width: 1024px;
-  }
-  .dashboard-content {
   }
 }
 
-.isClosed + .right-col {
+.isClosed + .dashboard-header {
+  margin-left: 100px;
+  width: calc(100% - 340px);
+}
+.isClosed ~ .right-col {
   margin-left: 100px;
 }
 
@@ -16,5 +17,4 @@
   background-color: #f0f0f0;
   padding: 0;
   min-height: 100%;
-  margin-left: 350px;
 }

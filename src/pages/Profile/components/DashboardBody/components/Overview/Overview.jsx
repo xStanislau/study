@@ -1,57 +1,43 @@
 import React from "react";
-import { Row, Container } from "react-bootstrap";
+import { Row, Container, Col } from "react-bootstrap";
 import OverviewCard from "./components/OverviewCard/OverviewCard";
 import TimeBadge from "./components/TimeBadge/TimeBadge";
 import "./Overview.scss";
 import mockData from "../../../../../../mocks/mocks";
 
 const Overview = props => {
-  debugger;
-  const { timeBadges } = mockData.dashboardData;
+  const { timeBadges, data } = mockData.dashboardData;
+  const { colors, iconNames } = data.overview;
   const className = "overview";
-  const colors = ["blue", "orange", "green"];
-  const iconNames = ["tag", "user", "tag"];
+
   return (
-    <section className="d-flex overview">
+    <section className={`${className} d-flex`}>
       <Container fluid>
-        <div className="d-flex justify-content-between">
-          <h2 className={`${className}__title`}>Overview</h2>
-          <div className={`${className}__time`}>
-            {timeBadges.map(badge => {
-              const { text, color } = badge;
-              return <TimeBadge key={text} text={text} color={color} />;
-            })}
-          </div>
-        </div>
+        <Row className="justify-content-between">
+          <Col>
+            <h2 className={`${className}__title`}>Overview</h2>
+          </Col>
+          <Col>
+            <div className={`${className}__time ml-auto d-flex`}>
+              {timeBadges.map(badge => {
+                const { text, color } = badge;
+                return <TimeBadge key={text} text={text} color={color} />;
+              })}
+            </div>
+          </Col>
+        </Row>
         <Row>
-          {Object.keys(props).map((keyName, i) => {
+          {Object.keys(props).map((keyName, index) => {
             return (
               <OverviewCard
+                key={`${keyName} ${index}`}
                 title={keyName}
                 number={props[keyName]}
-                iconName={iconNames[i]}
-                color={colors[i]}
+                iconName={iconNames[index]}
+                color={colors[index]}
               />
             );
           })}
-          {/* <OverviewCard
-            title="Overall Sale"
-            number="1231"
-            iconName="tag"
-            color="blue"
-          />
-          <OverviewCard
-            title="Overall Visited"
-            number="1231"
-            iconName="user"
-            color="orange"
-          />
-          <OverviewCard
-            title="Overall Growth"
-            number="1231"
-            iconName="tag"
-            color="green"
-          /> */}
         </Row>
       </Container>
     </section>

@@ -1,14 +1,11 @@
 import React from "react";
-import Activity from "./components/Activity/Activity";
-import mockData from "../../../../../../../../mocks/mocks";
-import formatTime from "../../../../../../../../utils/formatDate";
-import "./UserActivity.scss";
 import { Col, Card } from "react-bootstrap";
+import formatTime from "../../../../../../../../utils/formatDate";
+import Activity from "./components/Activity/Activity";
 import Button from "../../../../../../../../components/Button/Button";
+import "./UserActivity.scss";
 
-const UserActivity = ({ props }) => {
-  const activity = mockData.dashboardData.data.activity;
-
+const UserActivity = ({ activity }) => {
   return (
     <Col className="col-4">
       <Card className="user-activity">

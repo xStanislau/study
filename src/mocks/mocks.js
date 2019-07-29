@@ -178,6 +178,8 @@ const mockData = {
       notifications: 3,
       emails: 10,
       overview: {
+        colors: ["blue", "orange", "green"],
+        iconNames: ["tag", "user", "tag"],
         visited: 1231,
         sale: 1446,
         growth: 65

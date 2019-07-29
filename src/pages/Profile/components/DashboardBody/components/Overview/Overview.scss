@@ -1,12 +1,9 @@
 .overview {
   margin-bottom: 22px;
-  .row {
-  }
   .container-fluid {
     padding-left: 0;
     padding-right: 0;
   }
-
   &__title {
     margin-bottom: 22px;
     font-size: 28px;
@@ -16,6 +13,9 @@
       margin-right: 33px;
       &:last-child {
         margin-right: 0;
+      }
+      &:first-child {
+        margin-left: auto;
       }
     }
   }

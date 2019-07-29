@@ -7,7 +7,7 @@ const Activity = ({ operation, time }) => {
     <Media className="activity">
       <img
         className="activity__user-img rounded-circle "
-        src="https://place-hold.it/50x50"
+        src="https://place-hold.it/48x48"
         alt="Generic placeholder"
       />
       <Media.Body>

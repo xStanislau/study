@@ -6,7 +6,7 @@ import "./Nav.scss";
 
 const Nav = ({ notifications, emails, settings }) => {
   return (
-    <nav className="header-nav col-4">
+    <nav className="header-nav">
       <ul className="nav-list d-flex">
         <li className="nav-list__item">
           <Link className="nav-list__icon" to="#">

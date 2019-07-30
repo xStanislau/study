@@ -12,7 +12,7 @@ class DashBoardHeader extends Component {
     const classNames = cx("dashboard-left", {
       isClosed: this.props.isClosed
     });
-    const { notifications, emails, toogleSidebar } = this.props;
+    const { notifications, emails, toogleSidebar, userName } = this.props;
     return (
       <Container fluid>
         <Row className="top-row">
@@ -29,8 +29,7 @@ class DashBoardHeader extends Component {
               <Nav notifications={notifications} emails={emails} />
 
               <div className="d-flex justify-content-end align-items-center">
-                {/* <Searchbar /> */}
-                <Account />
+                <Account userName={userName} />
               </div>
             </header>
           </Col>

@@ -7,6 +7,7 @@ import { loadData } from "../../redux/modules/dashboard";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { Row, Col } from "react-bootstrap";
+import Loader from "../../components/Loader/Loader";
 
 class Profile extends Component {
   state = {
@@ -30,33 +31,39 @@ class Profile extends Component {
   };
 
   render() {
-    const { isLoad } = this.props;
-    return (
-      <div className="containter-fluid dashboard">
-        <Row>
-          <DashBoardHeader
-            {...this.props.data}
-            toogleSidebar={this.toogleSidebar}
-            isClosed={this.state.isClosed}
-          />
-          <Sidebar
-            handleClick={this.handleClick}
-            isClosed={this.state.isClosed}
-          />
-          {isLoad && (
+    const { isLoad, userName } = this.props;
+
+    const DashBoard = () => {
+      return (
+        <div className="containter-fluid dashboard">
+          <Row>
+            <DashBoardHeader
+              {...this.props.data}
+              userName={userName}
+              toogleSidebar={this.toogleSidebar}
+              isClosed={this.state.isClosed}
+            />
+            <Sidebar
+              handleClick={this.handleClick}
+              isClosed={this.state.isClosed}
+            />
             <Col className="right-col">
-              <DashboardBody {...this.props.data} />
+              <DashboardBody isLoad={isLoad} {...this.props.data} />
             </Col>
-          )}
-        </Row>
-      </div>
-    );
+          </Row>
+        </div>
+      );
+    };
+
+    const DashBoardWithLoader = Loader(DashBoard);
+    return <DashBoardWithLoader isLoad={isLoad} />;
   }
 }
 
 const mapStateToProps = state => ({
   data: state.dashboard.data,
-  isLoad: state.dashboard.isLoaded
+  isLoad: state.dashboard.isLoaded,
+  userName: state.auth.userName
 });
 
 const mapDispatchToProps = dispatch => ({

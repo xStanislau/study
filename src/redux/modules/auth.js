@@ -7,9 +7,8 @@ const LOG_OUT = "app/auth/LOG_OUT";
 const LOG_OUT_FAILED = "app/auth/LOG_OUT_FAILED";
 const LOG_OUT_SUCCSSEEDED = "app/auth/LOG_OUT_SUCCSSEEDED";
 
-export const logInStart = payload => ({
-  type: LOG_IN,
-  userName: payload
+export const logInStart = () => ({
+  type: LOG_IN
 });
 
 export const logInFailed = error => ({
@@ -19,7 +18,7 @@ export const logInFailed = error => ({
 
 export const logInSuccessed = payload => ({
   type: LOG_IN_SUCCSSEEDED,
-  userName: payload
+  payload: payload
 });
 
 export const logOutStart = () => ({
@@ -58,6 +57,7 @@ export default function reducer(state = initialState, action) {
     case LOG_IN_SUCCSSEEDED:
       return {
         ...state,
+        userName: action.payload,
         isAuthorized: true
       };
     case LOG_OUT:

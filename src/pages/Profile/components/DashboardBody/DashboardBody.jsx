@@ -9,7 +9,7 @@ import "./DashboardBody.scss";
 
 const DashboardBody = ({ overview, activity }) => {
   return (
-    <Container fluid className="dashboard-body">
+    <Container fluid className="dashboard-body dashboard-right">
       <Overview {...overview} />
       <Secondary activity={activity} />
     </Container>

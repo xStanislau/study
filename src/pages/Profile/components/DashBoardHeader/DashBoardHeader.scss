@@ -4,7 +4,6 @@
   justify-content: space-between;
   height: 80px;
   background-color: rgba(255, 255, 255, 0.5);
-  padding: 0 10px;
   align-items: center;
   z-index: 2;
   // position: fixed;
@@ -21,8 +20,13 @@
     margin-right: 36px;
   }
 }
-.header-left-col {
-  width: 350px;
-  max-width: 350px;
+
+.dashboard-left {
+  flex: 0 0 350px;
   padding: 0;
+}
+
+.dashboard-right {
+  padding-left: 40px;
+  padding-right: 40px;
 }

@@ -20,8 +20,6 @@
 
 .sidebar-header {
   padding: 0 26px 0 36px;
-  width: 350px;
-  min-width: 350px;
   height: 80px;
   background-color: #29b1cc;
   color: white;
@@ -35,23 +33,12 @@
     margin-bottom: 0;
   }
 }
-.sidebar.col-3.isClosed {
+.sidebar.dashboard-left.isClosed {
+}
+
+.dashboard-left.isClosed {
   flex: 0 0 100px;
-  width: 100px;
-  min-width: 100px;
-}
-.sidebar-header.isClosed {
-  width: 100px;
-  min-width: 100px;
-}
-.header-left-col.isClosed {
-  width: 100px;
-  max-width: 100px;
-  .sidebar-header {
-    width: 100px;
-    max-width: 100px;
-    min-width: 100px;
-  }
+
   .sidebar-header__title {
     display: none;
   }

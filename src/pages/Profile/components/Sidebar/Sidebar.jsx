@@ -7,7 +7,7 @@ import mockData from "../../../../mocks/mocks";
 import cx from "classnames";
 
 const Sidebar = ({ handleClick, isClosed }) => {
-  const classNames = cx("sidebar", "col-3", "mobile", {
+  const classNames = cx("sidebar", "dashboard-left", "mobile", {
     isClosed
   });
   const {

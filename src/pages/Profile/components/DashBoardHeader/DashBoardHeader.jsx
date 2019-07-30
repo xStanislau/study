@@ -9,7 +9,7 @@ import "./DashBoardHeader.scss";
 
 class DashBoardHeader extends Component {
   render() {
-    const classNames = cx("header-left-col", {
+    const classNames = cx("dashboard-left", {
       isClosed: this.props.isClosed
     });
     const { notifications, emails, toogleSidebar } = this.props;
@@ -24,12 +24,12 @@ class DashBoardHeader extends Component {
               </div>
             </header>
           </Col>
-          <Col className="header-right-col">
+          <Col className="dashboard-right">
             <header className="dashboard-header">
               <Nav notifications={notifications} emails={emails} />
 
               <div className="d-flex justify-content-end align-items-center">
-                <Searchbar />
+                {/* <Searchbar /> */}
                 <Account />
               </div>
             </header>

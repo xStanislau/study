@@ -3,7 +3,8 @@
   height: 100vh;
   width: 350px;
   max-width: 350px;
-  // position: fixed;
+  margin-bottom: -80px;
+  padding-bottom: 80px;
   z-index: 2;
   overflow-y: auto;
   background: white;
@@ -24,6 +25,7 @@
   background-color: #29b1cc;
   color: white;
   left: 0;
+
   &__content {
     width: 100%;
   }

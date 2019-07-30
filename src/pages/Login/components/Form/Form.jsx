@@ -3,7 +3,7 @@ import { Form } from "react-final-form";
 import Button from "../../../../components/Button/Button";
 import Input from "../../../../components/input/Input";
 import Icon from "../../../../components/Icon/Icon";
-import { checkPassword } from "./../../../../utils/validation";
+import { checkPassword, checkEmail } from "./../../../../utils/validation";
 import { withRouter } from "react-router-dom";
 import { logIn as loginAction } from "../../../../redux/modules/auth";
 import "./Form.scss";
@@ -26,6 +26,9 @@ class LoginForm extends Component {
     if (!checkPassword(values.password)) {
       errors.password = "Password must consist of numbers and leters";
     }
+    if (!checkEmail(values.username)) {
+      errors.username = "Please enter correct email";
+    }
 
     return errors;
   };
@@ -40,7 +43,7 @@ class LoginForm extends Component {
             <form className="login-form" onSubmit={handleSubmit}>
               <Input
                 className="input"
-                type="text"
+                type="email"
                 name="username"
                 id="user-name"
                 placeholder="username"

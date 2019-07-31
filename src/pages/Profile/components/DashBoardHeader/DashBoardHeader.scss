@@ -1,3 +1,7 @@
+.white-05 {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 .dashboard-header {
   width: 100%;
   display: flex;
@@ -6,7 +10,8 @@
   background-color: rgba(255, 255, 255, 0.5);
   align-items: center;
   z-index: 2;
-  // position: fixed;
+  padding-left: 40px;
+  padding-right: 40px;
   box-sizing: border-box;
   i {
     color: #8ca0b3;
@@ -27,6 +32,18 @@
 }
 
 .dashboard-right {
+  min-width: 1024px;
   padding-left: 40px;
   padding-right: 40px;
+}
+
+.top-container {
+  z-index: 4;
+}
+.top-row {
+  .dashboard-right {
+    padding-left: 0;
+    padding-right: 0;
+    min-width: 520px;
+  }
 }

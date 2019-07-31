@@ -14,8 +14,8 @@ class DashBoardHeader extends Component {
     });
     const { notifications, emails, toogleSidebar, userName } = this.props;
     return (
-      <Container fluid>
-        <Row className="top-row">
+      <Container className="top-container" fluid>
+        <Row className="top-row flex-nowrap  white-05">
           <Col className={classNames}>
             <header className="sidebar-header d-flex align-items-center">
               <div className="sidebar-header__content d-flex justify-content-between">

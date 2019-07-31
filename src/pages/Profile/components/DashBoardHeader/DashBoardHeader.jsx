@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import cx from "classnames";
-import Searchbar from "./components/Searchbar/Searchbar";
 import Nav from "./components/Nav/Nav";
 import Account from "./components/Account/Account";
 import Icon from "../../../../components/Icon/Icon";

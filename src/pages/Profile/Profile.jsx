@@ -1,18 +1,28 @@
 import React, { Component } from "react";
 import DashBoardHeader from "./components/DashBoardHeader/DashBoardHeader";
 import Sidebar from "./components/Sidebar/Sidebar";
-import "./Profile.scss";
 import DashboardBody from "./components/DashboardBody/DashboardBody";
 import { loadData } from "../../redux/modules/dashboard";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { Row, Col } from "react-bootstrap";
 import Loader from "../../components/Loader/Loader";
+import "./Profile.scss";
 
 class Profile extends Component {
   state = {
     isClosed: false
   };
+
+  componentDidMount() {
+    this.props.loadData(1);
+    window.addEventListener("resize", this.resizeHandler);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener(this.resizeHandler);
+  }
+
   resizeHandler = () => {
     setTimeout(() => {
       if (window.innerWidth < 1024) {
@@ -22,13 +32,6 @@ class Profile extends Component {
       }
     }, 50);
   };
-  componentDidMount() {
-    this.props.loadData(1);
-    window.addEventListener("resize", this.resizeHandler);
-  }
-  componentWillUnmount() {
-    window.removeEventListener(this.resizeHandler);
-  }
 
   toogleSidebar = evt => {
     this.setState(state => {

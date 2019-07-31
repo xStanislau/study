@@ -63,6 +63,13 @@ class LoginForm extends Component {
               >
                 <Icon name="lock" className="l-icon-center-left" />
               </Input>
+              <Input
+                className="checkbox"
+                name="rememberMe"
+                type="checkbox"
+                id="remember-me"
+                label="Remember me"
+              />
               <Button
                 type="submit"
                 className="btn btn-primary"

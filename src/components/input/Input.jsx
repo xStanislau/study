@@ -23,8 +23,6 @@ const Input = ({
       type={type}
       disabled={disabled}
       render={({ input, meta }) => {
-        if (meta.submitError) {
-        }
         return (
           <div className="form-group">
             {label && <label htmlFor={id}>{label}</label>}

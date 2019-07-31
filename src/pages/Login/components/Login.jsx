@@ -1,9 +1,10 @@
-import React, { Fragment, Component } from "react";
+import React, { Component } from "react";
 import Form from "./Form/Form";
 import { Link } from "react-router-dom";
 import "./Login.scss";
 import Popup from "../../../components/Popup/Popup";
 import Button from "../../../components/Button/Button";
+import Loader from "../../../components/Loader/Loader";
 
 class Login extends Component {
   state = {
@@ -26,13 +27,26 @@ class Login extends Component {
   };
 
   render() {
-    return (
-      <Fragment>
+    const LoginPage = () => {
+      return (
         <main className="page-content">
           <div className="img">
             <section className="right-side">
+              <header className=" header d-flex justify-content-between">
+                <a href="/home" className="link link-left">
+                  Home
+                </a>
+                <div className="left-links">
+                  <a href="/home" className="link">
+                    Contacts /
+                  </a>
+                  <a href="/home" className="link">
+                    Privacy
+                  </a>
+                </div>
+              </header>
               <div className="form-wrapper">
-                <h2 className="text-center">Log in</h2>
+                <h2 className="text-center title">Login your account</h2>
                 <Form />
                 <div className="d-flex justify-content-center align-items-center mb-3">
                   <Button onClick={this.openPopup}>modal</Button>
@@ -52,8 +66,9 @@ class Login extends Component {
             </section>
           </div>
         </main>
-      </Fragment>
-    );
+      );
+    };
+    return <LoginPage />;
   }
 }
 

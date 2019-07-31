@@ -3,6 +3,18 @@
 .page-content {
   margin: 0 auto;
   min-height: 100%;
+  .header {
+    position: absolute;
+    top: 0;
+    padding: 55px 56px;
+    color: red;
+    .link {
+      color: #6b6c6f;
+    }
+  }
+  .title {
+    color: #252529;
+  }
 }
 
 .form-wrapper {
@@ -51,8 +63,11 @@
 
 .right-side {
   display: flex;
+  position: relative;
   justify-content: center;
+  align-items: center;
   background-color: $white-color;
+  height: 100%;
   width: 50%;
   .btn-border {
     margin-bottom: 20px;

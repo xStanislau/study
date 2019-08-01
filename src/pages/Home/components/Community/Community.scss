@@ -1,52 +1,79 @@
 @import "./../../../../styles/theme/theme.scss";
 
 .community {
-  .community-title {
-    margin-bottom: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  &__wrapper {
+    max-width: 1124px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 20px;
+    padding-right: 20px;
   }
-  .row {
+
+  &__container {
     justify-content: center;
-    .col-lg {
-      padding-left: 0px;
-      padding-right: 63px;
-      &:first-child {
-        padding-left: 15px;
-      }
-      &:last-child {
-        padding-right: 15px;
-      }
-    }
+    margin-left: -20px;
+    margin-right: -20px;
   }
-  .card {
-    .card-img-top {
-      width: 100%;
-      height: auto;
-    }
-    .card-title {
-      margin-bottom: 4px;
-    }
-    .card-body {
-      padding: 15px 15px 30px 25px;
-    }
+
+  &__card {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
   }
 }
 
-.card-img-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 260px;
-  overflow: hidden;
-  background-color: #c7c7c7;
-}
-
-@media (max-width: $break-point-lg) {
+@media (min-width: $break-point-sm) {
   .community {
-    .row {
+    padding-bottom: 143px;
+
+    &__title {
+      font-family: "IBM Plex Sans", sans-serif;
+      font-weight: 300;
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+    &__wrapper {
+      max-width: 1124px;
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+    &__container {
       justify-content: center;
-      .col-lg {
-        padding: 0 15px;
+      margin-left: -32px;
+      margin-right: -32px;
+    }
+    &__card {
+      padding-left: 32px;
+      padding-right: 32px;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      font-family: "IBM Plex Sans", sans-serif;
+      .card-img-top {
+        width: 100%;
+        height: auto;
       }
+      .card-title {
+        margin-bottom: 4px;
+      }
+      .card-body {
+        padding: 15px 15px 30px 25px;
+      }
+    }
+
+    .card-img-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 260px;
+      overflow: hidden;
+      background-color: #c7c7c7;
     }
   }
 }

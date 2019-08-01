@@ -8,12 +8,12 @@ const Project = ({
   className
 }) => {
   return (
-    <div className={className}>
-      <div className="project-technology">{technology}</div>
-      <h4 className="project-title">{title}</h4>
-      <div className="project-developers">{numberOfDevelopers}</div>
-      <p className="project-description">{description}</p>
-      <Link to="#" className="project-read-more">
+    <div className={`${className} d-flex justify-content-between flex-column`}>
+      <div className={`${className}__technology`}>{technology}</div>
+      <h4 className={`${className}__title`}>{title}</h4>
+      <div className={`${className}__developers`}>{numberOfDevelopers}</div>
+      <p className={`${className}__description`}>{description}</p>
+      <Link to="#" className={`${className}__read-more`}>
         Read more...
       </Link>
     </div>

@@ -46,7 +46,7 @@ class LoginForm extends Component {
                 type="email"
                 name="email"
                 id="user-name"
-                placeholder="username@email.com"
+                placeholder="Your E-mail"
                 label="Email"
                 withicon
                 formGroupClass="email-group"
@@ -58,7 +58,7 @@ class LoginForm extends Component {
                 type="password"
                 name="password"
                 id="user-password"
-                placeholder="password"
+                placeholder="Your Password"
                 label="Password"
                 withicon
                 formGroupClass="password-group"

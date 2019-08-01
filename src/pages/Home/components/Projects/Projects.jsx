@@ -11,20 +11,20 @@ const Projects = ({ className }) => {
       <div className="wrapper">
         <h3 className={`${className}-title text-center`}>Projects</h3>
         <Menu
-          className={`${className}-menu d-flex align-items-start`}
+          className={`${className}__menu d-flex align-items-start`}
           items={projectsMenu}
         />
-        <div className={`${className}-grid container `}>
-          <div className="row justify-content-between ">
+        <div className={`${className}__wrapper`}>
+          <div className={`${className}__container row `}>
             {projects.map((project, index) => {
               return (
                 <div
                   key={`${project.technology} ${project.title} ${index}`}
-                  className="col-xs-12 col-sm-12 col-md-6 col-xl-4"
+                  className={`${className}__project col-xs-12 col-sm-12 col-md-6 col-xl-4`}
                 >
                   <Project
                     key={`${project.technology} ${project.title} ${index}`}
-                    className="project d-flex justify-content-between flex-column"
+                    className="project"
                     technology={project.technology}
                     title={project.title}
                     numberOfDevelopers={project.numberOfDevelopers}

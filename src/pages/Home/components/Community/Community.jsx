@@ -7,12 +7,15 @@ const Community = ({ className }) => {
   const { cards } = mockData;
   return (
     <section className={`${className} pt-50 `}>
-      <div className="wrapper container">
-        <h3 className="text-center  community-title">Comunity Value</h3>
-        <div className="row">
+      <h3 className="text-center  community__title">Comunity Value</h3>
+      <div className="community__wrapper">
+        <div className="row community__container">
           {cards.map((card, index) => {
             return (
-              <div className="col-md-9 col-lg" key={`${card.title} ${index}`}>
+              <div
+                className="col-md-9 col-lg community__card"
+                key={`${card.title} ${index}`}
+              >
                 <Card
                   className="card"
                   imgSrc={card.imgSrc}

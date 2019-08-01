@@ -20,7 +20,7 @@ class Profile extends Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListener(this.resizeHandler);
+    window.removeEventListener("resize", this.resizeHandler);
   }
 
   resizeHandler = () => {

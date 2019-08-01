@@ -6,6 +6,7 @@ import "./Input.scss";
 
 const Input = ({
   className,
+  formGroupClass,
   name,
   type,
   placeholder,
@@ -24,7 +25,7 @@ const Input = ({
       disabled={disabled}
       render={({ input, meta }) => {
         return (
-          <div className="form-group">
+          <div className={`${formGroupClass} form-group `}>
             {label && <label htmlFor={id}>{label}</label>}
             <div className={withIcon}>
               <input

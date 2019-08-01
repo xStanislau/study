@@ -6,7 +6,7 @@ export default async data => {
 
   const error = Object.create(null);
   if (
-    data.username !== credentials.userName ||
+    data.email !== credentials.userName ||
     data.password !== credentials.password
   ) {
     error.message = "The username or password you entered is incorrect";

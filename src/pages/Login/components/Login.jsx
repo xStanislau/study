@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import Form from "./Form/Form";
 import { Link } from "react-router-dom";
-import "./Login.scss";
 import Popup from "../../../components/Popup/Popup";
 import Button from "../../../components/Button/Button";
 import Loader from "../../../components/Loader/Loader";
+import "./Login.scss";
 
 class Login extends Component {
   state = {
@@ -32,28 +32,28 @@ class Login extends Component {
         <main className="page-content">
           <div className="img">
             <section className="right-side">
-              <header className=" header d-flex justify-content-between">
-                <a href="/home" className="link link-left">
+              <header className="login-header d-flex justify-content-between">
+                <Link to="/" className="link link-left">
                   Home
-                </a>
+                </Link>
                 <div className="left-links">
-                  <a href="/home" className="link">
+                  <Link to="/#" className="link">
                     Contacts /
-                  </a>
-                  <a href="/home" className="link">
+                  </Link>
+                  <Link to="/#" className="link">
                     Privacy
-                  </a>
+                  </Link>
                 </div>
               </header>
               <div className="form-wrapper">
                 <h2 className="text-center title">Login your account</h2>
                 <Form />
-                <div className="d-flex justify-content-center align-items-center mb-3">
-                  <Button onClick={this.openPopup}>modal</Button>
-                  -or-
-                  <Button>
-                    <Link to="/">redirect</Link>
+                <div className="buttons-group d-flex justify-content-center align-items-center ">
+                  <Button className="btn btn-modal" onClick={this.openPopup}>
+                    modal
                   </Button>
+                  -or-
+                  <Link to="/">redirect</Link>
                 </div>
                 <div className="d-flex align-items-center flex-column">
                   <Button type="button" className="btn-outlined">

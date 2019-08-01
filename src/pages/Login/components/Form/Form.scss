@@ -1,18 +1,43 @@
 @import "./../../../../styles/theme/theme.scss";
 
 .login-form {
+  margin-bottom: 19px;
   .btn-primary {
     width: 100%;
   }
-}
-
-.login-form .btn-primary {
-  margin-bottom: 20px;
-}
-
-.login-form {
+  .email-group {
+    margin-bottom: 19px;
+    label {
+      margin-bottom: 14px;
+    }
+  }
+  .password-group {
+    margin-bottom: 19px;
+    label {
+      margin-bottom: 19px;
+    }
+  }
+  .checkbox-group {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin-bottom: 19px;
+    label {
+      margin-bottom: 0;
+    }
+    .checkbox {
+      color: #6b6c6f;
+      margin-right: 15px;
+      width: 18px;
+      height: 18px;
+    }
+  }
   .fa {
     color: $secondary-color;
+  }
+  label {
+    color: #6b6c6f;
   }
   .input {
     height: 50px;

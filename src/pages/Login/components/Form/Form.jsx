@@ -26,8 +26,8 @@ class LoginForm extends Component {
     if (!checkPassword(values.password)) {
       errors.password = "Password must consist of numbers and leters";
     }
-    if (!checkEmail(values.username)) {
-      errors.username = "Please enter correct email";
+    if (!checkEmail(values.email)) {
+      errors.email = "Please enter correct email";
     }
 
     return errors;
@@ -44,11 +44,12 @@ class LoginForm extends Component {
               <Input
                 className="input"
                 type="email"
-                name="username"
+                name="email"
                 id="user-name"
-                placeholder="username"
-                label="Username"
+                placeholder="username@email.com"
+                label="Email"
                 withicon
+                formGroupClass="email-group"
               >
                 <Icon name="envelope" className="l-icon-center-left" />
               </Input>
@@ -60,11 +61,13 @@ class LoginForm extends Component {
                 placeholder="password"
                 label="Password"
                 withicon
+                formGroupClass="password-group"
               >
                 <Icon name="lock" className="l-icon-center-left" />
               </Input>
               <Input
                 className="checkbox"
+                formGroupClass="checkbox-group"
                 name="rememberMe"
                 type="checkbox"
                 id="remember-me"

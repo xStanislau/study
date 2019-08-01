@@ -1,0 +1,52 @@
+@import "./../../../../styles/theme/theme.scss";
+
+.community {
+  .community-title {
+    margin-bottom: 40px;
+  }
+  .row {
+    justify-content: center;
+    .col-lg {
+      padding-left: 0px;
+      padding-right: 63px;
+      &:first-child {
+        padding-left: 15px;
+      }
+      &:last-child {
+        padding-right: 15px;
+      }
+    }
+  }
+  .card {
+    .card-img-top {
+      width: 100%;
+      height: auto;
+    }
+    .card-title {
+      margin-bottom: 4px;
+    }
+    .card-body {
+      padding: 15px 15px 30px 25px;
+    }
+  }
+}
+
+.card-img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 260px;
+  overflow: hidden;
+  background-color: #c7c7c7;
+}
+
+@media (max-width: $break-point-lg) {
+  .community {
+    .row {
+      justify-content: center;
+      .col-lg {
+        padding: 0 15px;
+      }
+    }
+  }
+}

@@ -3,8 +3,8 @@ import Button from "../../../../components/Button/Button";
 
 const Media = ({ className }) => {
   return (
-    <section className={`${className}-section `}>
-      <div className="wrapper d-flex justify-content-around">
+    <section className={`${className}-section`}>
+      <div className="wrapper d-flex justify-content-center align-items-center">
         <div className={`${className}-text`}>
           <h3 className={`${className}-title`}>About Cognetive Catalyst</h3>
           <p>

@@ -47,7 +47,6 @@ class Profile extends Component {
 
   render() {
     const { isLoad, userName } = this.props;
-
     const DashBoard = () => {
       return (
         <div className="containter-fluid dashboard">
@@ -78,7 +77,7 @@ class Profile extends Component {
 const mapStateToProps = state => ({
   data: state.dashboard.data,
   isLoad: state.dashboard.isLoaded,
-  userName: state.auth.userName
+  userName: state.auth.userInfo.userName
 });
 
 const mapDispatchToProps = dispatch => ({

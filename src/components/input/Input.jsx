@@ -25,23 +25,26 @@ const Input = ({
       disabled={disabled}
       render={({ input, meta }) => {
         return (
-          <div className={`${formGroupClass} form-group `}>
-            {label && <label htmlFor={id}>{label}</label>}
-            <div className={withIcon}>
-              <input
-                className={classess}
-                id={id}
-                placeholder={placeholder}
-                {...input}
-              />
-              {children}
-            </div>
-            {meta.touched && (meta.error || meta.submitError) && (
-              <span className="text-danger">
-                {meta.error || meta.submitError}
-              </span>
+          <>
+            {meta.touched && meta.submitError && !meta.dirtySinceLastSubmit && (
+              <span className="text-danger">{meta.submitError}</span>
             )}
-          </div>
+            <div className={`${formGroupClass} form-group `}>
+              {label && <label htmlFor={id}>{label}</label>}
+              <div className={withIcon}>
+                <input
+                  className={classess}
+                  id={id}
+                  placeholder={placeholder}
+                  {...input}
+                />
+                {children}
+              </div>
+              {meta.touched && meta.error && (
+                <span className="text-danger">{meta.error}</span>
+              )}
+            </div>
+          </>
         );
       }}
     />

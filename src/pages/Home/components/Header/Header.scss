@@ -1,3 +1,5 @@
+@import "./../../../../styles//theme/theme.scss";
+
 .main-header {
   .btn {
     width: 100px;
@@ -49,4 +51,21 @@
   width: 44px;
   height: 47px;
   margin-right: 15px;
+}
+
+@media (max-width: $break-point-sm) {
+  .main-header {
+    &__profile-link {
+      margin-right: 10px;
+    }
+    .logo {
+      font-size: 18px;
+
+      img {
+        width: 35px;
+        height: 35px;
+        margin-right: 10px;
+      }
+    }
+  }
 }

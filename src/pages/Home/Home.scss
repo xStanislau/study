@@ -62,7 +62,7 @@
     }
     .container {
       &:first-child {
-        margin-top: 175px;
+        margin-top: 205px;
       }
     }
   }
@@ -267,6 +267,8 @@
     font-size: 18px;
     font-weight: lighter;
     margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 15px;
     white-space: nowrap;
     justify-content: center;
     overflow-x: auto;
@@ -276,8 +278,11 @@
     margin-bottom: 40px;
     .menu-item {
       font-size: 15px;
-      margin-right: 55px;
+      margin-right: 20px;
       padding-bottom: 8px;
+      padding-right: 10px;
+      padding-left: 8px;
+
       &:last-child {
         margin-right: 0;
       }
@@ -315,6 +320,7 @@
     font-size: 14px;
     background-color: #ffcf27;
     padding: 29px 17px 20px 26px;
+
     &__technology {
       margin-bottom: 10px;
     }
@@ -416,12 +422,14 @@
       border-bottom: 1px solid #f2f2f2;
       border-top: none;
     }
-
+    .table-cell {
+      border: 1px solid #f2f2f2;
+    }
     .table-head {
       background-color: #fbfbfb;
       border: 1px solid #f2f2f2;
       .table-head-cell {
-        border: none;
+        border: 1px solid #f2f2f2;
       }
     }
   }
@@ -429,8 +437,8 @@
 
 @media only screen and (max-width: $break-point-sm) {
   .forums {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
     text-align: left;
   }
 }
@@ -465,6 +473,7 @@
       position: relative;
       padding-left: 5%;
       margin-left: 150px;
+      border: 1px solid #f2f2f2;
     }
 
     .table-cell:before {
@@ -535,6 +544,9 @@
       margin-right: 0;
     }
   }
+  .wrapper {
+    max-width: 1140px;
+  }
   .news-title {
     text-align: center;
   }
@@ -548,6 +560,7 @@
     small {
       font-size: 14px;
     }
+
     .news-article-img {
       max-width: 300px;
       height: auto;
@@ -564,6 +577,9 @@
     .news-article-title {
       font-size: 24px;
       margin: 11px 0 5px 0;
+    }
+    .news-article-text {
+      min-height: 65px;
     }
     .news-article-description {
       margin-top: 15px;

@@ -15,7 +15,7 @@ class LoginForm extends Component {
     const response = await this.props.login(values);
 
     if (response) {
-      return { password: response.error.message };
+      return { email: response.error.message };
     }
 
     this.props.history.push("/profile");
@@ -38,7 +38,17 @@ class LoginForm extends Component {
       <Form
         onSubmit={this.onSubmit}
         validate={this.validate}
-        render={({ handleSubmit, pristine, invalid }) => {
+        initialValues={this.props.values && this.props.values}
+        render={({
+          handleSubmit,
+          dirtySinceLastSubmit,
+          hasValidationErrors,
+          pristine,
+          dirty,
+          invalid,
+          submitting,
+          hasSubmitErrors
+        }) => {
           return (
             <form className="login-form" onSubmit={handleSubmit}>
               <Input
@@ -76,7 +86,11 @@ class LoginForm extends Component {
               <Button
                 type="submit"
                 className="btn btn-primary"
-                disabled={pristine || invalid}
+                disabled={
+                  submitting ||
+                  (hasValidationErrors && !dirty) ||
+                  (hasSubmitErrors && !dirtySinceLastSubmit)
+                }
               >
                 Login
               </Button>
@@ -88,11 +102,23 @@ class LoginForm extends Component {
   }
 }
 
+const mapStateToProps = state => {
+  if (state.auth.userInfo) {
+    return {
+      values: {
+        email: state.auth.userInfo.userName,
+        password: state.auth.userInfo.password
+      }
+    };
+  }
+  return state.auth;
+};
+
 const mapDispatchToProps = dispatch => ({
   login: bindActionCreators(loginAction, dispatch)
 });
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(withRouter(LoginForm));

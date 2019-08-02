@@ -37,6 +37,7 @@ export const logOutSuccessed = () => ({
 const initialState = {
   isAuthorized: false,
   error: null
+  // userInfo: null
 };
 
 export default function reducer(state = initialState, action) {
@@ -44,20 +45,19 @@ export default function reducer(state = initialState, action) {
     case LOG_IN:
       return {
         ...state,
-        userName: action.payload,
+        userInfo: action.payload,
         isAuthorized: false
       };
     case LOG_IN_FAILED:
       return {
         ...state,
-        userName: action.payload,
         isAuthorized: false,
         error: action.error
       };
     case LOG_IN_SUCCSSEEDED:
       return {
         ...state,
-        userName: action.payload,
+        userInfo: action.payload,
         isAuthorized: true
       };
     case LOG_OUT:
@@ -68,6 +68,7 @@ export default function reducer(state = initialState, action) {
     case LOG_OUT_SUCCSSEEDED:
       return {
         ...state,
+        // userInfo: null,
         isAuthorized: false
       };
     default:
@@ -78,14 +79,17 @@ export default function reducer(state = initialState, action) {
 export const logIn = values => async dispatch => {
   dispatch(logInStart());
   try {
-    const reponse = await api.login(values);
+    let response = await api.login(values);
+    if (response.error) return response;
+    if (values.rememberMe) {
+      const { password } = values;
+      response = { ...response, password };
+    }
 
-    if (reponse.error) return reponse;
-
-    dispatch(logInSuccessed(reponse));
+    dispatch(logInSuccessed(response));
     localStorage.setItem(
       "user",
-      JSON.stringify({ ...reponse, isAuthorized: true })
+      JSON.stringify({ ...response, isAuthorized: true })
     );
   } catch (error) {
     dispatch(logInFailed(error));
@@ -95,7 +99,12 @@ export const logIn = values => async dispatch => {
 export const logOut = key => async dispatch => {
   dispatch(logOutStart);
   try {
-    localStorage.removeItem(key);
+    const user = localStorage.getItem(key)
+      ? JSON.parse(localStorage.getItem(key))
+      : "";
+
+    user.isAuthorized = false;
+    localStorage.setItem("user", JSON.stringify(user));
     dispatch(logOutSuccessed());
   } catch (error) {
     dispatch(logOutFailed(error));

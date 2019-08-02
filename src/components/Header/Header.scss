@@ -10,20 +10,6 @@
   z-index: 1;
   transition: all 0.24s ease-in-out;
   color: white;
-  .btn {
-    width: 100px;
-  }
-  .logo {
-    font-family: "IBM Plex Sans", sans-serif;
-  }
-  .profile {
-    font-family: "IBM Plex Sans", sans-serif;
-    font-weight: lighter;
-  }
-  .profile.isActive {
-    text-decoration: underline;
-    color: darken($color: #fff, $amount: 20%);
-  }
 }
 
 .fixed {

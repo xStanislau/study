@@ -11,7 +11,6 @@
 }
 
 .wrapper {
-  // max-width: $base-content-width;
   width: 100%;
   margin: 0 auto;
 }
@@ -63,7 +62,7 @@
     }
     .container {
       &:first-child {
-        margin-top: 115px;
+        margin-top: 175px;
       }
     }
   }
@@ -404,6 +403,8 @@
   padding-left: 40px;
   padding-right: 40px;
   .table {
+    max-width: 1115px;
+    margin: 0 auto;
     font-family: "IBM Plex Sans", sans-serif;
     font-size: 14px;
     font-weight: normal;
@@ -425,6 +426,7 @@
     }
   }
 }
+
 @media only screen and (max-width: $break-point-sm) {
   .forums {
     padding-left: 10px;
@@ -549,12 +551,14 @@
     .news-article-img {
       max-width: 300px;
       height: auto;
-      margin-right: 20px;
+      margin-right: 35px;
     }
     .news-article-tag {
       display: inline-block;
       background-color: #fff;
       color: #00b29e;
+      font-weight: 500;
+      line-height: normal;
       padding: 8px 15px;
     }
     .news-article-title {

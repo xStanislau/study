@@ -31,7 +31,7 @@ const mockData = {
   projectsMenu: ["Trending", "Language", "Speeh", "Vision", "Data Insight"],
   projects: [
     {
-      technology: "Javascript",
+      technology: "Swift                  ",
       title: "IBM Cognative Catalyst Community",
       numberOfDevelopers: 15,
       description:
@@ -45,28 +45,28 @@ const mockData = {
         "Discover details about the IBM Design Language animation update, where the moving parts of the user interface meet the business machine."
     },
     {
-      technology: "Javascript",
-      title: "IBM Cognative Catalyst Community",
+      technology: "HTML",
+      title: "Retrieve and Rank Grand Truth Tooling",
       numberOfDevelopers: 15,
       description:
         "Discover details about the IBM Design Language animation update, where the moving parts of the user interface meet the business machine.Language animation update, where the moving parts of the user interface meet the business machine."
     },
     {
-      technology: "Javascript",
-      title: "IBM Cognative Catalyst Community",
+      technology: "Phyton",
+      title: "Document Segmenter",
       numberOfDevelopers: 15,
       description: " the user interface meet the business machine."
     },
     {
-      technology: "Javascript",
-      title: "IBM Cognative Catalyst Community",
+      technology: "Java ",
+      title: "QA Safe Strings",
       numberOfDevelopers: 15,
       description:
         "Discover details about the IBM Design Language animation update, where the moving parts of the user interface meet the business machine."
     },
     {
       technology: "Javascript",
-      title: "IBM Cognative Catalyst Community",
+      title: "Annotations Assist",
       numberOfDevelopers: 15,
       description: "Discover "
     }

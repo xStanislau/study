@@ -4,16 +4,20 @@ import Header from "../../../../components/Header/Header";
 import Logo from "../../../../components/Logo/Logo";
 import Button from "../../../../components/Button/Button";
 import { connect } from "react-redux";
+import "./Header.scss";
 
 const MainHeader = ({ className, isAuthorized }) => {
   return (
     <Header className={`${className} `}>
       <section className="wrapper d-flex justify-content-between align-items-center">
-        <Logo className="logo">Logo</Logo>
-        <div className="text-white">
+        <Logo className="logo">
+          <img src="/images/react.svg" alt="logo" />
+          Logo
+        </Logo>
+        <div className="main-header__links">
           <NavLink
             to="/profile"
-            className="profile mr-3 text-white"
+            className="main-header__profile-link"
             activeClassName="isActive"
           >
             Profile

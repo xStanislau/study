@@ -18,9 +18,8 @@ export default function configureStore() {
 
       store.dispatch(logInSuccessed(auth));
     } else if (user.hasOwnProperty("password")) {
-      const auth = {};
       const { userName, password } = user;
-      auth = { userName, password };
+      const auth = { userName, password };
       store.dispatch(logInSuccessed(auth));
     }
   }

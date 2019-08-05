@@ -36,8 +36,8 @@ export const logOutSuccessed = () => ({
 
 const initialState = {
   isAuthorized: false,
-  error: null
-  // userInfo: null
+  error: null,
+  userInfo: null
 };
 
 export default function reducer(state = initialState, action) {
@@ -55,6 +55,7 @@ export default function reducer(state = initialState, action) {
         error: action.error
       };
     case LOG_IN_SUCCSSEEDED:
+      debugger;
       return {
         ...state,
         userInfo: action.payload,
@@ -68,7 +69,7 @@ export default function reducer(state = initialState, action) {
     case LOG_OUT_SUCCSSEEDED:
       return {
         ...state,
-        // userInfo: null,
+        userInfo: null,
         isAuthorized: false
       };
     default:
@@ -86,11 +87,11 @@ export const logIn = values => async dispatch => {
       response = { ...response, password };
     }
 
-    dispatch(logInSuccessed(response));
     localStorage.setItem(
       "user",
       JSON.stringify({ ...response, isAuthorized: true })
     );
+    dispatch(logInSuccessed(response));
   } catch (error) {
     dispatch(logInFailed(error));
   }
@@ -104,6 +105,9 @@ export const logOut = key => async dispatch => {
       : "";
 
     user.isAuthorized = false;
+    delete user.userName;
+    delete user.password;
+
     localStorage.setItem("user", JSON.stringify(user));
     dispatch(logOutSuccessed());
   } catch (error) {

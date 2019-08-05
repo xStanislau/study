@@ -6,9 +6,9 @@ import Icon from "../../../../components/Icon/Icon";
 import { checkPassword, checkEmail } from "./../../../../utils/validation";
 import { withRouter } from "react-router-dom";
 import { logIn as loginAction } from "../../../../redux/modules/auth";
-import "./Form.scss";
-import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
+import "./Form.scss";
 
 class LoginForm extends Component {
   onSubmit = async values => {
@@ -17,8 +17,6 @@ class LoginForm extends Component {
     if (response) {
       return { email: response.error.message };
     }
-
-    this.props.history.push("/profile");
   };
 
   validate = values => {
@@ -34,6 +32,11 @@ class LoginForm extends Component {
   };
 
   render() {
+    debugger;
+    const { isAuthorized } = this.props;
+    if (isAuthorized) {
+      this.props.history.push("/profile");
+    }
     return (
       <Form
         onSubmit={this.onSubmit}
@@ -43,9 +46,7 @@ class LoginForm extends Component {
           handleSubmit,
           dirtySinceLastSubmit,
           hasValidationErrors,
-          pristine,
           dirty,
-          invalid,
           submitting,
           hasSubmitErrors
         }) => {
@@ -105,13 +106,17 @@ class LoginForm extends Component {
 const mapStateToProps = state => {
   if (state.auth.userInfo) {
     return {
+      isAuthorized: state.auth.isAuthorized,
       values: {
         email: state.auth.userInfo.userName,
         password: state.auth.userInfo.password
       }
     };
+  } else {
+    return {
+      isAuthorized: state.auth.isAuthorized
+    };
   }
-  return state.auth;
 };
 
 const mapDispatchToProps = dispatch => ({

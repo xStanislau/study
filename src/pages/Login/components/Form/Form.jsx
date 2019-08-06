@@ -32,7 +32,6 @@ class LoginForm extends Component {
   };
 
   render() {
-    debugger;
     const { isAuthorized } = this.props;
     if (isAuthorized) {
       this.props.history.push("/profile");

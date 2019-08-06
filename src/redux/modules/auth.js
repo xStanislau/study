@@ -55,7 +55,6 @@ export default function reducer(state = initialState, action) {
         error: action.error
       };
     case LOG_IN_SUCCSSEEDED:
-      debugger;
       return {
         ...state,
         userInfo: action.payload,

@@ -5,7 +5,7 @@ import "./Chart.scss";
 
 const Chart = () => {
   return (
-    <Col className="col-8 chart">
+    <Col className="col-7 chart">
       <VictoryChart
         width={722}
         height={350}

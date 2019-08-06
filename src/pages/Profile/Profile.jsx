@@ -17,6 +17,9 @@ class Profile extends Component {
   componentDidMount() {
     this.props.loadData(1);
     window.addEventListener("resize", this.resizeHandler);
+    if (window.innerWidth < 1280) {
+      this.setState({ isClosed: true });
+    }
   }
 
   componentWillUnmount() {
@@ -25,7 +28,7 @@ class Profile extends Component {
 
   resizeHandler = () => {
     setTimeout(() => {
-      if (window.innerWidth < 1024) {
+      if (window.innerWidth < 1280) {
         this.setState({ isClosed: true });
       } else {
         this.setState({ isClosed: false });
@@ -33,7 +36,7 @@ class Profile extends Component {
     }, 50);
   };
 
-  toogleSidebar = evt => {
+  toogleSidebar = () => {
     this.setState(state => {
       return { isClosed: !this.state.isClosed };
     });

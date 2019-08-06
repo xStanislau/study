@@ -37,7 +37,7 @@ class UserActivity extends PureComponent {
   render() {
     const { activity } = this.props;
     return (
-      <Col className="col-4">
+      <Col className="col-5">
         <Card className="user-activity">
           <Card.Header>
             <h5 className="user-activity__title">User Activity</h5>

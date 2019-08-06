@@ -6,9 +6,8 @@ import "./OverviewCard.scss";
 
 const OverviewCard = ({ title, number, iconName, color }) => {
   const className = "overview-card";
-
   return (
-    <Col>
+    <Col className="overview__overview-card col-4">
       <Card className={`${className} ${className}_${color}`}>
         <Card.Header className={`${className}__header`}>
           <Icon className={`${className}__header-icon`} name={iconName} />

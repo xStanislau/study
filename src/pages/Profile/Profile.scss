@@ -1,27 +1,31 @@
 .dashboard {
+  min-width: 1024px;
   & > .row {
     margin-right: 0;
     margin-left: 0;
   }
-  min-width: 1024px;
 }
 
 .isClosed + .dashboard-header {
   margin-left: 100px;
   width: calc(100% - 340px);
+  height: 100vh;
 }
 .isClosed + .right-col {
   padding-left: 100px;
 }
+
 .right-col {
   background-color: #f0f0f0;
-  padding: 0;
+  padding-left: 100px;
   padding-top: 80px;
-  padding-left: 350px;
   height: 100%;
-  position: fixed;
-  top: 0;
-  bottom: 0;
+  position: relative;
   width: 100%;
-  overflow-x: auto;
+  overflow: auto;
+}
+@media (min-width: 1280px) {
+  .right-col {
+    padding-left: 350px;
+  }
 }

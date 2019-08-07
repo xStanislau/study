@@ -1,17 +1,24 @@
 import React, { Component } from "react";
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
 import { Container, Row, Col } from "react-bootstrap";
 import cx from "classnames";
 import Nav from "./components/Nav/Nav";
 import Account from "./components/Account/Account";
 import Icon from "../../../../components/Icon/Icon";
 import "./DashBoardHeader.scss";
+import {
+  openSidebar,
+  closeSidebar,
+  toggleSidebar
+} from "../../../../redux/modules/sidebar";
 
 class DashBoardHeader extends Component {
   render() {
     const classNames = cx("dashboard-left", {
       isClosed: this.props.isClosed
     });
-    const { notifications, emails, toogleSidebar, userName } = this.props;
+    const { notifications, emails, toggleSidebar, userName } = this.props;
     return (
       <Container className="top-container" fluid>
         <Row className="top-row flex-nowrap  white-05">
@@ -19,7 +26,7 @@ class DashBoardHeader extends Component {
             <header className="sidebar-header d-flex align-items-center">
               <div className="sidebar-header__content d-flex justify-content-between">
                 <h6 className="sidebar-header__title">Profile</h6>
-                <Icon name="align-left" size="25" onClick={toogleSidebar} />
+                <Icon name="align-left" size="25" onClick={toggleSidebar} />
               </div>
             </header>
           </Col>
@@ -38,4 +45,17 @@ class DashBoardHeader extends Component {
   }
 }
 
-export default DashBoardHeader;
+const mapStateToProps = state => ({
+  isClosed: state.sidebar.isClosed
+});
+
+const mapDispatchToProps = dispatch => ({
+  openSidebar: bindActionCreators(openSidebar, dispatch),
+  closeSidebar: bindActionCreators(closeSidebar, dispatch),
+  toggleSidebar: bindActionCreators(toggleSidebar, dispatch)
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(DashBoardHeader);

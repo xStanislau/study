@@ -5,8 +5,11 @@ import SidebarItem from "./components/Item/Item";
 import SubItem from "./components/Subitem/Subitem";
 import mockData from "../../../../mocks/mocks";
 import cx from "classnames";
+import { connect } from "react-redux";
+import { openSidebar } from "../../../../redux/modules/sidebar";
+import { bindActionCreators } from "../../../../../../../../../AppData/Local/Microsoft/TypeScript/3.5/node_modules/redux";
 
-const Sidebar = ({ handleClick, isClosed }) => {
+const Sidebar = ({ isClosed, openSidebar }) => {
   const classNames = cx("sidebar", "dashboard-left", "mobile", {
     isClosed
   });
@@ -19,7 +22,7 @@ const Sidebar = ({ handleClick, isClosed }) => {
 
   return (
     <>
-      <div className={classNames} onClick={handleClick}>
+      <div className={classNames} onClick={openSidebar}>
         <Accordion>
           {items.map((item, index) => {
             const { subItems, text, iconName } = item;
@@ -50,4 +53,15 @@ const Sidebar = ({ handleClick, isClosed }) => {
   );
 };
 
-export default Sidebar;
+const mapStateToProps = state => ({
+  isClosed: state.sidebar.isClosed
+});
+
+const mapDispatchToProps = dispatch => ({
+  openSidebar: bindActionCreators(openSidebar, dispatch)
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Sidebar);

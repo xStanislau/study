@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import { Row, Col } from "react-bootstrap";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 import DashBoardHeader from "./components/DashBoardHeader/DashBoardHeader";
 import Sidebar from "./components/Sidebar/Sidebar";
 import DashboardBody from "./components/DashboardBody/DashboardBody";
 import { loadData } from "../../redux/modules/dashboard";
-import { bindActionCreators } from "redux";
-import { connect } from "react-redux";
-import { Row, Col } from "react-bootstrap";
+import { openSidebar, closeSidebar } from "../../redux/modules/sidebar";
 import Loader from "../../components/Loader/Loader";
 import "./Profile.scss";
 
@@ -18,7 +19,7 @@ class Profile extends Component {
     this.props.loadData(1);
     window.addEventListener("resize", this.resizeHandler);
     if (window.innerWidth < 1280) {
-      this.setState({ isClosed: true });
+      this.props.closeSidebar();
     }
   }
 
@@ -29,22 +30,16 @@ class Profile extends Component {
   resizeHandler = () => {
     setTimeout(() => {
       if (window.innerWidth < 1280) {
-        this.setState({ isClosed: true });
+        this.props.closeSidebar();
       } else {
-        this.setState({ isClosed: false });
+        this.props.openSidebar();
       }
     }, 50);
   };
 
-  toogleSidebar = () => {
-    this.setState(state => {
-      return { isClosed: !this.state.isClosed };
-    });
-  };
-
-  handleClick = evt => {
-    if (this.state.isClosed) {
-      this.toogleSidebar(evt);
+  handleClick = () => isClosed => {
+    if (isClosed) {
+      this.props.toogleSidebar();
     }
   };
 
@@ -54,16 +49,8 @@ class Profile extends Component {
       return (
         <div className="containter-fluid dashboard">
           <Row>
-            <DashBoardHeader
-              {...this.props.data}
-              userName={userName}
-              toogleSidebar={this.toogleSidebar}
-              isClosed={this.state.isClosed}
-            />
-            <Sidebar
-              handleClick={this.handleClick}
-              isClosed={this.state.isClosed}
-            />
+            <DashBoardHeader {...this.props.data} userName={userName} />
+            <Sidebar />
             <Col className="right-col">
               <DashboardBody isLoad={isLoad} {...this.props.data} />
             </Col>
@@ -84,7 +71,9 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  loadData: bindActionCreators(loadData, dispatch)
+  loadData: bindActionCreators(loadData, dispatch),
+  openSidebar: bindActionCreators(openSidebar, dispatch),
+  closeSidebar: bindActionCreators(closeSidebar, dispatch)
 });
 
 export default connect(

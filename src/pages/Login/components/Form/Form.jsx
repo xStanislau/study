@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Form } from "react-final-form";
-import Button from "../../../../components/Button/Button";
+import Button, { ButtonWithLoader } from "../../../../components/Button/Button";
 import Input from "../../../../components/input/Input";
 import Icon from "../../../../components/Icon/Icon";
 import { checkPassword, checkEmail } from "./../../../../utils/validation";
@@ -83,7 +83,8 @@ class LoginForm extends Component {
                 id="remember-me"
                 label="Remember me"
               />
-              <Button
+              <ButtonWithLoader
+                isLoad={isAuthorized || !submitting}
                 type="submit"
                 className="btn btn-primary"
                 disabled={
@@ -93,7 +94,7 @@ class LoginForm extends Component {
                 }
               >
                 Login
-              </Button>
+              </ButtonWithLoader>
             </form>
           );
         }}

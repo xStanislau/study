@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
+import Loader from "../Loader/Loader";
 import "./Button.scss";
 
 const Button = ({ onClick, type, className, children, disabled, ...attrs }) => {
@@ -31,5 +32,7 @@ Button.defaultProps = {
   children: "Button",
   disabled: false
 };
+
+export const ButtonWithLoader = Loader(Button);
 
 export default Button;

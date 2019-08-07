@@ -1,4 +1,4 @@
-import React, { Fragm } from "react";
+import React from "react";
 import "./Loader.scss";
 import { Spinner } from "react-bootstrap";
 

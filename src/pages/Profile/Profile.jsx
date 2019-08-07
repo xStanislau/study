@@ -50,7 +50,7 @@ class Profile extends Component {
         <div className="containter-fluid dashboard">
           <Row>
             <DashBoardHeader {...this.props.data} userName={userName} />
-            <Sidebar />
+            <Sidebar openSidebar={this.props.openSidebar} />
             <Col className="right-col">
               <DashboardBody isLoad={isLoad} {...this.props.data} />
             </Col>

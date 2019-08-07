@@ -1,13 +1,13 @@
 import React from "react";
-import "./Sidebar.scss";
-import { Accordion, Card } from "react-bootstrap";
-import SidebarItem from "./components/Item/Item";
-import SubItem from "./components/Subitem/Subitem";
-import mockData from "../../../../mocks/mocks";
 import cx from "classnames";
 import { connect } from "react-redux";
 import { openSidebar } from "../../../../redux/modules/sidebar";
 import { bindActionCreators } from "../../../../../../../../../AppData/Local/Microsoft/TypeScript/3.5/node_modules/redux";
+import { Accordion, Card } from "react-bootstrap";
+import SidebarItem from "./components/Item/Item";
+import SubItem from "./components/Subitem/Subitem";
+import mockData from "../../../../mocks/mocks";
+import "./Sidebar.scss";
 
 const Sidebar = ({ isClosed, openSidebar }) => {
   const classNames = cx("sidebar", "dashboard-left", "mobile", {
@@ -57,11 +57,7 @@ const mapStateToProps = state => ({
   isClosed: state.sidebar.isClosed
 });
 
-const mapDispatchToProps = dispatch => ({
-  openSidebar: bindActionCreators(openSidebar, dispatch)
-});
-
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  null
 )(Sidebar);

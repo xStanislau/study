@@ -3,6 +3,7 @@ const mockData = {
     userName: "admin@mail.ru",
     password: "Admin12345"
   },
+
   statistics: {
     developers: "13.435",
     software: "1.943",
@@ -138,26 +139,101 @@ const mockData = {
       lastPost: "Yesterday"
     }
   ],
-  accordeon: {
-    dashboard: [
-      {
-        text: "dashboard 1",
-        link: "/dashboard/1"
-      },
-      {
-        text: "dashboard 2",
-        link: "/dashboard/2"
-      },
-      {
-        text: "dashboard 3",
-        link: "/dashboard/3"
-      }
-    ],
-    tables: [],
-    forms: [],
-    uiElements: []
-  },
   dashboardData: {
+    sidebar: {
+      items: [
+        {
+          text: "dashboard",
+          iconName: "git-square",
+          subItems: [
+            {
+              text: "dashboard 1",
+              link: "/dashboard/1"
+            },
+            {
+              text: "dashboard 2",
+              link: "/dashboard/2"
+            },
+            {
+              text: "dashboard 3",
+              link: "/dashboard/3"
+            }
+          ]
+        },
+        {
+          text: "charts",
+          iconName: "git-square",
+          subItems: [
+            {
+              text: "chart 1",
+              link: "/chart/1"
+            },
+            {
+              text: "chart 2",
+              link: "/chart/2"
+            },
+            {
+              text: "chart 3",
+              link: "/chart/3"
+            }
+          ]
+        },
+        {
+          text: "tables",
+          iconName: "git-square",
+          subItems: [
+            {
+              text: "tables 1",
+              link: "/tables/1"
+            },
+            {
+              text: "tables 2",
+              link: "/tables/2"
+            },
+            {
+              text: "tables 3",
+              link: "/tables/3"
+            }
+          ]
+        },
+        {
+          text: "forms",
+          iconName: "git-square",
+          subItems: [
+            {
+              text: "forms 1",
+              link: "/forms/1"
+            },
+            {
+              text: "forms 2",
+              link: "/forms/2"
+            },
+            {
+              text: "forms 3",
+              link: "/forms/3"
+            }
+          ]
+        },
+        {
+          text: "UI elements",
+          iconName: "git-square",
+          subItems: [
+            {
+              text: "ui-elements 1",
+              link: "/ui-elements/1"
+            },
+            {
+              text: "ui-elements 2",
+              link: "/ui-elements/2"
+            },
+            {
+              text: "ui-elements 3",
+              link: "/ui-elements/3"
+            }
+          ]
+        }
+      ]
+    },
     timeBadges: [
       {
         text: "today",

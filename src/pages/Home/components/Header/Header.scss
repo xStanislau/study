@@ -33,8 +33,6 @@
   }
   &__burger {
     z-index: 3;
-    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-    -webkit-tap-highlight-color: transparent;
   }
 }
 
@@ -134,6 +132,13 @@
       img {
         width: 35px;
         height: 35px;
+      }
+    }
+    &__burger {
+      &:focus {
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+        -webkit-tap-highlight-color: transparent;
+        outline-color: transparent;
       }
     }
   }

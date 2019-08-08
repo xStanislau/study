@@ -231,6 +231,24 @@ const mockData = {
               link: "/ui-elements/3"
             }
           ]
+        },
+        {
+          text: "Articles",
+          iconName: "git-square",
+          subItems: [
+            {
+              text: "List",
+              link: "/profile/news"
+            },
+            {
+              text: "ui-elements 2",
+              link: "/ui-elements/2"
+            },
+            {
+              text: "ui-elements 3",
+              link: "/ui-elements/3"
+            }
+          ]
         }
       ]
     },

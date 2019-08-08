@@ -8,6 +8,7 @@ import DashboardBody from "./components/DashboardBody/DashboardBody";
 import { loadData } from "../../redux/modules/dashboard";
 import { openSidebar, closeSidebar } from "../../redux/modules/sidebar";
 import Loader from "../../components/Loader/Loader";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./Profile.scss";
 
 class Profile extends Component {

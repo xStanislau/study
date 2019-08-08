@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import Popup from "../../../components/Popup/Popup";
 import Button from "../../../components/Button/Button";
 import Header from "./Header/Header";
-import Loader from "../../../components/Loader/Loader";
 import "./Login.scss";
 
 class Login extends Component {

@@ -31,7 +31,6 @@ export default function reducer(state = initialState, action) {
         isClosed: true
       };
     case TOGGLE_SIDEBAR:
-      debugger;
       return {
         ...state,
         isClosed: !state.isClosed

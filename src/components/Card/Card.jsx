@@ -1,6 +1,7 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 const Card = props => {
-  const { text, title, imgSrc, className } = props;
+  const { text, title, imgSrc, className, linkText } = props;
   return (
     <div className={className}>
       <div className="card-img-wrapper">
@@ -10,6 +11,8 @@ const Card = props => {
         <h5 className="card-title">{title}</h5>
         <p className="card-text">{text}</p>
       </div>
+
+      {linkText && <NavLink to={linkText}>Show </NavLink>}
     </div>
   );
 };

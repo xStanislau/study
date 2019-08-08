@@ -3,6 +3,7 @@ import Form from "./Form/Form";
 import { Link } from "react-router-dom";
 import Popup from "../../../components/Popup/Popup";
 import Button from "../../../components/Button/Button";
+import Header from "./Header/Header";
 import Loader from "../../../components/Loader/Loader";
 import "./Login.scss";
 
@@ -32,21 +33,9 @@ class Login extends Component {
         <main className="page-content">
           <div className="img">
             <section className="right-side">
-              <header className="login-header d-flex justify-content-between">
-                <Link to="/" className="link link-left">
-                  Home
-                </Link>
-                <div className="left-links">
-                  <Link to="/#" className="link">
-                    Contacts /
-                  </Link>
-                  <Link to="/#" className="link">
-                    Privacy
-                  </Link>
-                </div>
-              </header>
+              <Header />
               <div className="form-wrapper">
-                <h2 className="text-center title">Login your account</h2>
+                <h2 className="text-left title">Login your account</h2>
                 <Form />
                 <div className="buttons-group d-flex justify-content-center align-items-center ">
                   <Button className="btn btn-modal" onClick={this.openPopup}>

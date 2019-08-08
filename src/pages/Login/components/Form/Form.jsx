@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Form } from "react-final-form";
-import Button, { ButtonWithLoader } from "../../../../components/Button/Button";
+import { ButtonWithLoader } from "../../../../components/Button/Button";
 import Input from "../../../../components/input/Input";
 import Icon from "../../../../components/Icon/Icon";
 import { checkPassword, checkEmail } from "./../../../../utils/validation";
@@ -82,7 +82,9 @@ class LoginForm extends Component {
                 type="checkbox"
                 id="remember-me"
                 label="Remember me"
-              />
+              >
+                <label className="checkmark" htmlFor="remember-me" />>
+              </Input>
               <ButtonWithLoader
                 isLoad={isAuthorized || !submitting}
                 type="submit"

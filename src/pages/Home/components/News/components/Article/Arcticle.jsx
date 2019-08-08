@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 const Article = ({
   className,
   imgSrc,
@@ -21,7 +21,6 @@ const Article = ({
           <strong className={`${className}-date`}>{date}</strong>
         </small>
         <p className={`${className}-text`}>{text}</p>
-        <Link to="#">Read more...</Link>
       </div>
     </article>
   );

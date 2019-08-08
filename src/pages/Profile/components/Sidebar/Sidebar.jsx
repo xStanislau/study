@@ -1,8 +1,6 @@
 import React from "react";
 import cx from "classnames";
 import { connect } from "react-redux";
-import { openSidebar } from "../../../../redux/modules/sidebar";
-import { bindActionCreators } from "../../../../../../../../../AppData/Local/Microsoft/TypeScript/3.5/node_modules/redux";
 import { Accordion, Card } from "react-bootstrap";
 import SidebarItem from "./components/Item/Item";
 import SubItem from "./components/Subitem/Subitem";

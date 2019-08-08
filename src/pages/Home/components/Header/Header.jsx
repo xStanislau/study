@@ -80,12 +80,9 @@ const MainHeader = ({ className, isAuthorized }) => {
                   }
                 </Link>
               )}
-              {/* </div> */}
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-
-        {/*  */}
       </section>
     </Header>
   );

@@ -16,7 +16,7 @@ const Input = ({
   children,
   withicon
 }) => {
-  const withIcon = classNames({ withicon });
+  const withIcon = classNames("input-container", { withicon });
   const classess = classNames("form-control", className);
   return (
     <Field

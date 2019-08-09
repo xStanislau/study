@@ -4,7 +4,7 @@ import Button from "../../../../components/Button/Button";
 const Promo = ({ className }) => {
   return (
     <section className={className}>
-      <section className={`${className}-content`}>
+      <div className={`${className}-content`}>
         <div className="container">
           <h1 className={`${className}-title text-center`}>
             We can <strong>do</strong> something
@@ -22,7 +22,7 @@ const Promo = ({ className }) => {
             Get Started
           </Button>
         </div>
-      </section>
+      </div>
     </section>
   );
 };

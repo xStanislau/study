@@ -12,7 +12,6 @@ const DashboardBody = ({ overview, activity }) => {
     <Container fluid className="dashboard-body dashboard-right">
       <Switch>
         <Route
-          exact
           path="/profile"
           component={() => {
             return (

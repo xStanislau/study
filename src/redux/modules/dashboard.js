@@ -1,9 +1,11 @@
 import { getData } from "../../api/user/getData";
 
+// actions
 const LOAD_DATA = "app/dashboard/LOAD_DATA";
 const LOAD_DATA_SUCCESSEDED = "app/dashboard/LOAD_DATA_SUCCESSEDED";
 const LOAD_DATA_FAILED = "app/dashboard/LOAD_DATA_FAILED";
 
+// action creators
 export const loadDataStart = () => ({
   type: LOAD_DATA
 });
@@ -23,6 +25,7 @@ const initialState = {
   data: null
 };
 
+//reducer
 export default function reducer(state = initialState, action) {
   switch (action.type) {
     case LOAD_DATA:
@@ -47,6 +50,7 @@ export default function reducer(state = initialState, action) {
   }
 }
 
+// async action
 export const loadData = id => async dispatch => {
   dispatch(loadDataStart());
   try {

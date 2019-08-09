@@ -1,6 +1,6 @@
-import { getData } from "../../api/user/getData";
 import { getArticle } from "../../api/news/getArticle";
 
+// actions
 const LOAD_DATA = "app/articles/LOAD_ARTICLE";
 const LOAD_ARTICLES_SUCCESSEDED = "app/articles/LOAD_ARTICLE_SUCCESSEDED";
 const LOAD_ARTICLES_FAILED = "app/articles/LOAD_ARTICLE_FAILED";
@@ -14,6 +14,7 @@ const ADD_ARTICLE = "app/articles/DELTE_ARTICLE";
 const ADD_ARTICLE_SUCCESSEDED = "app/articles/ADD_ARTICLE_SUCCESSEDED";
 const ADD_ARTICLE_FAILED = "app/articles/ADD_ARTICLE_FAILED";
 
+// action creators
 export const loadDataStart = () => ({
   type: LOAD_DATA
 });
@@ -33,6 +34,7 @@ const initialState = {
   data: null
 };
 
+// reducer
 export default function reducer(state = initialState, action) {
   switch (action.type) {
     case LOAD_DATA:
@@ -57,6 +59,7 @@ export default function reducer(state = initialState, action) {
   }
 }
 
+// async action
 export const loadData = id => async dispatch => {
   dispatch(loadDataStart());
   try {

@@ -18,7 +18,7 @@ const MainHeader = ({ className, isAuthorized }) => {
   }
   return (
     <Header className={`${className} `}>
-      <section className="wrapper d-flex ">
+      <div className="wrapper d-flex ">
         <Navbar expand="lg" className="justify-content-between w-100">
           <Navbar.Brand className="z-index-3" href="#home">
             <Logo className="logo">
@@ -83,7 +83,7 @@ const MainHeader = ({ className, isAuthorized }) => {
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-      </section>
+      </div>
     </Header>
   );
 };

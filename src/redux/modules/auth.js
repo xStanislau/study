@@ -1,5 +1,6 @@
 import api from "../../api/index";
 
+// actions
 const LOG_IN = "app/auth/LOG_IN";
 const LOG_IN_FAILED = "app/auth/LOG_IN_FAILED";
 const LOG_IN_SUCCSSEEDED = "app/auth/LOG_IN_SUCCSSEEDED";
@@ -7,6 +8,7 @@ const LOG_OUT = "app/auth/LOG_OUT";
 const LOG_OUT_FAILED = "app/auth/LOG_OUT_FAILED";
 const LOG_OUT_SUCCSSEEDED = "app/auth/LOG_OUT_SUCCSSEEDED";
 
+// action creators
 export const logInStart = () => ({
   type: LOG_IN
 });
@@ -40,6 +42,7 @@ const initialState = {
   userInfo: null
 };
 
+// reducer
 export default function reducer(state = initialState, action) {
   switch (action.type) {
     case LOG_IN:
@@ -76,6 +79,7 @@ export default function reducer(state = initialState, action) {
   }
 }
 
+// async actions
 export const logIn = values => async dispatch => {
   dispatch(logInStart());
   try {

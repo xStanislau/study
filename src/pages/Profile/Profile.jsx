@@ -8,7 +8,8 @@ import DashboardBody from "./components/DashboardBody/DashboardBody";
 import { loadData } from "../../redux/modules/dashboard";
 import { openSidebar, closeSidebar } from "../../redux/modules/sidebar";
 import Loader from "../../components/Loader/Loader";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Accordion from "../../components/Accordion/Accordion";
+import mockData from "../../mocks/mocks";
 import "./Profile.scss";
 
 class Profile extends Component {
@@ -46,12 +47,19 @@ class Profile extends Component {
 
   render() {
     const { isLoad, userName } = this.props;
+    const {
+      dashboardData: {
+        sidebar: { items }
+      }
+    } = mockData;
     const DashBoard = () => {
       return (
         <div className="containter-fluid dashboard">
           <Row>
             <DashBoardHeader {...this.props.data} userName={userName} />
-            <Sidebar openSidebar={this.props.openSidebar} />
+            <Sidebar openSidebar={this.props.openSidebar}>
+              <Accordion items={items} />
+            </Sidebar>
             <Col className="right-col">
               <DashboardBody isLoad={isLoad} {...this.props.data} />
             </Col>

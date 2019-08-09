@@ -1,7 +1,9 @@
+// actions
 const OPEN_SIDEBAR = "app/sidebar/OPEN_SIDEBAR";
 const CLOSE_SIDEBAR = "app/sidebar/CLOSE_SIDEBAR";
 const TOGGLE_SIDEBAR = "app/sidebar/TOGGLE_SIDEBAR";
 
+// action creators
 export const openSidebar = () => ({
   type: OPEN_SIDEBAR
 });
@@ -18,6 +20,7 @@ const initialState = {
   isClosed: false
 };
 
+// reducer
 export default function reducer(state = initialState, action) {
   switch (action.type) {
     case OPEN_SIDEBAR:

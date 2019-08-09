@@ -1,7 +1,7 @@
 import React from "react";
 import "./SubItem.scss";
 import { Link } from "react-router-dom";
-import Icon from "../../../../../../components/Icon/Icon";
+import Icon from "../Icon/Icon";
 
 const Subitem = ({ children, name, to }) => {
   return (

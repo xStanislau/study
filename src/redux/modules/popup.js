@@ -1,6 +1,8 @@
+// actions
 const OPEN_POPUP = "OPEN_POPUP";
 const CLOSE_POPUP = "CLOSE_POPUP";
 
+// action creators
 export const openPopup = () => ({
   type: OPEN_POPUP
 });
@@ -13,6 +15,7 @@ const initialState = {
   isOpen: false
 };
 
+// reducer
 export default function reducer(state = initialState, action) {
   switch (action.type) {
     case OPEN_POPUP:

@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import { logOut as logOutAction } from "../../redux/modules/auth";
+import { logOut as logOutAction } from "../../redux/reducers/auth";
 import { withRouter } from "react-router-dom";
 
 class LogOut extends Component {

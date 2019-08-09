@@ -1,31 +1,7 @@
-.dashboard {
-  min-width: 1024px;
-  & > .row {
-    margin-right: 0;
-    margin-left: 0;
-  }
-}
-
-.isClosed + .dashboard-header {
-  margin-left: 100px;
-  width: calc(100% - 340px);
-  height: 100vh;
-}
-.isClosed + .right-col {
-  padding-left: 100px;
-}
-
-.right-col {
-  background-color: #f0f0f0;
-  padding-left: 100px;
-  padding-top: 80px;
+.dashboard-body {
+  padding-top: 22px;
+  overflow-y: auto;
   height: 100%;
-  position: relative;
   width: 100%;
-  overflow: auto;
-}
-@media (min-width: 1280px) {
-  .right-col {
-    padding-left: 350px;
-  }
+  overflow-x: auto;
 }

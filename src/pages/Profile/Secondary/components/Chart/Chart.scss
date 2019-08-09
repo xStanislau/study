@@ -1,0 +1,12 @@
+@import "../../../../../styles/theme/theme.scss";
+.chart {
+  .VictoryContainer {
+    background-color: white;
+  }
+}
+
+@media (max-width: $break-point-lg) {
+  .chart {
+    margin-bottom: 20px;
+  }
+}

@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware, compose } from "redux";
-import rootReducer from "../modules/index";
+import rootReducer from "../reducers/index";
 import thunk from "redux-thunk";
-import { logInSuccessed } from "../../redux/modules/auth";
+import { logInSuccessed } from "../reducers/auth";
 export default function configureStore() {
   const store = createStore(
     rootReducer,

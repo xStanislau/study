@@ -238,7 +238,7 @@ const mockData = {
           subItems: [
             {
               text: "List",
-              link: "/profile/news"
+              link: "/news"
             },
             {
               text: "ui-elements 2",

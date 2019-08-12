@@ -14,6 +14,13 @@ import {
 } from "../../../redux/reducers/sidebar";
 
 class DashBoardHeader extends Component {
+  onToggleSidebar = () => {
+    const { onCloseSidebar, isClosed, toggleSidebar } = this.props;
+    if (!isClosed) {
+      onCloseSidebar(isClosed);
+      toggleSidebar();
+    }
+  };
   render() {
     const classNames = cx("dashboard-left", {
       isClosed: this.props.isClosed

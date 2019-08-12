@@ -1,24 +1,29 @@
 import React from "react";
+import { connect } from "react-redux";
 import { Route, Redirect } from "react-router-dom";
-import checkAuth from "../../utils/checkAuth";
 import Profile from "../../pages/Profile/Profile";
-import News from "../../pages/Home/components/News/News";
-import Article from "../../pages/Home/components/News/components/Article/Arcticle";
+import News from "../../pages/News/News";
+import Article from "../../pages/News/Article/Article";
+import Dashboard from "../../layout/Dashboard/Dashboard";
 
-const PrivateRoutes = () => {
-  const isAuthorized = checkAuth();
-
+const PrivateRoutes = ({ isAuthorized }) => {
   if (!isAuthorized) {
     return <Redirect to="/login" />;
   }
-
   return (
-    <div>
+    <Dashboard>
       <Route path="/profile" component={Profile} />
       <Route exact path="/news" component={News} />
       <Route path="/news/:id" component={Article} />
-    </div>
+    </Dashboard>
   );
 };
 
-export default PrivateRoutes;
+const mapStateToProps = state => ({
+  isAuthorized: state.auth.isAuthorized
+});
+
+export default connect(
+  mapStateToProps,
+  null
+)(PrivateRoutes);

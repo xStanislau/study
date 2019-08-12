@@ -2,6 +2,7 @@ import { createStore, applyMiddleware, compose } from "redux";
 import rootReducer from "../reducers/index";
 import thunk from "redux-thunk";
 import { logInSuccessed } from "../reducers/auth";
+
 export default function configureStore() {
   const store = createStore(
     rootReducer,
@@ -13,16 +14,11 @@ export default function configureStore() {
   );
   if (localStorage.getItem("user") !== null) {
     const user = JSON.parse(localStorage.getItem("user"));
-    if (user.isAuthorized) {
-      const auth = { userName: user.userName };
-
-      store.dispatch(logInSuccessed(auth));
-    } else if (user.hasOwnProperty("password")) {
+    if (user.hasOwnProperty("password")) {
       const { userName, password } = user;
       const auth = { userName, password };
       store.dispatch(logInSuccessed(auth));
     }
   }
-
   return store;
 }

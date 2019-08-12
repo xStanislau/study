@@ -7,15 +7,19 @@ import Button from "../../../../components/Button/Button";
 import { connect } from "react-redux";
 import { Navbar, Nav } from "react-bootstrap";
 import "./Header.scss";
+import { bindActionCreators } from "redux";
+import { logOut } from "../../../../redux/reducers/auth";
 
 const MainHeader = ({ className, isAuthorized }) => {
   const [isOpen, toggleMenu] = useState(false);
   const body = document.querySelector("body");
+
   if (isOpen) {
     body.classList.add("overflow-hidden");
   } else {
     body.classList.remove("overflow-hidden");
   }
+
   return (
     <Header className={`${className} `}>
       <div className="wrapper d-flex ">
@@ -64,13 +68,16 @@ const MainHeader = ({ className, isAuthorized }) => {
                 Profile
               </NavLink>
               {isAuthorized ? (
-                <Link to="/logout" className="login-btn">
+                <div className="login-btn">
                   {
-                    <Button className="btn btn-outline-light rounded-0">
+                    <Button
+                      className="btn btn-outline-light rounded-0"
+                      onClick={logOut}
+                    >
                       Logout
                     </Button>
                   }
-                </Link>
+                </div>
               ) : (
                 <Link to="/login" className="login-btn">
                   {
@@ -92,7 +99,11 @@ const mapStatToProps = state => {
   return { isAuthorized: state.auth.isAuthorized };
 };
 
+const mapDispatchToProps = dispatch => ({
+  logout: bindActionCreators(logOut, dispatch)
+});
+
 export default connect(
   mapStatToProps,
-  null
+  mapDispatchToProps
 )(MainHeader);

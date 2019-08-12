@@ -13,7 +13,8 @@ import "./Dashboard.scss";
 
 class Dashboard extends Component {
   componentDidMount() {
-    this.props.loadData(1);
+    const userId = 1;
+    this.props.loadData(userId);
     window.addEventListener("resize", this.resizeHandler);
 
     if (window.innerWidth < 1280) {
@@ -73,8 +74,8 @@ class Dashboard extends Component {
               <Accordion items={items} />
             </Sidebar>
             {isLoad && (
-              <Col className="right-col dashboard-right">
-                <Container fluid className="profile-content dashboard-right">
+              <Col className="right-col ">
+                <Container fluid className="dashboard__content dashboard-right">
                   {children}
                 </Container>
               </Col>

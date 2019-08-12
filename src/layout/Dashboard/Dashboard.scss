@@ -3,10 +3,14 @@
   position: absolute;
   top: 0;
   bottom: 0;
-
+  right: 0;
+  left: 0;
   & > .row {
     margin-right: 0;
     margin-left: 0;
+  }
+  &__content {
+    padding-bottom: 30px;
   }
 }
 
@@ -22,12 +26,12 @@
 .right-col {
   background-color: #f0f0f0;
   padding-left: 100px;
-  padding-top: 80px;
-  height: 100%;
+  padding-right: 0;
+  padding-top: 112px;
   position: relative;
   width: 100%;
-  overflow: auto;
 }
+
 @media (min-width: 1280px) {
   .right-col {
     padding-left: 350px;

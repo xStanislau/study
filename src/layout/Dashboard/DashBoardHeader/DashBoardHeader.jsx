@@ -12,15 +12,26 @@ import {
   closeSidebar,
   toggleSidebar
 } from "../../../redux/reducers/sidebar";
+import { withRouter } from "react-router-dom";
+
+import { logOut } from "../../../redux/reducers/auth";
 
 class DashBoardHeader extends Component {
   onToggleSidebar = () => {
     const { onCloseSidebar, isClosed, toggleSidebar } = this.props;
     if (!isClosed) {
       onCloseSidebar(isClosed);
+    } else {
       toggleSidebar();
     }
   };
+
+  handleLogout = async () => {
+    const { logout, history } = this.props;
+    await logout("user");
+    history.push("/login");
+  };
+
   render() {
     const classNames = cx("dashboard-left", {
       isClosed: this.props.isClosed
@@ -33,16 +44,20 @@ class DashBoardHeader extends Component {
             <header className="sidebar-header d-flex align-items-center">
               <div className="sidebar-header__content d-flex justify-content-between">
                 <h6 className="sidebar-header__title">Profile</h6>
-                <Icon name="align-left" size="25" onClick={toggleSidebar} />
+                <Icon
+                  className="sidebar-header__icon"
+                  name="align-left"
+                  size="25"
+                  onClick={toggleSidebar}
+                />
               </div>
             </header>
           </Col>
           <Col className="dashboard-right">
             <header className="dashboard-header">
               <Nav notifications={notifications} emails={emails} />
-
               <div className="d-flex justify-content-end align-items-center">
-                <Account userName={userName} />
+                <Account userName={userName} onClick={this.handleLogout} />
               </div>
             </header>
           </Col>
@@ -53,16 +68,18 @@ class DashBoardHeader extends Component {
 }
 
 const mapStateToProps = state => ({
-  isClosed: state.sidebar.isClosed
+  isClosed: state.sidebar.isClosed,
+  isAuthorized: state.auth.isAuthorized
 });
 
 const mapDispatchToProps = dispatch => ({
   openSidebar: bindActionCreators(openSidebar, dispatch),
   closeSidebar: bindActionCreators(closeSidebar, dispatch),
-  toggleSidebar: bindActionCreators(toggleSidebar, dispatch)
+  toggleSidebar: bindActionCreators(toggleSidebar, dispatch),
+  logout: bindActionCreators(logOut, dispatch)
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(DashBoardHeader);
+)(withRouter(DashBoardHeader));

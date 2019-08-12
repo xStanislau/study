@@ -10,10 +10,10 @@ const Profile = props => {
     data: { activity, overview }
   } = props;
   return (
-    <Container fluid className="profile-content dashboard-right">
+    <>
       <Overview {...overview} />
       <Secondary activity={activity} />
-    </Container>
+    </>
   );
 };
 

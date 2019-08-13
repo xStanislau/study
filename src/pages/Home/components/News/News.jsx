@@ -1,7 +1,8 @@
 import React from "react";
-import Article from "./components/Article/Arcticle";
 import mockData from "./../../../../mocks/mocks";
 import Button from "../../../../components/Button/Button";
+import NewsItems from "./components/NewsItems/NewsItems";
+
 const News = ({ className }) => {
   const { posts } = mockData;
   return (
@@ -10,21 +11,7 @@ const News = ({ className }) => {
         <h1 className={`${className}-title text-center mb-5`}>
           News, Blog and Event
         </h1>
-        {posts.map(post => {
-          const { imgSrc, tag, title, creator, text, date } = post;
-          return (
-            <Article
-              imgSrc={imgSrc}
-              className={`${className}-article`}
-              key={`${tag}${title}`}
-              tagText={tag}
-              title={title}
-              creator={creator}
-              date={date}
-              text={text}
-            />
-          );
-        })}
+        <NewsItems className={className} posts={posts} />
         <div className="button-group d-flex justify-content-center align-items-center">
           <Button className="btn btn-outline-light rounded-0">
             View All News and Blogs

@@ -6,7 +6,7 @@ const Media = ({ className }) => {
     <section className={`${className}-section`}>
       <div className="wrapper d-flex justify-content-center align-items-center">
         <div className={`${className}-text`}>
-          <h3 className={`${className}-title`}>About Cognetive Catalyst</h3>
+          <h3 className={`${className}-title h2`}>About Cognetive Catalyst</h3>
           <p>
             Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec
             tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis

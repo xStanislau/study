@@ -8,7 +8,7 @@ const News = () => {
 
   return (
     <section className="dashboard-news">
-      <h3 className="text-center">News</h3>
+      <h3 className="text-center dashboard-news__title h3">News</h3>
       <div className="row">
         {posts.map((post, index) => {
           return (

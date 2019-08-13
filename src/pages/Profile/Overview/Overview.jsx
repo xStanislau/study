@@ -15,7 +15,7 @@ const Overview = props => {
       <Container fluid>
         <Row className="justify-content-between">
           <Col>
-            <h2 className={`${className}__title`}>Overview</h2>
+            <h2 className={`${className}__title h2`}>Overview</h2>
           </Col>
           <Col>
             <div className={`${className}__time ml-auto d-flex`}>

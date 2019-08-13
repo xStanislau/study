@@ -5,12 +5,13 @@
   border: 1px solid $btn-green-bg;
   background-color: $btn-green-bg;
   color: $white-color;
+  font-family: $base-font;
 }
 
 .btn {
   height: $btn-base-height;
   border-width: 2px;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: $base-font;
   font-size: 14px;
   cursor: pointer;
 }

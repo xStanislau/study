@@ -1,3 +1,5 @@
+@import "./../../../styles/theme/theme.scss";
+
 .white-05 {
   background-color: rgba(255, 255, 255, 0.5);
 }
@@ -8,7 +10,7 @@
   display: flex;
   justify-content: space-between;
   height: 80px;
-  background-color: white;
+  background-color: $white-color;
   align-items: center;
   z-index: 2;
   padding-left: 40px;

@@ -1,6 +1,8 @@
+@import "./../../../../../../../styles/theme/theme.scss";
+
 .activity {
   &:nth-child(2n) {
-    background-color: #f0f0f0;
+    background-color: $dashboard-content-light;
   }
   padding: 18px 22px;
   &__user-img {
@@ -21,7 +23,7 @@
   }
   &__title {
     font-size: 20px;
-    color: #000a12;
+    color: $dashboard-main-color;
     margin-bottom: 0px;
   }
   &__operation {

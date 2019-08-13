@@ -11,7 +11,7 @@
     padding: 0;
   }
   .logo {
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: $base-font;
     font-weight: lighter;
   }
 
@@ -20,16 +20,16 @@
     justify-content: flex-end;
   }
   &__profile-link {
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: $base-font;
     font-size: 14px;
     font-weight: normal;
     text-decoration: none;
-    color: #fff;
+    color: $white-color;
     margin-right: 40px;
   }
   &__profile-link.isActive {
     text-decoration: underline;
-    color: darken($color: #fff, $amount: 10%);
+    color: darken($color: $white-color, $amount: 10%);
   }
   &__burger {
     z-index: 3;
@@ -37,19 +37,19 @@
 }
 
 .main-header ~ .show {
-  background-color: #fff;
+  background-color: $white-color;
 }
 
 .main-header.fixed {
   transition: all 0.24s ease-in-out;
-  background-color: white;
+  background-color: $white-color;
   color: black;
   .btn-outline-light {
     color: black;
     border-color: black;
     &:hover {
       background-color: black;
-      color: white;
+      color: $white-color;
     }
   }
 
@@ -91,7 +91,7 @@
     }
     &__profile-link.isActive {
       text-decoration: underline;
-      color: darken($color: #fff, $amount: 10%);
+      color: darken($color: $white-color, $amount: 10%);
     }
 
     .show {
@@ -116,7 +116,7 @@
           border-color: black;
           &:hover {
             background-color: black;
-            color: white;
+            color: $white-color;
           }
         }
       }

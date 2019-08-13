@@ -53,7 +53,7 @@
         width: 18px;
         height: 18px;
         border: 1px solid #dfe2e6;
-        background-color: white;
+        background-color: $white-color;
         &:after {
           left: 5px;
           top: 2px;
@@ -69,7 +69,7 @@
 
       .checkbox {
         &:checked ~ .checkmark {
-          background-color: white;
+          background-color: $white-color;
           &:after {
             display: block;
           }

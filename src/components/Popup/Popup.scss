@@ -1,3 +1,5 @@
+@import "./../../styles/theme/theme.scss";
+
 .popup-bg {
   position: fixed;
   display: flex;
@@ -25,5 +27,5 @@
   box-sizing: border-box;
   overflow: scroll;
   padding: 15px;
-  background-color: #fff;
+  background-color: $white-color;
 }

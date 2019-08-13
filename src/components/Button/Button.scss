@@ -10,7 +10,7 @@
 .btn {
   height: $btn-base-height;
   border-width: 2px;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: $base-font;
   font-size: 14px;
   cursor: pointer;
 }

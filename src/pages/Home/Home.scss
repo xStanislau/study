@@ -2,7 +2,7 @@
 
 .h1 {
   font-size: 36px;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: $base-font;
   font-weight: 300;
 }
 
@@ -44,7 +44,7 @@
   background-size: cover;
   height: 850px;
   text-align: center;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: $base-font;
 
   color: #363c44;
   .promo-content {
@@ -103,7 +103,7 @@
 .media-section {
   padding: 116px 20px;
   background-color: #9855d4;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: $base-font;
   font-weight: 300;
   font-size: 16px;
   margin: 0 auto;
@@ -137,7 +137,7 @@
     box-sizing: border-box;
     line-height: 1.13;
     font-weight: 300;
-    color: white;
+    color: $white-color;
     margin-right: 104px;
     &-title {
       font-size: 36px;
@@ -203,7 +203,7 @@
 .statistics {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.75);
-  color: white;
+  color: $white-color;
   padding: 116px 20px 109px 20px;
   .statistics-list {
     width: 100%;
@@ -259,9 +259,9 @@
   .projects-title {
     font-size: 36px;
     margin-bottom: 25px;
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: $base-font;
     font-weight: 300;
-    color: white;
+    color: $white-color;
   }
   &__menu {
     font-size: 18px;
@@ -274,7 +274,7 @@
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
-    color: white;
+    color: $white-color;
     margin-bottom: 40px;
     .menu-item {
       font-size: 15px;
@@ -316,7 +316,7 @@
   .project {
     min-height: 300px;
     height: 100%;
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: $base-font;
     font-size: 14px;
     background-color: #ffcf27;
     padding: 29px 17px 20px 26px;
@@ -369,7 +369,7 @@
     .project {
       min-height: 300px;
       height: 100%;
-      font-family: "IBM Plex Sans", sans-serif;
+      font-family: $base-font;
       font-size: 14px;
       background-color: #ffcf27;
       padding: 29px 17px 20px 26px;
@@ -411,7 +411,7 @@
   .table {
     max-width: 1115px;
     margin: 0 auto;
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: $base-font;
     font-size: 14px;
     font-weight: normal;
     color: #303a4e;
@@ -532,9 +532,9 @@
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 42px;
-  color: white;
+  color: $white-color;
   background-color: #00b29e;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: $base-font;
   .btn {
     margin-right: 20px;
     margin-bottom: 10px;
@@ -568,7 +568,7 @@
     }
     .news-article-tag {
       display: inline-block;
-      background-color: #fff;
+      background-color: $white-color;
       color: #00b29e;
       font-weight: 500;
       line-height: normal;
@@ -594,7 +594,7 @@
       font-weight: bold;
     }
     a {
-      color: white;
+      color: $white-color;
       text-decoration: none;
     }
   }
@@ -662,8 +662,8 @@
 }
 
 .start-guide {
-  color: white;
-  font-family: "IBM Plex Sans", sans-serif;
+  color: $white-color;
+  font-family: $base-font;
   padding: 55px 20px 55px 20px;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.75);
@@ -678,7 +678,7 @@
 
 .footer {
   padding: 40px;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: $base-font;
   font-size: 14px;
   .footer-info {
     font-size: 14px;

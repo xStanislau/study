@@ -13,7 +13,7 @@ const News = () => {
         {posts.map((post, index) => {
           return (
             <div
-              className="col col-lg-4  col-md-6 dashboard-news__card"
+              className="col col-lg-4 col-md-6 dashboard-news__card"
               key={`${post.title} ${index}`}
             >
               <Card

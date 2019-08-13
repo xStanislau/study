@@ -30,7 +30,7 @@
     padding-bottom: 143px;
 
     &__title {
-      font-family: "IBM Plex Sans", sans-serif;
+      font-family: $base-font;
       font-weight: 300;
       font-size: 36px;
       margin-bottom: 40px;
@@ -54,7 +54,7 @@
     }
 
     .card {
-      font-family: "IBM Plex Sans", sans-serif;
+      font-family: $base-font;
       .card-img-top {
         width: 100%;
         height: auto;

@@ -4,10 +4,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: $base-font;
 }
 
 p {
+  font-family: $base-font;
   font-size: 14px;
 }
 

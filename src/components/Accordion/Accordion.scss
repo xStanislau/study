@@ -1,0 +1,7 @@
+@import "./../../styles/theme/theme.scss";
+.accordion {
+  &__toggle {
+    padding: 0 0;
+    background-color: $white-color;
+  }
+}

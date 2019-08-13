@@ -1,9 +1,9 @@
 import React from "react";
-import "./SubItem.scss";
+import "./AccordionSubItem.scss";
 import { Link } from "react-router-dom";
 import Icon from "../Icon/Icon";
 
-const Subitem = ({ children, name, to }) => {
+const AccordionSubItem = ({ children, name, to }) => {
   return (
     <Link
       to={to}
@@ -15,4 +15,4 @@ const Subitem = ({ children, name, to }) => {
   );
 };
 
-export default Subitem;
+export default AccordionSubItem;

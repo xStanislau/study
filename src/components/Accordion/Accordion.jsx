@@ -1,7 +1,7 @@
 import React from "react";
 import { Accordion as BootstrapAccordion, Card } from "react-bootstrap";
 import AccordionItem from "./AccordionItem";
-import AccordionSubItem from "./AccordionSubItem";
+import AccordionSubItems from "./AccordionSubItems";
 
 const Accordion = props => {
   const { items } = props;
@@ -15,17 +15,7 @@ const Accordion = props => {
               <AccordionItem text={text} name={iconName} size />
             </BootstrapAccordion.Toggle>
             <BootstrapAccordion.Collapse eventKey={index}>
-              <ul>
-                {subItems.map((subItem, index) => {
-                  return (
-                    <li key={`${subItem.text} ${index}`}>
-                      <AccordionSubItem name="circle" to={subItem.link}>
-                        {subItem.text}
-                      </AccordionSubItem>
-                    </li>
-                  );
-                })}
-              </ul>
+              <AccordionSubItems subItems={subItems} />
             </BootstrapAccordion.Collapse>
           </Card>
         );

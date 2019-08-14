@@ -12,7 +12,10 @@
     margin-left: 0;
   }
   &__content {
-    padding-bottom: 30px;
+    height: 100%;
+    padding-bottom: 22px;
+    padding-top: 22px;
+    overflow: auto;
   }
 }
 
@@ -26,11 +29,13 @@
 }
 
 .right-col {
+  height: 100%;
+  width: 100%;
+  position: relative;
   padding-left: 100px;
   padding-right: 0;
-  padding-top: 112px;
-  position: relative;
-  width: 100%;
+  padding-top: 80px;
+  overflow: hidden;
 }
 
 @media (min-width: 1280px) {

@@ -43,7 +43,7 @@ class DashBoardHeader extends Component {
           <Col className={classNames}>
             <header className="sidebar-header d-flex align-items-center">
               <div className="sidebar-header__content d-flex justify-content-between">
-                <h6 className="sidebar-header__title">Profile</h6>
+                <h6 className="sidebar-header__title h6">Profile</h6>
                 <Icon
                   className="sidebar-header__icon"
                   name="align-left"

@@ -8,7 +8,7 @@ const Article = ({ match }) => {
   const { title, imgSrc, creator, date, text } = article;
   return (
     <article className="article col-12">
-      <div className="article article__img-wrapper">
+      <div className="article__img-wrapper">
         <img className="article__img" src={imgSrc} alt="Card cap" />
       </div>
       <div className="article__description">
@@ -17,7 +17,7 @@ const Article = ({ match }) => {
           by <strong className="article__creator">{creator}</strong> on{" "}
           <strong className="article__date">{date}</strong>
         </small>
-        <p className={"article__text"}>{text}</p>
+        <p className="article__text">{text}</p>
       </div>
     </article>
   );

@@ -16,8 +16,10 @@ ul,
 li,
 em,
 strong,
+span,
+button,
 a,
-button {
+i {
   font-family: $base-font;
 }
 
@@ -36,23 +38,28 @@ h2,
   @extend .h1;
   font-size: 36px;
 }
+h3,
+.h3 {
+  @extend .h1;
+  font-size: 30px;
+}
 
 h4,
 .h4 {
   @extend .h1;
-  font-size: 30px;
+  font-size: 26px;
 }
 
 h5,
 .h5 {
   @extend .h1;
-  font-size: 26px;
+  font-size: 22px;
 }
 
 h6,
 .h6 {
   @extend .h1;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 p {
@@ -136,5 +143,10 @@ em {
 
   em {
     font-style: italic;
+  }
+
+  small {
+    display: block;
+    margin-bottom: 20px;
   }
 }

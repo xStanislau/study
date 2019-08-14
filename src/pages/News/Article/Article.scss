@@ -1,4 +1,5 @@
 .article {
+  max-width: 800px;
   margin-bottom: 100px;
   min-height: 100%;
   &__img-wrapper {
@@ -9,7 +10,15 @@
     margin-bottom: 20px;
   }
   &__img {
-    max-width: 500px;
-    max-height: 500px;
   }
+  &__description {
+    margin: 0 auto;
+    max-width: 700px;
+  }
+}
+.content-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
 }

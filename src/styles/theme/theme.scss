@@ -3,6 +3,8 @@ $primary-color: #252529;
 $secondary-color: #e1e4e8;
 $white-color: #fff;
 $btn-green-color: #29b1cc;
+$white-smoke-color: #f0f0f0;
+$black-pearl-color: #000a12;
 $btn-green-bg: #29b1cc;
 $input-outline-color: #dfe2e6;
 $input-font-color: #e1e4e8;
@@ -26,7 +28,7 @@ $btn-border-radius: 0px;
 $btn-base-height: 50px;
 
 .white-smoke-bg {
-  background-color: #f0f0f0;
+  background-color: $white-smoke-color;
 }
 
 .solitude-bg {

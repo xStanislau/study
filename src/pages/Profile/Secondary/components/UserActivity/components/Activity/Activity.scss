@@ -2,7 +2,7 @@
 
 .activity {
   &:nth-child(2n) {
-    background-color: $dashboard-content-light;
+    background-color: $white-smoke-color;
   }
   padding: 18px 22px;
   &__user-img {
@@ -23,7 +23,7 @@
   }
   &__title {
     font-size: 20px;
-    color: $dashboard-main-color;
+    color: $black-pearl-color;
     margin-bottom: 0px;
   }
   &__operation {

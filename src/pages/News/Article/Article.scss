@@ -1,6 +1,6 @@
 .article {
+  margin: 0 auto;
   max-width: 800px;
-  margin-bottom: 100px;
   min-height: 100%;
   &__img-wrapper {
     display: flex;
@@ -10,6 +10,7 @@
     margin-bottom: 20px;
   }
   &__img {
+    max-height: 400px;
   }
   &__description {
     margin: 0 auto;

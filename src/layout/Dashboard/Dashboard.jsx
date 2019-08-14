@@ -74,7 +74,7 @@ class Dashboard extends Component {
               <Accordion items={items} />
             </Sidebar>
             {isLoad && (
-              <Col className="right-col dashboard-content-light">
+              <Col className="right-col white-smoke-bg">
                 <Container fluid className="dashboard__content dashboard-right">
                   {children}
                 </Container>

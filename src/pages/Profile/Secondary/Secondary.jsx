@@ -10,7 +10,7 @@ const Secondary = ({ activity }) => {
       <Container fluid>
         <Row>
           <Col>
-            <h2 className="secondary__title">Secondary</h2>
+            <h2 className="secondary__title h2">Secondary</h2>
           </Col>
         </Row>
         <Row>

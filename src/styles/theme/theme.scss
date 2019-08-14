@@ -4,9 +4,18 @@ $secondary-color: #e1e4e8;
 $white-color: #fff;
 $btn-green-color: #29b1cc;
 $btn-green-bg: #29b1cc;
-$dashboard-content-light: #f0f0f0;
-$dashboard-main-color: #000a12;
-
+$input-outline-color: #dfe2e6;
+$input-font-color: #e1e4e8;
+$label-color: #252529;
+$placeholder-text: $secondary-color;
+$form-title-color: #252529;
+$home-title-dark: #323332;
+$home-title-light: #f5f5f5;
+$main-home-color: #363c44;
+$table-color: #303a4e;
+$table-th-fw: #303a4e;
+//fonts
+$base-font: "IBM Plex Sans", sans-serif;
 //sizes
 $break-point-sm: 576px;
 $break-point-md: 768px;
@@ -16,5 +25,10 @@ $base-content-width: 1140px;
 $btn-border-radius: 0px;
 $btn-base-height: 50px;
 
-//fonts
-$base-font: "IBM Plex Sans";
+.white-smoke-bg {
+  background-color: #f0f0f0;
+}
+
+.solitude-bg {
+  background-color: #dfe2e6;
+}

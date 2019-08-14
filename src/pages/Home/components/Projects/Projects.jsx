@@ -9,7 +9,7 @@ const Projects = ({ className }) => {
   return (
     <section className={`${className} pt-50 pb-60`}>
       <div className="wrapper">
-        <h3 className={`${className}-title text-center`}>Projects</h3>
+        <h3 className={`${className}-title h2 text-center`}>Projects</h3>
         <Menu
           className={`${className}__menu d-flex align-items-start`}
           items={projectsMenu}

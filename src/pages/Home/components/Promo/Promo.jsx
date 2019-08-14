@@ -6,7 +6,7 @@ const Promo = ({ className }) => {
     <section className={className}>
       <div className={`${className}-content`}>
         <div className="container">
-          <h1 className={`${className}-title text-center`}>
+          <h1 className={`${className}-title h1 text-center`}>
             We can <strong>do</strong> something
             <strong> bigger</strong>,<strong> together</strong>
           </h1>

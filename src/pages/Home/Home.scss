@@ -1,11 +1,5 @@
 @import "./../../styles/theme/theme.scss";
 
-.h1 {
-  font-size: 36px;
-  font-family: $base-font;
-  font-weight: 300;
-}
-
 .container {
   box-sizing: border-box;
 }
@@ -44,7 +38,9 @@
   background-size: cover;
   height: 850px;
   text-align: center;
+  <<<<<<<HEAD
   font-family: $base-font;
+  =======>>>>>>> ecc119310da18ad279b6f33fa3a91d6eaeb5239b
 
   color: #363c44;
   .promo-content {
@@ -103,7 +99,6 @@
 .media-section {
   padding: 116px 20px;
   background-color: #9855d4;
-  font-family: $base-font;
   font-weight: 300;
   font-size: 16px;
   margin: 0 auto;
@@ -259,7 +254,6 @@
   .projects-title {
     font-size: 36px;
     margin-bottom: 25px;
-    font-family: $base-font;
     font-weight: 300;
     color: $white-color;
   }
@@ -316,7 +310,6 @@
   .project {
     min-height: 300px;
     height: 100%;
-    font-family: $base-font;
     font-size: 14px;
     background-color: #ffcf27;
     padding: 29px 17px 20px 26px;
@@ -369,7 +362,6 @@
     .project {
       min-height: 300px;
       height: 100%;
-      font-family: $base-font;
       font-size: 14px;
       background-color: #ffcf27;
       padding: 29px 17px 20px 26px;
@@ -411,7 +403,6 @@
   .table {
     max-width: 1115px;
     margin: 0 auto;
-    font-family: $base-font;
     font-size: 14px;
     font-weight: normal;
     color: #303a4e;
@@ -534,7 +525,6 @@
   padding-bottom: 42px;
   color: $white-color;
   background-color: #00b29e;
-  font-family: $base-font;
   .btn {
     margin-right: 20px;
     margin-bottom: 10px;
@@ -662,8 +652,8 @@
 }
 
 .start-guide {
-  color: $white-color;
-  font-family: $base-font;
+  color: white;
+
   padding: 55px 20px 55px 20px;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.75);
@@ -678,7 +668,6 @@
 
 .footer {
   padding: 40px;
-  font-family: $base-font;
   font-size: 14px;
   .footer-info {
     font-size: 14px;

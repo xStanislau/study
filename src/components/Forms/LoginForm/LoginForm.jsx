@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 import { Form } from "react-final-form";
-import { ButtonWithLoader } from "../../../../components/Button/Button";
-import Input from "../../../../components/input/Input";
-import Icon from "../../../../components/Icon/Icon";
-import { checkPassword, checkEmail } from "./../../../../utils/validation";
+import { ButtonWithLoader } from "../../Button/Button";
+import Input from "../../input/Input";
+import Icon from "../../Icon/Icon";
+import { checkPassword, checkEmail } from "../../../utils/validation";
 import { withRouter } from "react-router-dom";
-import { logIn as loginAction } from "../../../../redux/reducers/auth";
+import { logIn as loginAction } from "../../../redux/reducers/auth";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import "./Form.scss";
+import { NavLink } from "react-router-dom";
+import "./LoginForm.scss";
 
 class LoginForm extends Component {
   state = {
@@ -98,16 +99,25 @@ class LoginForm extends Component {
                   onClick={togglePasswordVibility}
                 />
               </Input>
-              <Input
-                className="checkbox"
-                formGroupClass="checkbox-group"
-                name="rememberMe"
-                type="checkbox"
-                id="remember-me"
-                label="Remember me"
-              >
-                <label className="checkmark" htmlFor="remember-me" />>
-              </Input>
+              <div className="d-flex justify-content-between">
+                <Input
+                  className="checkbox"
+                  formGroupClass="checkbox-group"
+                  name="rememberMe"
+                  type="checkbox"
+                  id="remember-me"
+                  label="Remember me"
+                >
+                  <label
+                    className="checkmark solitude-text"
+                    htmlFor="remember-me"
+                  />
+                  >
+                </Input>
+                <NavLink to="#" className="forgot-password">
+                  Forgot password
+                </NavLink>
+              </div>
               <ButtonWithLoader
                 isLoad={isAuthorized || !submitting}
                 type="submit"

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Form from "./Form/Form";
+import Form from "../../../components/Forms/LoginForm/LoginForm";
 import { Link } from "react-router-dom";
 import Popup from "../../../components/Popup/Popup";
 import Button from "../../../components/Button/Button";

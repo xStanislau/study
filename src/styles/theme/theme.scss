@@ -6,7 +6,7 @@ $btn-green-color: #29b1cc;
 $white-smoke-color: #f0f0f0;
 $black-pearl-color: #000a12;
 $btn-green-bg: #29b1cc;
-$input-outline-color: #dfe2e6;
+$solitude-color: #dfe2e6;
 $input-font-color: #e1e4e8;
 $label-color: #252529;
 $placeholder-text: $secondary-color;
@@ -33,5 +33,8 @@ $btn-base-height: 50px;
 }
 
 .solitude-bg {
-  background-color: #dfe2e6;
+  background-color: $solitude-color;
+}
+.solitude-text {
+  color: $solitude-color;
 }

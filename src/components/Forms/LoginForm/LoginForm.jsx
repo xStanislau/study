@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Form } from "react-final-form";
-import { ButtonWithLoader } from "../../Button/Button";
+import Button from "../../Button/Button";
 import Input from "../../input/Input";
 import Icon from "../../Icon/Icon";
 import { checkPassword, checkEmail } from "../../../utils/validation";
@@ -9,7 +9,10 @@ import { logIn as loginAction } from "../../../redux/reducers/auth";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
+
+import Loader from "../../Loader/Loader";
 import "./LoginForm.scss";
+import { validationErrors } from "../../../constants/validationErrors";
 
 class LoginForm extends Component {
   state = {
@@ -33,12 +36,13 @@ class LoginForm extends Component {
   };
 
   validate = values => {
+    const { password, email } = validationErrors;
     const errors = {};
     if (!checkPassword(values.password)) {
-      errors.password = "Password must consist of numbers and leters";
+      errors.password = password;
     }
     if (!checkEmail(values.email)) {
-      errors.email = "Please enter correct email";
+      errors.email = email;
     }
 
     return errors;
@@ -57,6 +61,7 @@ class LoginForm extends Component {
 
     return (
       <Form
+        autocomplete
         onSubmit={onSubmit}
         validate={validate}
         initialValues={values && values}
@@ -70,6 +75,7 @@ class LoginForm extends Component {
         }) => {
           return (
             <form className="login-form" onSubmit={handleSubmit}>
+              {(isAuthorized || submitting) && <Loader />}
               <Input
                 className="input"
                 type="email"
@@ -118,8 +124,7 @@ class LoginForm extends Component {
                   Forgot password
                 </NavLink>
               </div>
-              <ButtonWithLoader
-                isLoad={isAuthorized || !submitting}
+              <Button
                 type="submit"
                 className="btn btn-primary"
                 disabled={
@@ -129,7 +134,7 @@ class LoginForm extends Component {
                 }
               >
                 Login
-              </ButtonWithLoader>
+              </Button>
             </form>
           );
         }}

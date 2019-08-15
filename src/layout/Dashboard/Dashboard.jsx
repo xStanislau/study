@@ -61,8 +61,9 @@ class Dashboard extends Component {
       }
     } = mockData;
 
-    const DashBoard = () => {
-      return (
+    return (
+      <>
+        {!isLoad && <Loader />}
         <div className="containter-fluid dashboard">
           <Row className="h-100">
             <DashBoardHeader
@@ -82,11 +83,8 @@ class Dashboard extends Component {
             )}
           </Row>
         </div>
-      );
-    };
-
-    const DashBoardWithLoader = Loader(DashBoard);
-    return <DashBoardWithLoader isLoad={isLoad} />;
+      </>
+    );
   }
 }
 

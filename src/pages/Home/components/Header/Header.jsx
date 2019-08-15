@@ -20,6 +20,16 @@ const MainHeader = ({ className, isAuthorized }) => {
     body.classList.remove("overflow-hidden");
   }
 
+  window.addEventListener("resize", evt => {
+    if (window.innerWidth > 991) {
+      body.classList.remove("overflow-hidden");
+    } else {
+      if (isOpen) {
+        body.classList.add("overflow-hidden");
+      }
+    }
+  });
+
   return (
     <Header className={`${className} `}>
       <div className="wrapper d-flex ">

@@ -34,10 +34,13 @@ class Login extends Component {
             <section className="right-side">
               <Header />
               <div className="form-wrapper">
-                <h2 className="text-left title">Login your account</h2>
+                <h2 className="text-left title h4">Login your account</h2>
                 <Form />
                 <div className="buttons-group d-flex justify-content-center align-items-center ">
-                  <Button className="btn btn-modal" onClick={this.openPopup}>
+                  <Button
+                    className="btn btn-link btn-modal"
+                    onClick={this.openPopup}
+                  >
                     modal
                   </Button>
                   -or-

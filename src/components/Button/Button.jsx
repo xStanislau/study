@@ -4,7 +4,15 @@ import classNames from "classnames";
 import Loader from "../Loader/Loader";
 import "./Button.scss";
 
-const Button = ({ onClick, type, className, children, disabled, ...attrs }) => {
+const Button = ({
+  onClick,
+  type,
+  className,
+  children,
+  disabled,
+  isLoad,
+  ...attrs
+}) => {
   const classes = classNames("btn", className, { disabled });
   return (
     <button

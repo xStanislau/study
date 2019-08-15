@@ -1,6 +1,5 @@
 import React from "react";
 import mockData from "../../../mocks/mocks";
-import Button from "../../../components/Button/Button";
 import { Link } from "react-router-dom";
 import "./Article.scss";
 

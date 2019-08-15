@@ -14,6 +14,7 @@
     }
   }
   .title {
+    font-weight: bold;
     color: #252529;
     margin-bottom: 23px;
   }
@@ -80,6 +81,7 @@
     margin-left: 0;
   }
 }
+
 @media (max-width: $break-point-md) {
   .page-content {
     .login-header {
@@ -89,6 +91,22 @@
       padding-top: 74px;
       padding-bottom: 49px;
     }
+    .title {
+      // font-size: 22px;
+    }
+  }
+}
+
+@media (orientation: portrait) {
+  .img {
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-position: center center;
+    background-size: cover;
+  }
+  .form-wrapper {
+    margin-left: 0;
   }
 }
 
@@ -110,6 +128,7 @@
 .buttons-group {
   margin-bottom: 19px;
 }
+
 .btn-modal {
   height: 28px;
   padding: 0;

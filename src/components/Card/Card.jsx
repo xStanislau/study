@@ -6,7 +6,10 @@ import CardImg from "./CardImg/CardImg";
 
 const Card = props => {
   const { text, title, imgSrc, className, linkText, location } = props;
-  const to = { pathname: linkText, state: { prevPath: location.pathname } };
+  let to;
+  if (linkText) {
+    to = { pathname: linkText, state: { prevPath: location.pathname } };
+  }
   return (
     <div className={className}>
       <div className="card-img-wrapper">
@@ -46,5 +49,7 @@ const Card = props => {
     </div>
   );
 };
-
+// Card.defaultProps = {
+//   location: { pathname: "news" }
+// };
 export default Card;

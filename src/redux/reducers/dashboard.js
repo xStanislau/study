@@ -6,16 +6,16 @@ const LOAD_DATA_SUCCESSEDED = "app/dashboard/LOAD_DATA_SUCCESSEDED";
 const LOAD_DATA_FAILED = "app/dashboard/LOAD_DATA_FAILED";
 
 // action creators
-export const loadDataStart = () => ({
+export const fetchStart = () => ({
   type: LOAD_DATA
 });
 
-export const loadDataSuccesseded = data => ({
+export const fetchSuccesseded = data => ({
   type: LOAD_DATA_SUCCESSEDED,
   payload: data
 });
 
-export const loadDataFailed = error => ({
+export const fetchFailed = error => ({
   type: LOAD_DATA_FAILED,
   payload: error
 });
@@ -51,15 +51,15 @@ export default function reducer(state = initialState, action) {
 }
 
 // async action
-export const loadData = id => async dispatch => {
-  dispatch(loadDataStart());
+export const fetch = id => async dispatch => {
+  dispatch(fetchStart());
   try {
     const response = await getData(id);
     if (response.data.status === "err") {
       throw Error(response.data.message);
     }
-    dispatch(loadDataSuccesseded(response.data));
+    dispatch(fetchSuccesseded(response.data));
   } catch (error) {
-    dispatch(loadDataFailed(error));
+    dispatch(fetchFailed(error));
   }
 };

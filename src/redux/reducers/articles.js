@@ -15,16 +15,16 @@ const ADD_ARTICLE_SUCCESSEDED = "app/articles/ADD_ARTICLE_SUCCESSEDED";
 const ADD_ARTICLE_FAILED = "app/articles/ADD_ARTICLE_FAILED";
 
 // action creators
-export const loadDataStart = () => ({
+export const fetchStart = () => ({
   type: LOAD_DATA
 });
 
-export const loadDataSuccesseded = data => ({
+export const fetchSuccesseded = data => ({
   type: LOAD_ARTICLES_SUCCESSEDED,
   payload: data
 });
 
-export const loadDataFailed = error => ({
+export const fetchFailed = error => ({
   type: LOAD_ARTICLES_FAILED,
   payload: error
 });
@@ -60,15 +60,15 @@ export default function reducer(state = initialState, action) {
 }
 
 // async action
-export const loadData = id => async dispatch => {
-  dispatch(loadDataStart());
+export const fetch = id => async dispatch => {
+  dispatch(fetchStart());
   try {
     const response = await getArticle(id);
     if (response.data.status === "err") {
       throw Error(response.data.message);
     }
-    dispatch(loadDataSuccesseded(response.data));
+    dispatch(fetchSuccesseded(response.data));
   } catch (error) {
-    dispatch(loadDataFailed(error));
+    dispatch(fetchFailed(error));
   }
 };

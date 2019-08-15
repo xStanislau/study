@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import DashBoardHeader from "./DashBoardHeader/DashBoardHeader";
 import Sidebar from "./Sidebar/Sidebar";
-import { loadData } from "../../redux/reducers/dashboard";
+import { fetch } from "../../redux/reducers/dashboard";
 import { openSidebar, closeSidebar } from "../../redux/reducers/sidebar";
 import Loader from "../../components/Loader/Loader";
 import Accordion from "../../components/Accordion/Accordion";
@@ -13,8 +13,8 @@ import "./Dashboard.scss";
 
 class Dashboard extends Component {
   componentDidMount() {
-    const userId = 1;
-    this.props.loadData(userId);
+    const { userId } = mockData.dashboardData.data;
+    this.props.fetch(userId);
     window.addEventListener("resize", this.resizeHandler);
 
     if (window.innerWidth < 1280) {
@@ -98,7 +98,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  loadData: bindActionCreators(loadData, dispatch),
+  fetch: bindActionCreators(fetch, dispatch),
   openSidebar: bindActionCreators(openSidebar, dispatch),
   closeSidebar: bindActionCreators(closeSidebar, dispatch)
 });

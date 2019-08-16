@@ -13,7 +13,6 @@ import { logOut } from "../../../../redux/reducers/auth";
 const MainHeader = ({ className, isAuthorized }) => {
   const [isOpen, toggleMenu] = useState(false);
   const body = document.querySelector("body");
-
   if (isOpen) {
     body.classList.add("overflow-hidden");
   } else {
@@ -22,11 +21,7 @@ const MainHeader = ({ className, isAuthorized }) => {
 
   window.addEventListener("resize", evt => {
     if (window.innerWidth > 991) {
-      body.classList.remove("overflow-hidden");
-    } else {
-      if (isOpen) {
-        body.classList.add("overflow-hidden");
-      }
+      toggleMenu(false);
     }
   });
 
@@ -47,7 +42,7 @@ const MainHeader = ({ className, isAuthorized }) => {
               toggleMenu(!isOpen);
             }}
           />
-          <Navbar.Collapse id="basic-navbar-nav">
+          <Navbar.Collapse id="basic-navbar-nav" in={isOpen}>
             <Nav className="main-header__links  w-100 align-items-center ">
               <NavLink
                 to="/"

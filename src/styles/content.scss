@@ -1,66 +1,4 @@
 @import "./theme/theme.scss";
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-li,
-em,
-strong,
-span,
-button,
-a,
-i {
-  font-family: $base-font;
-}
-
-h1,
-.h1 {
-  font-size: 44px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-}
-
-h2,
-.h2 {
-  @extend .h1;
-  font-size: 36px;
-}
-h3,
-.h3 {
-  @extend .h1;
-  font-size: 30px;
-}
-
-h4,
-.h4 {
-  @extend .h1;
-  font-size: 26px;
-}
-
-h5,
-.h5 {
-  @extend .h1;
-  font-size: 22px;
-}
-
-h6,
-.h6 {
-  @extend .h1;
-  font-size: 20px;
-}
 
 p {
   font-family: $base-font;
@@ -71,12 +9,6 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-}
-strong {
-  font-weight: bold;
-}
-em {
-  font-style: italic;
 }
 
 .content {
@@ -106,7 +38,7 @@ em {
   h4:first-child {
     margin-bottom: 15px;
   }
-  h4,
+
   h5 {
     margin: 15px 0;
   }

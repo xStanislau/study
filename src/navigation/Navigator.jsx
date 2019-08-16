@@ -9,19 +9,21 @@ import ForgotForm from "../components/Forms/ForgotPasswordForm/ForgotPasswordFor
 export default () => {
   return (
     <Switch>
+      <Route exact path="/" component={Home} />
       <Route
+        exact
         path="/login"
         render={props => {
           return <Login form={LoginForm} />;
         }}
       />
       <Route
+        exact
         path="/forgot"
         render={props => {
           return <Login form={ForgotForm} />;
         }}
       />
-      <Route exact path="/" component={Home} />
       <PrivateRoutes />
       <Route exact component={() => <h1>Page not found</h1>} />
     </Switch>

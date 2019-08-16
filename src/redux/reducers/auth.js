@@ -85,15 +85,19 @@ export const logIn = values => async dispatch => {
   try {
     let response = await api.login(values);
     if (response.error) return response;
-    if (values.rememberMe) {
-      const { password } = values;
-      response = { ...response, password };
-    }
-
-    localStorage.setItem(
+    sessionStorage.setItem(
       "user",
       JSON.stringify({ ...response, isAuthorized: true })
     );
+
+    if (values.rememberMe) {
+      const timesTamp = new Date().getTime();
+      const userData = { ...response, timesTamp };
+      localStorage.setItem(
+        "user",
+        JSON.stringify({ ...userData, isAuthorized: true })
+      );
+    }
     dispatch(logInSuccessed(response));
   } catch (error) {
     dispatch(logInFailed(error));
@@ -103,15 +107,17 @@ export const logIn = values => async dispatch => {
 export const logOut = key => async dispatch => {
   dispatch(logOutStart);
   try {
-    const user = localStorage.getItem(key)
-      ? JSON.parse(localStorage.getItem(key))
-      : "";
+    let user;
+    if (sessionStorage.getItem(key) !== null) {
+      user = JSON.parse(sessionStorage.getItem(key));
+      user.isAuthorized = false;
+      sessionStorage.setItem("user", JSON.stringify(user));
+    }
 
-    user.isAuthorized = false;
-    delete user.userName;
-    delete user.password;
+    if (localStorage.getItem(key) !== null) {
+      localStorage.removeItem(key);
+    }
 
-    localStorage.setItem("user", JSON.stringify(user));
     dispatch(logOutSuccessed());
   } catch (error) {
     dispatch(logOutFailed(error));

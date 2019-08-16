@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Popup from "../../../components/Popup/Popup";
-import Button from "../../../components/Button/Button";
-import Header from "./Header/Header";
-import "../../../components/Forms/Form.scss";
+import Popup from "../../components/Popup/Popup";
+import Button from "../../components/Button/Button";
+import Header from "./LoginHeader/LoginHeader";
+import "../../components/Forms/Form.scss";
 import "./Login.scss";
 
 class Login extends Component {
@@ -34,7 +34,6 @@ class Login extends Component {
           <section className="right-side">
             <Header />
             <div className="form-wrapper">
-              {/* <h2 className="text-left title h4">Login your account</h2> */}
               <Form />
               <div className="buttons-group d-flex justify-content-center align-items-center ">
                 <Button

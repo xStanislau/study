@@ -1,6 +1,6 @@
 import React from "react";
-import mockData from "../../../../mocks/mocks";
-import Card from "../../../../components/Card/Card";
+import mockData from "../../../mocks/mocks";
+import Card from "../../../components/Card/Card";
 import "./Community.scss";
 
 const Community = ({ className }) => {

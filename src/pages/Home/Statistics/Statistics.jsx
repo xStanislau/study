@@ -1,5 +1,5 @@
 import React from "react";
-import mockData from "../../../../mocks/mocks";
+import mockData from "../../../mocks/mocks";
 
 const Statistics = ({ className }) => {
   const {

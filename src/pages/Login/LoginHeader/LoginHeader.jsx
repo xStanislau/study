@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const LoginHeader = () => {
   return (
     <header className="login-header d-flex justify-content-between">
       <Link to="/" className="link link-left">
@@ -19,4 +19,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default LoginHeader;

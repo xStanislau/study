@@ -1,7 +1,7 @@
 import React from "react";
-import Article from "../../../../../components/_Article/Arcticle";
+import Article from "../../../../components/_Article/Arcticle";
 import NewsItem from "../NewsItem/NewsItem";
-import mockData from "../../../../../mocks/mocks";
+import mockData from "../../../../mocks/mocks";
 
 const NewsItems = ({ className }) => {
   const { posts } = mockData;

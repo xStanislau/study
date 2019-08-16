@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import Login from "../pages/Login/components/Login";
+import Login from "../pages/Login/Login";
 import Home from "../pages/Home/Home";
 import PrivateRoutes from "./PrivateRoutes";
 import LoginForm from "../components/Forms/LoginForm/LoginForm";
@@ -25,7 +25,7 @@ export default () => {
         }}
       />
       <PrivateRoutes />
-      <Route exact component={() => <h1>Page not found</h1>} />
+      <Route component={() => <h1>Page not found</h1>} />
     </Switch>
   );
 };

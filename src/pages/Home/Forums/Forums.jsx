@@ -1,7 +1,7 @@
 import React from "react";
-import Button from "../../../../components/Button/Button";
-import Table from "../../../../components/Table/Table";
-import mockData from "../../../../mocks/mocks";
+import Button from "../../../components/Button/Button";
+import Table from "../../../components/Table/Table";
+import mockData from "../../../mocks/mocks";
 
 const Forums = ({ className }) => {
   const { forums } = mockData;

@@ -10,18 +10,21 @@ const PrivateRoutes = ({ isAuthorized }) => {
   if (!isAuthorized) {
     return <Redirect to="/login" />;
   }
+
   return (
     <Dashboard>
-      <Route path="/profile" component={Profile} />
+      <Route exact path="/profile" component={Profile} />
       <Route exact path="/news" component={News} />
       <Route path="/news/:id" component={Article} />
     </Dashboard>
   );
 };
 
-const mapStateToProps = state => ({
-  isAuthorized: state.auth.isAuthorized
-});
+const mapStateToProps = state => {
+  return {
+    isAuthorized: state.auth.isAuthorized
+  };
+};
 
 export default connect(
   mapStateToProps,

@@ -1,4 +1,4 @@
-@import "./../../../styles/theme/theme.scss";
+@import "./../../styles/theme/theme.scss";
 
 .page-content {
   margin: 0 auto;
@@ -91,8 +91,14 @@
       padding-top: 74px;
       padding-bottom: 49px;
     }
-    .title {
-      // font-size: 22px;
+  }
+}
+
+@media (max-width: $break-point-sm) {
+  .page-content {
+    .right-side {
+      padding-top: 74px;
+      padding-bottom: 10px;
     }
   }
 }

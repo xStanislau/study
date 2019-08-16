@@ -1,6 +1,6 @@
 import React from "react";
 import NewsItems from "./NewsItems/NewsItems";
-import Button from "../../../../components/Button/Button";
+import Button from "../../../components/Button/Button";
 
 const News = ({ className }) => {
   return (

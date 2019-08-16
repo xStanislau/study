@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import Header from "../../../../components/Header/Header";
-import Logo from "../../../../components/Logo/Logo";
-import Button from "../../../../components/Button/Button";
-
+import Header from "../../../components/Header/Header";
+import Logo from "../../../components/Logo/Logo";
+import Button from "../../../components/Button/Button";
 import { connect } from "react-redux";
 import { Navbar, Nav } from "react-bootstrap";
 import "./Header.scss";
 import { bindActionCreators } from "redux";
-import { logOut } from "../../../../redux/reducers/auth";
+import { logOut } from "../../../redux/reducers/auth";
 
 const MainHeader = ({ className, isAuthorized }) => {
   const [isOpen, toggleMenu] = useState(false);

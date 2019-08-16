@@ -1,8 +1,8 @@
 import React from "react";
-import Project from "./components/Project/Project";
-import Menu from "../../../../components/Menu/Menu";
-import mockData from "../../../../mocks/mocks";
-import Button from "../../../../components/Button/Button";
+import Project from "./Project/Project";
+import Menu from "../../../components/Menu/Menu";
+import mockData from "../../../mocks/mocks";
+import Button from "../../../components/Button/Button";
 
 const Projects = ({ className }) => {
   const { projects, projectsMenu } = mockData;

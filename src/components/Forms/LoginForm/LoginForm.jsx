@@ -18,9 +18,6 @@ class LoginForm extends Component {
     visiblle: false
   };
 
-  LoginHoc = () => () => {
-    return;
-  };
   onSubmit = async values => {
     const response = await this.props.login(values);
 
@@ -54,6 +51,7 @@ class LoginForm extends Component {
     const { isAuthorized, values } = this.props;
     const { visible } = this.state;
     const { onSubmit, validate, togglePasswordVibility } = this;
+
     if (isAuthorized) {
       this.props.history.push("/profile");
     }

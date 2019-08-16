@@ -11,7 +11,6 @@ import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
 
 import Loader from "../../Loader/Loader";
-import "./LoginForm.scss";
 import { validationErrors } from "../../../constants/validationErrors";
 
 class LoginForm extends Component {
@@ -19,6 +18,9 @@ class LoginForm extends Component {
     visiblle: false
   };
 
+  LoginHoc = () => () => {
+    return;
+  };
   onSubmit = async values => {
     const response = await this.props.login(values);
 
@@ -74,8 +76,9 @@ class LoginForm extends Component {
           hasSubmitErrors
         }) => {
           return (
-            <form className="login-form" onSubmit={handleSubmit}>
+            <form className="form login-form" onSubmit={handleSubmit}>
               {(isAuthorized || submitting) && <Loader />}
+              <h2 className="text-left title h4">Login your account</h2>
               <Input
                 className="input"
                 type="email"
@@ -120,7 +123,7 @@ class LoginForm extends Component {
                   />
                   >
                 </Input>
-                <NavLink to="#" className="forgot-password">
+                <NavLink to="/forgot" className="forgot-password">
                   Forgot password
                 </NavLink>
               </div>

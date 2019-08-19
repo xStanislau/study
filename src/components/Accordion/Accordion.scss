@@ -1,7 +1,40 @@
 @import "./../../styles/theme/theme.scss";
+
 .accordion {
   &__toggle {
     padding: 0 0;
+    border: none;
+    border-radius: 0;
     background-color: $white-color;
+    position: relative;
+  }
+  &__toggle.active {
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 10px;
+      bottom: 10px;
+      width: 4px;
+      background-color: #29b1cc;
+    }
+  }
+  &__item-container {
+    border: none;
+    border-radius: 0;
+  }
+
+  &__collapse {
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 15px;
+      right: 15px;
+      height: 3px;
+      background-color: #979797;
+      opacity: 0.2;
+    }
   }
 }

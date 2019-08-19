@@ -8,10 +8,12 @@
   bottom: 0;
   z-index: 1;
   background-color: $white-color;
+
   .accordion {
     height: 100%;
     overflow-y: auto;
   }
+
   .container {
     padding: 0;
     margin: 0;
@@ -24,13 +26,16 @@
   background-color: #29b1cc;
   color: $white-color;
   z-index: 3;
+
   &__content {
     width: 100%;
   }
+
   &__title {
     font-size: 20px;
     margin-bottom: 0;
   }
+
   &__icon {
     cursor: pointer;
   }
@@ -41,6 +46,7 @@
   width: 350px;
   min-width: 350px;
 }
+
 .dashboard-left.isClosed {
   flex: 0 0 100px;
   width: 100px;

@@ -3,16 +3,19 @@
 .page-content {
   margin: 0 auto;
   min-height: 100%;
+
   .login-header {
     width: 100%;
     position: absolute;
     top: 0;
     padding: 55px 56px;
     font-size: 14px;
+
     .link {
       color: #6b6c6f;
     }
   }
+
   .title {
     font-weight: bold;
     color: #252529;
@@ -54,6 +57,7 @@
   background-color: $white-color;
   min-height: 100%;
   width: 50%;
+
   .btn-border {
     margin-bottom: 20px;
     width: 100%;
@@ -77,6 +81,7 @@
     background-position: center center;
     background-size: cover;
   }
+
   .form-wrapper {
     margin-left: 0;
   }
@@ -87,6 +92,7 @@
     .login-header {
       padding: 25px 25px;
     }
+
     .right-side {
       padding-top: 74px;
       padding-bottom: 49px;
@@ -111,6 +117,7 @@
     background-position: center center;
     background-size: cover;
   }
+
   .form-wrapper {
     margin-left: 0;
   }

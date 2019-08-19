@@ -2,41 +2,52 @@
 
 .form {
   margin-bottom: 19px;
+
   .btn-primary {
     width: 100%;
   }
+
   label {
     font-size: 14px;
   }
+
   .email-group {
     margin-bottom: 19px;
+
     label {
       margin-bottom: 14px;
     }
   }
+
   label:hover {
     cursor: pointer;
   }
+
   .password-group {
     margin-bottom: 19px;
+
     label {
       margin-bottom: 19px;
     }
+
     .fa:last-child {
       padding: 10px 0;
       cursor: pointer;
     }
   }
+
   .checkbox-group {
     display: inline-flex;
     justify-content: flex-end;
     align-items: center;
     flex-direction: row-reverse;
     margin-bottom: 19px;
+
     label {
       font-size: 16px;
       margin-bottom: 0;
     }
+
     .checkbox {
       position: absolute;
       opacity: 0;
@@ -44,6 +55,7 @@
       height: 0;
       width: 0;
     }
+
     .input-container {
       display: block;
       position: relative;
@@ -60,6 +72,7 @@
         height: 18px;
         border: 1px solid $solitude-color;
         background-color: $white-color;
+
         &:after {
           left: 5px;
           top: 2px;
@@ -76,22 +89,26 @@
       .checkbox {
         &:checked ~ .checkmark {
           background-color: $white-color;
+
           &:after {
             display: block;
           }
         }
       }
     }
+
     .checkmark:after {
       content: "";
       position: absolute;
       display: none;
     }
   }
+
   .forgot-password {
     color: $solitude-color;
     text-decoration: none;
   }
+
   .fa {
     color: $solitude-color;
   }
@@ -108,13 +125,16 @@
     color: $primary-color;
     border: 1px solid $secondary-color;
     border-radius: $btn-border-radius;
+
     &:focus {
       color: $primary-color;
       box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.25);
     }
+
     &:focus ~ .fa {
       color: darken($solitude-color, 15%);
     }
+
     &::placeholder {
       font-size: 14px;
       color: #e1e4e8;

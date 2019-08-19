@@ -16,14 +16,17 @@
   padding-left: 40px;
   padding-right: 40px;
   box-sizing: border-box;
+
   i {
     color: #8ca0b3;
   }
+
   .row {
     height: 100%;
     margin-right: 0px;
     margin-left: 0px;
   }
+
   .search-bar {
     margin-right: 36px;
   }
@@ -43,6 +46,7 @@
   position: fixed;
   z-index: 4;
 }
+
 .top-row {
   .dashboard-right {
     padding-left: 0;

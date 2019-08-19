@@ -9,19 +9,23 @@
   font-weight: normal;
   text-align: center;
   color: $white-color;
+
   &:hover {
     cursor: pointer;
   }
+
   &_blue {
     box-shadow: 0 8px 30px 0 rgba(30, 135, 240, 0.2),
       0 8px 30px 0 rgba(30, 135, 240, 0.2);
     background-color: #1e87f0;
   }
+
   &_orange {
     box-shadow: 0 8px 30px 0 rgba(250, 160, 90, 0.2),
       0 8px 30px 0 rgba(240, 80, 110, 0.2);
     background-color: #faa05a;
   }
+
   &_green {
     box-shadow: 0 8px 30px 0 rgba(50, 210, 150, 0.2),
       0 8px 30px 0 rgba(50, 210, 150, 0.2);

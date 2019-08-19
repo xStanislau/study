@@ -5,13 +5,16 @@
   font-size: 18px;
   text-decoration: none;
   color: $black-pearl-color;
+
   &__icon {
     color: #0db9dd;
     margin-right: 33px;
   }
+
   &:hover {
     text-decoration: none;
   }
+
   transition: all 0.24s ease-in;
 }
 .sidebar.isClosed {

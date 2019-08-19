@@ -8,6 +8,7 @@ const Activity = ({ operation, time }) => {
       <img
         className="activity__user-img rounded-circle "
         src="https://place-hold.it/48x48"
+        // 48x48 format ???
         alt="Generic placeholder"
       />
       <Media.Body>

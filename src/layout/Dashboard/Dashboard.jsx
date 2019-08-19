@@ -14,6 +14,7 @@ import "./Dashboard.scss";
 class Dashboard extends Component {
   componentDidMount() {
     const { userId } = mockData.dashboardData.data;
+    // userId ???
     this.props.fetch(userId);
     window.addEventListener("resize", this.resizeHandler);
 
@@ -101,7 +102,13 @@ const mapDispatchToProps = dispatch => ({
   closeSidebar: bindActionCreators(closeSidebar, dispatch)
 });
 
+// function mapDispatchToProps(dispatch) {
+//   return bindActionCreators({ fetch, openSidebar, closeSidebar }, dispatch)
+// }
+// https://react-redux.js.org/using-react-redux/connect-mapdispatch
+
 export default connect(
   mapStateToProps,
   mapDispatchToProps
+  // { fetch, openSidebar, closeSidebar }
 )(Dashboard);

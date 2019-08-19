@@ -1,14 +1,21 @@
 import api from "../../api/index";
 
 // actions
+
+// constants ???
 const LOG_IN = "app/auth/LOG_IN";
+// const LOG_IN = "LOG_IN"; ???
 const LOG_IN_FAILED = "app/auth/LOG_IN_FAILED";
+// LOG_IN_FAILED why not used ???
 const LOG_IN_SUCCSSEEDED = "app/auth/LOG_IN_SUCCSSEEDED";
+// LOG_IN_SUCCSSEEDED -> LOG_IN_SUCCEED ???
 const LOG_OUT = "app/auth/LOG_OUT";
 const LOG_OUT_FAILED = "app/auth/LOG_OUT_FAILED";
 const LOG_OUT_SUCCSSEEDED = "app/auth/LOG_OUT_SUCCSSEEDED";
 
 // action creators
+
+// actions ???
 export const logInStart = () => ({
   type: LOG_IN
 });

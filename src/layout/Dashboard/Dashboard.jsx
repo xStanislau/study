@@ -95,11 +95,9 @@ const mapStateToProps = state => ({
   isClosed: state.sidebar.isClosed
 });
 
-const mapDispatchToProps = dispatch => ({
-  fetch: bindActionCreators(fetch, dispatch),
-  openSidebar: bindActionCreators(openSidebar, dispatch),
-  closeSidebar: bindActionCreators(closeSidebar, dispatch)
-});
+const mapDispatchToProps = dispatch => {
+  return bindActionCreators({ fetch, openSidebar, closeSidebar }, dispatch);
+};
 
 export default connect(
   mapStateToProps,

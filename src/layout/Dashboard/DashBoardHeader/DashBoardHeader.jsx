@@ -26,9 +26,9 @@ class DashBoardHeader extends Component {
     }
   };
 
-  handleLogout = async () => {
-    const { logout, history } = this.props;
-    await logout("user");
+  handleLogOut = async () => {
+    const { logOut, history } = this.props;
+    await logOut("user");
     history.push("/login");
   };
 
@@ -72,12 +72,12 @@ const mapStateToProps = state => ({
   isAuthorized: state.auth.isAuthorized
 });
 
-const mapDispatchToProps = dispatch => ({
-  openSidebar: bindActionCreators(openSidebar, dispatch),
-  closeSidebar: bindActionCreators(closeSidebar, dispatch),
-  toggleSidebar: bindActionCreators(toggleSidebar, dispatch),
-  logout: bindActionCreators(logOut, dispatch)
-});
+const mapDispatchToProps = dispatch => {
+  return bindActionCreators(
+    { openSidebar, closeSidebar, toggleSidebar, logOut },
+    dispatch
+  );
+};
 
 export default connect(
   mapStateToProps,

@@ -5,7 +5,11 @@ import { bindActionCreators } from "redux";
 import DashBoardHeader from "./DashBoardHeader/DashBoardHeader";
 import Sidebar from "./Sidebar/Sidebar";
 import { fetch } from "../../redux/reducers/dashboard";
-import { openSidebar, closeSidebar } from "../../redux/reducers/sidebar";
+import {
+  openSidebar,
+  closeSidebar,
+  toggleSidebarItem
+} from "../../redux/reducers/sidebar";
 import Loader from "../../components/Loader/Loader";
 import Accordion from "../../components/Accordion/Accordion";
 import mockData from "../../mocks/mocks";
@@ -42,11 +46,13 @@ class Dashboard extends Component {
 
   resizeHandler = () => {
     const { onCloseSidebar } = this;
-    const { openSidebar } = this.props;
+    const { openSidebar, isClosed } = this.props;
     setTimeout(() => {
       if (window.innerWidth < 1280) {
-        onCloseSidebar();
-      } else {
+        if (!isClosed) {
+          onCloseSidebar();
+        }
+      } else if (isClosed) {
         openSidebar();
       }
     }, 50);
@@ -96,7 +102,10 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => {
-  return bindActionCreators({ fetch, openSidebar, closeSidebar }, dispatch);
+  return bindActionCreators(
+    { fetch, openSidebar, closeSidebar, toggleSidebarItem },
+    dispatch
+  );
 };
 
 export default connect(

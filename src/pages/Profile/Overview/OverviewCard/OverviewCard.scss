@@ -4,6 +4,7 @@
   min-height: 208px;
   color: $white-color;
   border: none;
+
   &_orange {
     background-image: linear-gradient(to left, #f9d423, #f83600);
   }
@@ -24,6 +25,7 @@
     align-items: center;
     border-bottom: 1px solid $white-color;
     margin-bottom: 39px;
+
     &-link {
       display: flex;
       padding: 0 23px;
@@ -35,20 +37,24 @@
       height: 100%;
     }
   }
+
   &__body {
     padding: 0 39px;
   }
+
   &__title {
     margin-bottom: 0;
+    font-size: 20px;
   }
+
   &__number {
     font-size: 36px;
     letter-spacing: 0.51px;
   }
-}
 
-// @media (max-width: $break-point-lg) {
-//   .overview__overview-card {
-//     margin-bottom: 20px;
-//   }
-// }
+  &__time {
+    font-size: 14px;
+    font-style: italic;
+    opacity: 0.8;
+  }
+}

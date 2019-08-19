@@ -36,7 +36,9 @@ class DashBoardHeader extends Component {
     const classNames = cx("dashboard-left", {
       isClosed: this.props.isClosed
     });
-    const { notifications, emails, toggleSidebar, userName } = this.props;
+
+    const { notifications, emails, userName } = this.props;
+    const { onToggleSidebar } = this;
     return (
       <Container className="top-container" fluid>
         <Row className="top-row flex-nowrap  white-05">
@@ -48,7 +50,7 @@ class DashBoardHeader extends Component {
                   className="sidebar-header__icon"
                   name="align-left"
                   size="25"
-                  onClick={toggleSidebar}
+                  onClick={onToggleSidebar}
                 />
               </div>
             </header>

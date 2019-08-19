@@ -27,7 +27,11 @@ const Nav = ({ notifications, emails, settings }) => {
         <li className="nav-list__item">
           <Link className="nav-list__icon" to="#">
             <Icon name="cog" size="25" />
-            {settings && <Badge pill variant="danger" />}
+            {settings && (
+              <Badge pill variant="danger">
+                {settings}
+              </Badge>
+            )}
           </Link>
         </li>
       </ul>

@@ -1,19 +1,26 @@
 @import "./../../../../../../../styles/theme/theme.scss";
 
 .activity {
-  &:nth-child(2n) {
-    background-color: $white-smoke-color;
-  }
   padding: 18px 22px;
+  border: none;
+
+  &:nth-child(2n) {
+    background-color: rgba(140, 160, 179, 0.1);
+    border-right: 3px solid rgba(140, 160, 179, 0.1);
+    margin-right: -3px;
+  }
+
   &__user-img {
     border: solid 1px #137f9d;
     margin-right: 27px;
   }
+
   &__info {
     display: flex;
     width: 100%;
     justify-content: space-between;
   }
+
   .media-body {
     display: flex;
     flex-direction: column;
@@ -21,17 +28,20 @@
     align-content: flex-start;
     align-items: flex-start;
   }
+
   &__title {
     font-size: 20px;
     color: $black-pearl-color;
     margin-bottom: 0px;
   }
+
   &__operation {
-    color: #000911;
+    color: #053361;
     font-size: 16px;
     line-height: 24px;
     opacity: 0.86;
   }
+
   &__time {
     font-size: 14px;
     color: #555555;

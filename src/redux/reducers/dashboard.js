@@ -2,7 +2,7 @@ import { getData } from "../../api/user/getData";
 
 // actions
 const LOAD_DATA = "app/dashboard/LOAD_DATA";
-const LOAD_DATA_SUCCESSEDED = "app/dashboard/LOAD_DATA_SUCCESSEDED";
+const LOAD_DATA_SUCCEEDED = "app/dashboard/LOAD_DATA_SUCCEEDED";
 const LOAD_DATA_FAILED = "app/dashboard/LOAD_DATA_FAILED";
 
 // action creators
@@ -11,7 +11,7 @@ export const fetchStart = () => ({
 });
 
 export const fetchSuccesseded = data => ({
-  type: LOAD_DATA_SUCCESSEDED,
+  type: LOAD_DATA_SUCCEEDED,
   payload: data
 });
 
@@ -38,7 +38,7 @@ export default function reducer(state = initialState, action) {
         isLoaded: true,
         error: action.payload
       };
-    case LOAD_DATA_SUCCESSEDED:
+    case LOAD_DATA_SUCCEEDED:
       return {
         ...state,
         isLoaded: true,

@@ -2,6 +2,7 @@
 const OPEN_SIDEBAR = "app/sidebar/OPEN_SIDEBAR";
 const CLOSE_SIDEBAR = "app/sidebar/CLOSE_SIDEBAR";
 const TOGGLE_SIDEBAR = "app/sidebar/TOGGLE_SIDEBAR";
+const TOGGLE_SIDEBAR_ITEM = "app/sidebar/TOGGLE_SIDEBAR_ITEM";
 
 // action creators
 export const openSidebar = () => ({
@@ -16,8 +17,13 @@ export const toggleSidebar = () => ({
   type: TOGGLE_SIDEBAR
 });
 
+export const toggleSidebarItem = () => ({
+  type: TOGGLE_SIDEBAR_ITEM
+});
+
 const initialState = {
-  isClosed: false
+  isClosed: false,
+  itemIsClosed: false
 };
 
 // reducer
@@ -37,6 +43,11 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         isClosed: !state.isClosed
+      };
+    case TOGGLE_SIDEBAR_ITEM:
+      return {
+        ...state,
+        itemIsClosed: !state.itemIsClosed
       };
 
     default:

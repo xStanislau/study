@@ -3,10 +3,10 @@ import api from "../../api/index";
 // actions
 const LOG_IN = "app/auth/LOG_IN";
 const LOG_IN_FAILED = "app/auth/LOG_IN_FAILED";
-const LOG_IN_SUCCSSEEDED = "app/auth/LOG_IN_SUCCSSEEDED";
+const LOG_IN_SUCCEEDED = "app/auth/LOG_IN_SUCCEEDED";
 const LOG_OUT = "app/auth/LOG_OUT";
 const LOG_OUT_FAILED = "app/auth/LOG_OUT_FAILED";
-const LOG_OUT_SUCCSSEEDED = "app/auth/LOG_OUT_SUCCSSEEDED";
+const LOG_OUT_SUCCEEDED = "app/auth/LOG_OUT_SUCCEEDED";
 
 // action creators
 export const logInStart = () => ({
@@ -18,8 +18,8 @@ export const logInFailed = error => ({
   error
 });
 
-export const logInSuccessed = payload => ({
-  type: LOG_IN_SUCCSSEEDED,
+export const logInSucceeded = payload => ({
+  type: LOG_IN_SUCCEEDED,
   payload: payload
 });
 
@@ -32,8 +32,8 @@ export const logOutFailed = error => ({
   error
 });
 
-export const logOutSuccessed = () => ({
-  type: LOG_OUT_SUCCSSEEDED
+export const logOutSucceeded = () => ({
+  type: LOG_OUT_SUCCEEDED
 });
 
 const initialState = {
@@ -57,7 +57,7 @@ export default function reducer(state = initialState, action) {
         isAuthorized: false,
         error: action.error
       };
-    case LOG_IN_SUCCSSEEDED:
+    case LOG_IN_SUCCEEDED:
       return {
         ...state,
         userInfo: action.payload,
@@ -68,7 +68,7 @@ export default function reducer(state = initialState, action) {
         ...state,
         isAuthorized: true
       };
-    case LOG_OUT_SUCCSSEEDED:
+    case LOG_OUT_SUCCEEDED:
       return {
         ...state,
         userInfo: null,
@@ -98,7 +98,7 @@ export const logIn = values => async dispatch => {
         JSON.stringify({ ...userData, isAuthorized: true })
       );
     }
-    dispatch(logInSuccessed(response));
+    dispatch(logInSucceeded(response));
   } catch (error) {
     dispatch(logInFailed(error));
   }
@@ -118,7 +118,7 @@ export const logOut = key => async dispatch => {
       localStorage.removeItem(key);
     }
 
-    dispatch(logOutSuccessed());
+    dispatch(logOutSucceeded());
   } catch (error) {
     dispatch(logOutFailed(error));
   }

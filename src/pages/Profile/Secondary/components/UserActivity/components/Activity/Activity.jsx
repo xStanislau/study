@@ -1,8 +1,9 @@
 import React from "react";
 import { Media } from "react-bootstrap";
 import "./Activity.scss";
+import ActivityTitle from "./ActivityTitle";
 
-const Activity = ({ operation, time }) => {
+const Activity = ({ operation, time, status }) => {
   return (
     <Media className="activity">
       <img
@@ -11,7 +12,7 @@ const Activity = ({ operation, time }) => {
         alt="Generic placeholder"
       />
       <Media.Body>
-        <h6 className="activity__title">User</h6>
+        <ActivityTitle status={status}>User</ActivityTitle>
         <div className="activity__info">
           <span className="activity__operation">{operation}</span>
           <i className="activity__time">{time} ago</i>

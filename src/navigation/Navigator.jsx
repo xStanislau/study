@@ -24,7 +24,7 @@ export default () => {
           return <Login form={ForgotForm} />;
         }}
       />
-      <PrivateRoutes />
+      <Route path="/profile" component={PrivateRoutes} />
       <Route component={() => <h1>Page not found</h1>} />
     </Switch>
   );

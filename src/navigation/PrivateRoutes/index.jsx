@@ -6,17 +6,50 @@ import News from "../../pages/News/News";
 import Article from "../../pages/News/Article/Article";
 import Dashboard from "../../layout/Dashboard/Dashboard";
 
-const PrivateRoutes = ({ isAuthorized }) => {
+const PrivateRoutes = ({ isAuthorized, ...rest }) => {
   if (!isAuthorized) {
     return <Redirect to="/login" />;
   }
-
   return (
-    <Dashboard>
-      <Route exact path="/profile" component={Profile} />
-      <Route exact path="/news" component={News} />
-      <Route path="/news/:id" component={Article} />
-    </Dashboard>
+    <>
+      <Route exact path="/profile" component={Dashboard} />
+
+      <Route exact path="/profile/dashboard" component={Dashboard} />
+      <Route
+        exact
+        path="/profile/dashboard/:id"
+        render={props => {
+          return (
+            <Dashboard {...props}>
+              <Profile {...props} />
+            </Dashboard>
+          );
+        }}
+      />
+      <Route
+        exact
+        path="/profile/news"
+        render={props => {
+          return (
+            <Dashboard {...props}>
+              <News {...props} />
+            </Dashboard>
+          );
+        }}
+      />
+      <Route
+        exact
+        path="/profile/news/:id"
+        render={props => {
+          return (
+            <Dashboard {...props}>
+              <Article {...props} />
+            </Dashboard>
+          );
+        }}
+      />
+      <Route component={() => <h1>Page not found 404</h1>} />
+    </>
   );
 };
 

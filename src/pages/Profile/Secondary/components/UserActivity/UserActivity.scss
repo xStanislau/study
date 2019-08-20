@@ -7,6 +7,7 @@
     height: 66px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 0 20px;
     background-color: $white-color;
   }
@@ -26,6 +27,37 @@
     }
   }
 
+  &__menu {
+    cursor: pointer;
+    padding: 5px;
+  }
+
+  &__menu-body {
+    position: relative;
+    cursor: pointer;
+    width: 4px;
+    height: 4px;
+    background-color: #8ca0b3;
+    border-radius: 50%;
+
+    &::before,
+    &::after {
+      position: absolute;
+      border-radius: 50%;
+      width: 4px;
+      height: 4px;
+      background-color: #8ca0b3;
+      content: "";
+    }
+
+    &::before {
+      top: -5px;
+    }
+
+    &::after {
+      bottom: -5px;
+    }
+  }
   .card-body {
     padding: 0;
   }

@@ -41,6 +41,9 @@ class UserActivity extends PureComponent {
         <Card className="user-activity">
           <Card.Header>
             <h5 className="user-activity__title">User Activity</h5>
+            <div className="user-activity__menu">
+              <div className="user-activity__menu-body" />{" "}
+            </div>
           </Card.Header>
           <Card.Body className="user-activity__body">
             {activity &&

@@ -19,6 +19,8 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
+    white-space: nowrap;
+    flex-wrap: wrap;
   }
 
   .media-body {
@@ -36,10 +38,12 @@
   }
 
   &__operation {
+    margin-right: 20px;
     color: #053361;
     font-size: 16px;
     line-height: 24px;
     opacity: 0.86;
+    white-space: normal;
   }
 
   &__time {

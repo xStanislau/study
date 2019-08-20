@@ -18,6 +18,8 @@ class LoginForm extends Component {
     visiblle: false
   };
 
+  passwordInput = null;
+
   onSubmit = async values => {
     const response = await this.props.login(values);
 
@@ -26,12 +28,17 @@ class LoginForm extends Component {
     }
   };
 
+  focusPasswordInput = () => {
+    if (this.passwordInput) this.passwordInput.focus();
+  };
+
   togglePasswordVibility = () => {
     this.setState(state => {
       return {
         visible: !state.visible
       };
     });
+    this.focusPasswordInput();
   };
 
   validate = values => {
@@ -98,6 +105,7 @@ class LoginForm extends Component {
                 label="Password"
                 withicon
                 formGroupClass="password-group"
+                inputRef={el => (this.passwordInput = el)}
               >
                 <Icon name="lock" className="l-icon-center-left" />
                 <Icon

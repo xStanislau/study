@@ -14,7 +14,8 @@ const Input = ({
   disabled,
   label,
   children,
-  withicon
+  withicon,
+  inputRef
 }) => {
   const withIcon = classNames("input-container", { withicon });
   const classess = classNames("form-control", className);
@@ -36,6 +37,7 @@ const Input = ({
                   className={classess}
                   id={id}
                   placeholder={placeholder}
+                  ref={inputRef}
                   {...input}
                 />
                 {children}

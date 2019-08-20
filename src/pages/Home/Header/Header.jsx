@@ -12,20 +12,21 @@ import { logOut } from "../../../redux/reducers/auth";
 const MainHeader = ({ className, isAuthorized }) => {
   const [isOpen, toggleMenu] = useState(false);
   const body = document.querySelector("body");
+
   if (isOpen) {
     body.classList.add("overflow-hidden");
   } else {
     body.classList.remove("overflow-hidden");
   }
 
-  window.addEventListener("resize", evt => {
+  window.addEventListener("resize", () => {
     if (window.innerWidth > 991) {
       toggleMenu(false);
     }
   });
 
   return (
-    <Header className={`${className} `}>
+    <Header className={`${className}`}>
       <div className="wrapper d-flex ">
         <Navbar expand="lg" className="justify-content-between w-100">
           <Navbar.Brand className="z-index-3" href="#home">
@@ -104,7 +105,7 @@ const mapStatToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  logout: bindActionCreators(logOut, dispatch)
+  logOut: bindActionCreators(logOut, dispatch)
 });
 
 export default connect(

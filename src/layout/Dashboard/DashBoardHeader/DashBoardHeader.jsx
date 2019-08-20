@@ -59,7 +59,7 @@ class DashBoardHeader extends Component {
             <header className="dashboard-header">
               <Nav notifications={notifications} emails={emails} />
               <div className="d-flex justify-content-end align-items-center">
-                <Account userName={userName} onClick={this.handleLogout} />
+                <Account userName={userName} onClick={this.handleLogOut} />
               </div>
             </header>
           </Col>

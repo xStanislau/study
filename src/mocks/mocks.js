@@ -144,109 +144,122 @@ const mockData = {
       items: [
         {
           text: "dashboard",
+          link: "/dashboard",
           iconName: "git-square",
           subItems: [
             {
               text: "dashboard 1",
-              link: "/dashboard/1"
+              link: "/profile/dashboard/1",
+              color: "cerulean"
             },
             {
               text: "dashboard 2",
-              link: "/dashboard/2"
+              link: "/profile/dashboard/2",
+              color: "tan-hide"
             },
             {
               text: "dashboard 3",
-              link: "/dashboard/3"
+              link: "/profile/dashboard/3",
+              color: "french-rose"
             }
           ]
         },
         {
           text: "charts",
+          link: "/charts",
           iconName: "git-square",
           subItems: [
             {
               text: "chart 1",
-              link: "/chart/1"
+              link: "/profile/chart/1"
             },
             {
               text: "chart 2",
-              link: "/chart/2"
+              link: "/profile/chart/2"
             },
             {
               text: "chart 3",
-              link: "/chart/3"
+              link: "/profile/chart/3"
             }
           ]
         },
         {
           text: "tables",
+          link: "/tables",
           iconName: "git-square",
           subItems: [
             {
               text: "tables 1",
-              link: "/tables/1"
+              link: "/profile/tables/1"
             },
             {
               text: "tables 2",
-              link: "/tables/2"
+              link: "/profile/tables/2"
             },
             {
               text: "tables 3",
-              link: "/tables/3"
+              link: "/profile/tables/3"
             }
           ]
         },
         {
           text: "forms",
+          link: "/forms",
           iconName: "git-square",
           subItems: [
             {
               text: "forms 1",
-              link: "/forms/1"
+              link: "/profile/forms/1"
             },
             {
               text: "forms 2",
-              link: "/forms/2"
+              link: "/profile/forms/2"
             },
             {
               text: "forms 3",
-              link: "/forms/3"
+              link: "/profile/forms/3"
             }
           ]
         },
         {
           text: "UI elements",
+          link: "/UI elements",
           iconName: "git-square",
           subItems: [
             {
               text: "ui-elements 1",
-              link: "/ui-elements/1"
+              link: "/profile/ui-elements/1"
             },
             {
               text: "ui-elements 2",
-              link: "/ui-elements/2"
+              link: "/profile/ui-elements/2"
             },
             {
               text: "ui-elements 3",
-              link: "/ui-elements/3"
+              link: "/profile/ui-elements/3"
             }
           ]
         },
         {
           text: "Articles",
+          link: "/news",
+
           iconName: "git-square",
           subItems: [
             {
-              text: "List",
-              link: "/news"
+              text: "1",
+              link: "/profile/news/0",
+              color: "cerulean"
             },
             {
-              text: "ui-elements 2",
-              link: "/ui-elements/2"
+              text: "2",
+              link: "/profile/news/1",
+              color: "tan-hide"
             },
             {
-              text: "ui-elements 3",
-              link: "/ui-elements/3"
+              text: "3",
+              link: "/profile/news/2",
+              color: "french-rose"
             }
           ]
         }
@@ -281,7 +294,8 @@ const mockData = {
       activity: [
         {
           operation: "new comment",
-          time: "4"
+          time: "4",
+          status: "active"
         },
         {
           operation: "ordered 2 items",
@@ -297,11 +311,13 @@ const mockData = {
         },
         {
           operation: "signed out",
-          time: "60"
+          time: "60",
+          status: "active"
         },
         {
           operation: "ordered 2 items",
-          time: "90"
+          time: "90",
+          status: "away"
         },
         {
           operation: "ordered 1 item",

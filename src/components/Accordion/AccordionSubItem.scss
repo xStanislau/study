@@ -1,5 +1,17 @@
 @import "./../../styles/theme/theme.scss";
 
+.cerulean {
+  color: #0db9dd;
+}
+
+.tan-hide {
+  color: #faa05a;
+}
+
+.french-rose {
+  color: #f0506e;
+}
+
 .sidebar-sub-item {
   padding: 10px 26px 10px 36px;
   font-size: 18px;
@@ -7,8 +19,11 @@
   color: $black-pearl-color;
 
   &__icon {
-    color: #0db9dd;
     margin-right: 33px;
+  }
+
+  &__active {
+    text-decoration: underline;
   }
 
   &:hover {

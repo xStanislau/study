@@ -8,7 +8,11 @@ const AccordionSubItems = props => {
       {subItems.map((subItem, index) => {
         return (
           <li key={`${subItem.text} ${index}`}>
-            <AccordionSubItem name="circle" to={subItem.link}>
+            <AccordionSubItem
+              name="circle"
+              to={subItem.link}
+              color={subItem.color}
+            >
               {subItem.text}
             </AccordionSubItem>
           </li>

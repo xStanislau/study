@@ -1,13 +1,12 @@
 import React from "react";
+import { connect } from "react-redux";
+import { NavLink } from "react-router-dom";
 import { Accordion as BootstrapAccordion, Card } from "react-bootstrap";
 import AccordionItem from "./AccordionItem";
 import AccordionSubItems from "./AccordionSubItems";
-import { connect } from "react-redux";
-import cx from "classnames";
 import { toggleAccordionItem } from "../../redux/reducers/accordion";
-
-import "./Accordion.scss";
 import { bindActionCreators } from "../../../../../../../AppData/Local/Microsoft/TypeScript/3.5/node_modules/redux";
+import "./Accordion.scss";
 
 const Accordion = props => {
   const { items, itemIsClosed, toggleAccordionItem } = props;
@@ -30,7 +29,7 @@ const Accordion = props => {
   return (
     <BootstrapAccordion>
       {items.map((item, index) => {
-        const { subItems, text, iconName } = item;
+        const { subItems, text, iconName, link } = item;
         return (
           <div key={text} className="accordion__item-container">
             <BootstrapAccordion.Toggle
@@ -39,7 +38,13 @@ const Accordion = props => {
               className="accordion__toggle"
               eventKey={index}
             >
-              <AccordionItem text={text} name={iconName} size />
+              <NavLink
+                to={`/profile${link}`}
+                activeClassName="active"
+                className="accordion__link"
+              >
+                <AccordionItem text={text} name={iconName} size />
+              </NavLink>
             </BootstrapAccordion.Toggle>
             <BootstrapAccordion.Collapse
               className="accordion__collapse"

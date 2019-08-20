@@ -1,17 +1,21 @@
 import React from "react";
-import "./AccordionSubItem.scss";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Icon from "../Icon/Icon";
+import "./AccordionSubItem.scss";
 
-const AccordionSubItem = ({ children, name, to }) => {
+const AccordionSubItem = ({ children, name, to, color }) => {
   return (
-    <Link
-      to={to}
+    <NavLink
+      to={{ pathname: to, state: { prevPath: "/profile/news" } }}
       className="d-flex align-items-center justify-content-start sidebar-sub-item"
+      activeClassName="sidebar-sub-item_active"
     >
-      <Icon name={name} className="sidebar-sub-item__icon" />
+      <Icon
+        name={name}
+        className={`${color && color} sidebar-sub-item__icon`}
+      />
       <span className="sidebar-sub-item__text">{children}</span>
-    </Link>
+    </NavLink>
   );
 };
 

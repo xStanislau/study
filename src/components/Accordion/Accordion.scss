@@ -8,7 +8,28 @@
     background-color: $white-color;
     position: relative;
   }
-  &__toggle.active {
+
+  &__item-container {
+    border: none;
+    border-radius: 0;
+  }
+
+  &__link {
+    &:hover {
+      text-decoration: none;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 10px;
+        bottom: 10px;
+        width: 4px;
+        background-color: #29b1cc;
+      }
+    }
+  }
+  &__link.active {
     &::before {
       content: "";
       position: absolute;
@@ -19,14 +40,11 @@
       background-color: #29b1cc;
     }
   }
-  &__item-container {
-    border: none;
-    border-radius: 0;
-  }
 
   &__collapse {
     position: relative;
-    &:before {
+
+    &::before {
       content: "";
       position: absolute;
       top: 0;

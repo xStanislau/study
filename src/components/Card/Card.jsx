@@ -10,6 +10,7 @@ const Card = props => {
   if (linkText) {
     to = { pathname: linkText, state: { prevPath: location.pathname } };
   }
+
   return (
     <div className={className}>
       <div className="card-img-wrapper">
@@ -31,15 +32,7 @@ const Card = props => {
             title
           )}
         </CardTitle>
-        <CardText>
-          {linkText ? (
-            <NavLink className="card-link" to={to}>
-              {text}
-            </NavLink>
-          ) : (
-            text
-          )}
-        </CardText>
+        <CardText>{text}</CardText>
         {linkText && (
           <NavLink className="card-link" to={to}>
             Show

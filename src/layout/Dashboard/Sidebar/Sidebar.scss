@@ -39,6 +39,14 @@
   &__icon {
     cursor: pointer;
   }
+  &__link {
+    text-decoration: none;
+    color: white;
+    &:hover {
+      text-decoration: none;
+      color: darken(white, 10%);
+    }
+  }
 }
 
 .dashboard-left {

@@ -3,12 +3,13 @@ import mockData from "../../../mocks/mocks";
 import { Link } from "react-router-dom";
 import "./Article.scss";
 
-const Article = ({
-  match,
-  location: {
-    state: { prevPath }
-  }
-}) => {
+const Article = props => {
+  const {
+    location: {
+      state: { prevPath }
+    },
+    match
+  } = props;
   const { posts } = mockData;
   let article = posts[match.params.id];
   const { title, imgSrc, creator, date, text } = article;
@@ -24,10 +25,10 @@ const Article = ({
           <strong className="article__date">{date}</strong>
         </small>
         <p className="article__text">{text}</p>
+        <Link to={prevPath} className="btn-link d-block mt-5">
+          {"<< Back"}
+        </Link>
       </div>
-      <Link to={prevPath} className="btn-link">
-        {"<< Back"}
-      </Link>
     </article>
   );
 };

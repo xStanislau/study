@@ -26,5 +26,11 @@
   .card-title {
     font-size: 18px;
     min-height: 46px;
+    .card-link {
+      color: $black-pearl-color;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }

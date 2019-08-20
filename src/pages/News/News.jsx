@@ -6,7 +6,6 @@ import "./News.scss";
 
 const News = ({ location }) => {
   const { posts } = mockData;
-
   return (
     <section className="dashboard-news">
       <h1 className="text-center dashboard-news__title h3">News</h1>

@@ -3,6 +3,7 @@ import { Col, Card } from "react-bootstrap";
 import formatTime from "../../../../../utils/formatDate";
 import Activity from "./components/Activity/Activity";
 import Button from "../../../../../components/Button/Button";
+import mockData from "../../../../../mocks/mocks";
 import "./UserActivity.scss";
 
 class UserActivity extends PureComponent {
@@ -36,13 +37,14 @@ class UserActivity extends PureComponent {
 
   render() {
     const { activity } = this.props;
+    const { activity: activities } = mockData.dashboardData.data;
     return (
       <Col className="col-5">
         <Card className="user-activity">
           <Card.Header>
             <h5 className="user-activity__title">User Activity</h5>
             <div className="user-activity__menu">
-              <div className="user-activity__menu-body" />{" "}
+              <div className="user-activity__menu-body" />
             </div>
           </Card.Header>
           <Card.Body className="user-activity__body">
@@ -50,11 +52,17 @@ class UserActivity extends PureComponent {
               new Array(this.state.elementsShowed)
                 .fill(0)
                 .map((element, index) => {
+                  let status;
+                  if (activities[index].status) {
+                    status = activities[index].status;
+                  }
+                  status = activities[index].status;
                   return (
                     <Activity
                       key={`${activity[index].operation} ${index}`}
                       operation={activity[index].operation}
                       time={formatTime(activity[index].time)}
+                      status={status}
                     />
                   );
                 })}

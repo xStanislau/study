@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { Container, Row, Col } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 import cx from "classnames";
 import Nav from "./Nav/Nav";
 import Account from "./Account/Account";
@@ -45,7 +45,16 @@ class DashBoardHeader extends Component {
           <Col className={classNames}>
             <header className="sidebar-header d-flex align-items-center">
               <div className="sidebar-header__content d-flex justify-content-between">
-                <h6 className="sidebar-header__title h6">Profile</h6>
+                <h6 className="sidebar-header__title h6">
+                  <NavLink
+                    className="sidebar-header__link"
+                    activeClassName="sidebar-header__link_active"
+                    to="/profile"
+                  >
+                    Profile
+                  </NavLink>
+                </h6>
+
                 <Icon
                   className="sidebar-header__icon"
                   name="align-left"
@@ -74,14 +83,14 @@ const mapStateToProps = state => ({
   isAuthorized: state.auth.isAuthorized
 });
 
-const mapDispatchToProps = dispatch => {
-  return bindActionCreators(
-    { openSidebar, closeSidebar, toggleSidebar, logOut },
-    dispatch
-  );
-};
+// const mapDispatchToProps = dispatch => {
+//   return bindActionCreators(
+
+//     dispatch
+//   );
+// };
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  { openSidebar, closeSidebar, toggleSidebar, logOut }
 )(withRouter(DashBoardHeader));

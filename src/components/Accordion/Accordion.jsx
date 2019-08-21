@@ -4,26 +4,10 @@ import { NavLink } from "react-router-dom";
 import { Accordion as BootstrapAccordion, Card } from "react-bootstrap";
 import AccordionItem from "./AccordionItem";
 import AccordionSubItems from "./AccordionSubItems";
-import { toggleAccordionItem } from "../../redux/reducers/accordion";
 import "./Accordion.scss";
 
 const Accordion = props => {
-  const { items, itemIsClosed, toggleAccordionItem } = props;
-
-  const onItemCLick = evt => {
-    const itemsLists = document.querySelectorAll(".accordion__toggle");
-    if (!itemIsClosed) {
-      evt.currentTarget.classList.add("active");
-    }
-
-    [...itemsLists].forEach(item => {
-      if (item.classList.contains("active") && itemIsClosed) {
-        item.classList.remove("active");
-      }
-    });
-
-    toggleAccordionItem();
-  };
+  const { items } = props;
 
   return (
     <BootstrapAccordion>
@@ -34,7 +18,6 @@ const Accordion = props => {
           <div key={text} className="accordion__item-container">
             <BootstrapAccordion.Toggle
               as={Card.Header}
-              onClick={onItemCLick}
               className="accordion__toggle"
               eventKey={index}
             >
@@ -65,5 +48,5 @@ const mapStatToProps = state => {
 
 export default connect(
   mapStatToProps,
-  { toggleAccordionItem }
+  null
 )(Accordion);

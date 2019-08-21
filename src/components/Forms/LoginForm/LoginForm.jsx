@@ -5,8 +5,7 @@ import Input from "../../input/Input";
 import Icon from "../../Icon/Icon";
 import { checkPassword, checkEmail } from "../../../utils/validation";
 import { withRouter } from "react-router-dom";
-import { logIn as loginAction } from "../../../redux/reducers/auth";
-import { bindActionCreators } from "redux";
+import { logIn } from "../../../redux/reducers/auth";
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
 
@@ -21,7 +20,7 @@ class LoginForm extends Component {
   passwordInput = null;
 
   onSubmit = async values => {
-    const response = await this.props.login(values);
+    const response = await this.props.logIn(values);
 
     if (response) {
       return { email: response.error.message };
@@ -168,11 +167,7 @@ const mapStateToProps = state => {
   }
 };
 
-const mapDispatchToProps = dispatch => ({
-  login: bindActionCreators(loginAction, dispatch)
-});
-
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  { logIn }
 )(withRouter(LoginForm));

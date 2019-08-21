@@ -5,9 +5,8 @@ import Logo from "../../../components/Logo/Logo";
 import Button from "../../../components/Button/Button";
 import { connect } from "react-redux";
 import { Navbar, Nav } from "react-bootstrap";
-import "./Header.scss";
-import { bindActionCreators } from "redux";
 import { logOut } from "../../../redux/reducers/auth";
+import "./Header.scss";
 
 const MainHeader = ({ className, isAuthorized }) => {
   const [isOpen, toggleMenu] = useState(false);
@@ -104,11 +103,7 @@ const mapStatToProps = state => {
   return { isAuthorized: state.auth.isAuthorized };
 };
 
-const mapDispatchToProps = dispatch => ({
-  logOut: bindActionCreators(logOut, dispatch)
-});
-
 export default connect(
   mapStatToProps,
-  mapDispatchToProps
+  { logOut }
 )(MainHeader);

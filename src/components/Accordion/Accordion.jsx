@@ -5,7 +5,6 @@ import { Accordion as BootstrapAccordion, Card } from "react-bootstrap";
 import AccordionItem from "./AccordionItem";
 import AccordionSubItems from "./AccordionSubItems";
 import { toggleAccordionItem } from "../../redux/reducers/accordion";
-import { bindActionCreators } from "../../../../../../../AppData/Local/Microsoft/TypeScript/3.5/node_modules/redux";
 import "./Accordion.scss";
 
 const Accordion = props => {
@@ -30,6 +29,7 @@ const Accordion = props => {
     <BootstrapAccordion>
       {items.map((item, index) => {
         const { subItems, text, iconName, link } = item;
+
         return (
           <div key={text} className="accordion__item-container">
             <BootstrapAccordion.Toggle
@@ -62,10 +62,8 @@ const Accordion = props => {
 const mapStatToProps = state => {
   return { itemIsClosed: state.accordion.itemIsClosed };
 };
-const mapDispatchToProps = dispatch => {
-  return bindActionCreators({ toggleAccordionItem }, dispatch);
-};
+
 export default connect(
   mapStatToProps,
-  mapDispatchToProps
+  { toggleAccordionItem }
 )(Accordion);

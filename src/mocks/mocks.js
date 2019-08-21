@@ -241,7 +241,7 @@ const mockData = {
           ]
         },
         {
-          text: "Articles",
+          text: "articles",
           link: "/news",
 
           iconName: "git-square",

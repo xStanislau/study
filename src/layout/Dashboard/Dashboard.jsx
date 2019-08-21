@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Row, Col, Container } from "react-bootstrap";
 import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
 import DashBoardHeader from "./DashBoardHeader/DashBoardHeader";
 import Sidebar from "./Sidebar/Sidebar";
 import { fetch } from "../../redux/reducers/dashboard";
@@ -101,14 +100,7 @@ const mapStateToProps = state => ({
   isClosed: state.sidebar.isClosed
 });
 
-const mapDispatchToProps = dispatch => {
-  return bindActionCreators(
-    { fetch, openSidebar, closeSidebar, toggleSidebarItem },
-    dispatch
-  );
-};
-
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  { fetch, openSidebar, closeSidebar, toggleSidebarItem }
 )(Dashboard);

@@ -83,13 +83,6 @@ const mapStateToProps = state => ({
   isAuthorized: state.auth.isAuthorized
 });
 
-// const mapDispatchToProps = dispatch => {
-//   return bindActionCreators(
-
-//     dispatch
-//   );
-// };
-
 export default connect(
   mapStateToProps,
   { openSidebar, closeSidebar, toggleSidebar, logOut }

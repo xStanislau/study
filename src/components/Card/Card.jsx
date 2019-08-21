@@ -42,7 +42,5 @@ const Card = props => {
     </div>
   );
 };
-// Card.defaultProps = {
-//   location: { pathname: "news" }
-// };
+
 export default Card;

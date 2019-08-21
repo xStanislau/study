@@ -3,10 +3,11 @@ import { connect } from "react-redux";
 import { Route, Redirect, Switch } from "react-router-dom";
 import Profile from "../../pages/Profile/Profile";
 import News from "../../pages/News/News";
-import Article from "../../pages/News/Article/Article";
+import Article from "../../components/Article/Article";
 import Dashboard from "../../layout/Dashboard/Dashboard";
 
 const PrivateRoutes = ({ isAuthorized, ...rest }) => {
+  debugger;
   if (!isAuthorized) {
     return <Redirect to="/login" />;
   }

@@ -15,6 +15,7 @@ const PrivateRoutes = ({ isAuthorized, ...rest }) => {
       <Dashboard>
         <Switch>
           <Redirect exact from="/profile/dashboard" to="/profile/dashboard/1" />
+          <Redirect exact from="/profile" to="/profile/dashboard/1" />
           <Route exact path="/profile/dashboard/:id" component={Profile} />
           <Route exact path="/profile/news" component={News} />
           <Route exact path="/profile/news/:id" component={Article} />

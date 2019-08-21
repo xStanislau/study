@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Route, Redirect } from "react-router-dom";
+import { Route, Redirect, Switch } from "react-router-dom";
 import Profile from "../../pages/Profile/Profile";
 import News from "../../pages/News/News";
 import Article from "../../pages/News/Article/Article";
@@ -12,43 +12,15 @@ const PrivateRoutes = ({ isAuthorized, ...rest }) => {
   }
   return (
     <>
-      <Route exact path="/profile" component={Dashboard} />
-
-      <Route exact path="/profile/dashboard" component={Dashboard} />
-      <Route
-        exact
-        path="/profile/dashboard/:id"
-        render={props => {
-          return (
-            <Dashboard {...props}>
-              <Profile {...props} />
-            </Dashboard>
-          );
-        }}
-      />
-      <Route
-        exact
-        path="/profile/news"
-        render={props => {
-          return (
-            <Dashboard {...props}>
-              <News {...props} />
-            </Dashboard>
-          );
-        }}
-      />
-      <Route
-        exact
-        path="/profile/news/:id"
-        render={props => {
-          return (
-            <Dashboard {...props}>
-              <Article {...props} />
-            </Dashboard>
-          );
-        }}
-      />
-      <Route component={() => <h1>Page not found 404</h1>} />
+      <Dashboard>
+        <Switch>
+          <Redirect exact from="/profile/dashboard" to="/profile/dashboard/1" />
+          <Route exact path="/profile/dashboard/:id" component={Profile} />
+          <Route exact path="/profile/news" component={News} />
+          <Route exact path="/profile/news/:id" component={Article} />
+          <Route component={() => <h1>Page not found 404</h1>} />
+        </Switch>
+      </Dashboard>
     </>
   );
 };

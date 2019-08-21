@@ -1,11 +1,12 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-const Table = props => {
+const Table = ({ cols, rows }) => {
   return (
     <table className="table">
       <thead className="table-head">
         <tr className="table-row">
-          {props.cols.map(col => (
+          {cols.map(col => (
             <th className="table-head-cell" key={col.name}>
               {col.header}
             </th>
@@ -13,9 +14,9 @@ const Table = props => {
         </tr>
       </thead>
       <tbody className="table-body">
-        {props.rows.map(row => (
+        {rows.map(row => (
           <tr className="table-row" key={row.id}>
-            {props.cols.map(col => {
+            {cols.map(col => {
               return (
                 <td className="table-cell" key={col.name}>
                   {row[col.name]}
@@ -27,6 +28,11 @@ const Table = props => {
       </tbody>
     </table>
   );
+};
+
+Table.propTypes = {
+  cols: PropTypes.array.isRequired,
+  rows: PropTypes.array.isRequired
 };
 
 export default Table;

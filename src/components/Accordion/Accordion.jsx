@@ -5,6 +5,7 @@ import { Accordion as BootstrapAccordion, Card } from "react-bootstrap";
 import AccordionItem from "./AccordionItem";
 import AccordionSubItems from "./AccordionSubItems";
 import "./Accordion.scss";
+import PropTypes from "prop-types";
 
 const Accordion = props => {
   const { items } = props;
@@ -26,7 +27,7 @@ const Accordion = props => {
                 activeClassName="active"
                 className="accordion__link"
               >
-                <AccordionItem text={text} name={iconName} size />
+                <AccordionItem text={text} name={iconName} size="25" />
               </NavLink>
             </BootstrapAccordion.Toggle>
             <BootstrapAccordion.Collapse
@@ -40,6 +41,17 @@ const Accordion = props => {
       })}
     </BootstrapAccordion>
   );
+};
+
+Accordion.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      subItems: PropTypes.array,
+      text: PropTypes.string,
+      iconName: PropTypes.string,
+      link: PropTypes.string
+    })
+  )
 };
 
 const mapStatToProps = state => {

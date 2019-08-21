@@ -1,5 +1,6 @@
 import React from "react";
 import AccordionSubItem from "./AccordionSubItem";
+import PropTypes from "prop-types";
 
 const AccordionSubItems = props => {
   const { subItems } = props;
@@ -20,6 +21,10 @@ const AccordionSubItems = props => {
       })}
     </ul>
   );
+};
+
+AccordionSubItems.propTypes = {
+  subItems: PropTypes.array
 };
 
 export default AccordionSubItems;

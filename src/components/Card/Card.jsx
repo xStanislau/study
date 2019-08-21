@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import CardTitle from "./CardTitle/CardTitle";
 import CardText from "./CardText/CardText";
 import CardImg from "./CardImg/CardImg";
+import PropTypes from "prop-types";
 
 const Card = props => {
   const { text, title, imgSrc, className, linkText, location } = props;
@@ -41,6 +42,15 @@ const Card = props => {
       </div>
     </div>
   );
+};
+
+Card.propTypes = {
+  text: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  imgSrc: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  linkText: PropTypes.string,
+  location: PropTypes.string
 };
 
 export default Card;

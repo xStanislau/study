@@ -8,7 +8,6 @@ import { withRouter } from "react-router-dom";
 import { logIn } from "../../../redux/reducers/auth";
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
-
 import Loader from "../../Loader/Loader";
 import { validationErrors } from "../../../constants/validationErrors";
 

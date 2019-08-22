@@ -50,7 +50,7 @@ Card.propTypes = {
   imgSrc: PropTypes.string.isRequired,
   className: PropTypes.string,
   linkText: PropTypes.string,
-  location: PropTypes.string
+  location: PropTypes.object
 };
 
 export default Card;

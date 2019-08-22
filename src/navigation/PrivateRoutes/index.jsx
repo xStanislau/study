@@ -7,7 +7,6 @@ import Article from "../../components/Article/Article";
 import Dashboard from "../../layout/Dashboard/Dashboard";
 
 const PrivateRoutes = ({ isAuthorized, ...rest }) => {
-  debugger;
   if (!isAuthorized) {
     return <Redirect to="/login" />;
   }

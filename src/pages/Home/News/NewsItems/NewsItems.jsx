@@ -10,10 +10,9 @@ const NewsItems = ({ className }) => {
       {posts.map(post => {
         const { imgSrc, tag, title, creator, text, date } = post;
         return (
-          <NewsItem key={`${tag}${title}`}>
+          <NewsItem className="news__article" key={`${tag}${title}`}>
             <Article
               imgSrc={imgSrc}
-              className={`${className}-article`}
               key={`${tag}${title}`}
               tagText={tag}
               title={title}

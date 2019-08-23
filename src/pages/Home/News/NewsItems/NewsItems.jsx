@@ -3,7 +3,7 @@ import Article from "../../../../components/_Article/Arcticle";
 import NewsItem from "../NewsItem/NewsItem";
 import mockData from "../../../../mocks/mocks";
 
-const NewsItems = ({ className }) => {
+const NewsItems = () => {
   const { posts } = mockData;
   return (
     <>
@@ -19,6 +19,7 @@ const NewsItems = ({ className }) => {
               creator={creator}
               date={date}
               text={text}
+              readMore
             />
           </NewsItem>
         );

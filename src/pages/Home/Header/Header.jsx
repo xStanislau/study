@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Header from "../../../components/Header/Header";
 import Logo from "../../../components/Logo/Logo";
@@ -18,11 +18,18 @@ const MainHeader = ({ className, isAuthorized }) => {
     body.classList.remove("overflow-hidden");
   }
 
-  window.addEventListener("resize", () => {
+  const resizeHandler = () => {
     if (window.innerWidth > 991) {
       toggleMenu(false);
     }
-  });
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", resizeHandler);
+    return () => {
+      window.removeEventListener("resize", resizeHandler);
+    };
+  }, []);
 
   return (
     <Header className={`${className}`}>

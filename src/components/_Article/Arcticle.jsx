@@ -11,7 +11,9 @@ const Article = ({
   date,
   text,
   location: { state },
-  match
+  match,
+  content,
+  readMore
 }) => {
   let article;
 
@@ -21,7 +23,7 @@ const Article = ({
   }
 
   return (
-    <article className="article content pt-4">
+    <article className={`${content && content} article  pt-4`}>
       <div className="article__img-wrapper">
         <img className="article__img" src={imgSrc} alt={imgAlt} />
       </div>
@@ -34,27 +36,21 @@ const Article = ({
         </small>
         <p className="article__text">{text}</p>
         <LinkBack {...state} />
+        {readMore && (
+          <a href="#" className="article__link">
+            Read more...
+          </a>
+        )}
       </div>
     </article>
-    // <article className={className} article>
-    //   <img className={`${className}-img`} src={imgSrc} alt={imgAlt} />
-    //   <div className={`${className}-description`}>
-    //     <div className={`${className}-tag`}>{tagText}</div>
-    //     <h4 className={`${className}-title`}>{title}</h4>
-    //     <small className={`${className}-subscription`}>
-    //       by <strong className={`${className}-creator`}>{creator}</strong> on{" "}
-    //       <strong className={`${className}-date`}>{date}</strong>
-    //     </small>
-    //     <p className={`${className}-text`}>{text}</p>
-    //   </div>
-    // </article>
   );
 };
 
 Article.defaultProps = {
   location: { state: {} },
   match: {},
-  tagText: ""
+  tagText: "",
+  content: ""
 };
 
 export default Article;

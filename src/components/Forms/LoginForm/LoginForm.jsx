@@ -10,6 +10,7 @@ import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
 import Loader from "../../Loader/Loader";
 import { validationErrors } from "../../../constants/validationErrors";
+import PasswordInput from "../../inputs/PasswordInput/PasswordInput";
 
 class LoginForm extends Component {
   state = {
@@ -24,19 +25,6 @@ class LoginForm extends Component {
     if (response) {
       return { email: response.error.message };
     }
-  };
-
-  focusPasswordInput = () => {
-    if (this.passwordInput) this.passwordInput.focus();
-  };
-
-  togglePasswordVibility = () => {
-    this.setState(state => {
-      return {
-        visible: !state.visible
-      };
-    });
-    this.focusPasswordInput();
   };
 
   validate = values => {
@@ -54,15 +42,11 @@ class LoginForm extends Component {
 
   render() {
     const { isAuthorized, values } = this.props;
-    const { visible } = this.state;
-    const { onSubmit, validate, togglePasswordVibility } = this;
+    const { onSubmit, validate } = this;
 
     if (isAuthorized) {
       this.props.history.push("/profile");
     }
-
-    const eyeIconName = visible ? "eye" : "eye-slash";
-    const inputType = visible ? "input" : "password";
 
     return (
       <Form
@@ -94,7 +78,8 @@ class LoginForm extends Component {
               >
                 <Icon name="envelope" className="l-icon-center-left" />
               </Input>
-              <Input
+              <PasswordInput />
+              {/* <Input
                 className="input"
                 type={inputType}
                 name="password"
@@ -111,7 +96,7 @@ class LoginForm extends Component {
                   className="l-icon-center-right"
                   onClick={togglePasswordVibility}
                 />
-              </Input>
+              </Input> */}
               <div className="d-flex justify-content-between">
                 <Input
                   className="checkbox"

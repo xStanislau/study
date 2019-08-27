@@ -7,7 +7,8 @@ import ArticleTag from "./ArticleTag/ArticleTag";
 const Article = props => {
   const {
     location: { state },
-    match
+    match,
+    readMore
   } = props;
 
   let article;
@@ -33,6 +34,11 @@ const Article = props => {
         </small>
         <p className="article__text">{text}</p>
         <LinkBack {...state} />
+        {readMore && (
+          <a href="#" className="article__link">
+            Read more...
+          </a>
+        )}
       </div>
     </article>
   );
@@ -41,7 +47,8 @@ const Article = props => {
 Article.defaultProps = {
   location: { state: {} },
   match: {},
-  tagText: ""
+  tagText: "",
+  readMore: false
 };
 
 export default Article;

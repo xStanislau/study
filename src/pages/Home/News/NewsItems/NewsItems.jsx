@@ -1,5 +1,5 @@
 import React from "react";
-import Article from "../../../../components/_Article/Arcticle";
+import Article from "../../../../components/Article/Article";
 import NewsItem from "../NewsItem/NewsItem";
 import mockData from "../../../../mocks/mocks";
 
